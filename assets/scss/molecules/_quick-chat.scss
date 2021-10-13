@@ -1,0 +1,39 @@
+.sgp-quick-chat {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    height: 45px;
+    border-radius: 45px;
+    background-color: #002350;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.161);
+    padding: $spacer-0 $spacer-3;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+    &__txt {
+        padding-left: $spacer-2;
+    }
+}
+
+@include mobile {
+    .sgp-quick-chat {
+        padding: $spacer-0;
+        width: 40px;
+        height: 40px;
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+        &__txt {
+            display: none;
+        }
+    }
+}

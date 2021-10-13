@@ -1,0 +1,15 @@
+.sgp-btn-inline {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    svg {
+        width: 15px;
+        height: 9px;
+        margin-left: $spacer-2;
+        margin-top: -3px;
+    }
+    &:hover {
+        color: #fff;
+    }
+}

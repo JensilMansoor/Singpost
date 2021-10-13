@@ -1,0 +1,26 @@
+.sgp-tile {
+    border: 1px solid #fff;
+    padding: $spacer-4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        background: transparent linear-gradient(136deg, #24549D 0%, #0A224D 100%) 0% 0% no-repeat padding-box;
+        border: 1px solid #24549D;
+        color: #fff;
+    }
+    &__desc {
+        min-height: 88px;
+        margin-bottom: $spacer-3;
+    }
+}
+
+@include mobile {
+    .sgp-tile {
+        padding: $spacer-3 $spacer-2;
+        &__desc {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

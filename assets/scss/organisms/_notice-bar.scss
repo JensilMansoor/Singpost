@@ -1,0 +1,155 @@
+.sgp-notice {
+    background-color: #C31126;
+    color: #fff;
+    padding: $spacer-1 $spacer-0;
+    overflow: hidden;
+    &.hide {
+        display: none;
+    }
+    .content-wrapper {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+    }
+    &__close-btn {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    &__title {
+        font-size: 12px;
+        line-height: 18px;
+        @include font-univers-65;
+        background-color: #fff;
+        color: #C31126;
+        padding: $spacer-0 16px $spacer-0 $spacer-2;
+        white-space: nowrap;
+        text-transform: uppercase;
+        min-width: 125px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            right: -13px;
+            top: -9px;
+            width: 20px;
+            height: 40px;
+            background-color: #C31126;
+            transform: rotate(20deg);
+        }
+    }
+    &__slider {
+        width: calc(100% - 125px);
+        padding: $spacer-0 100px $spacer-0 $spacer-2;
+    }
+    &__item {
+        font-size: 12px;
+        line-height: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: underline;
+        overflow: hidden;
+    }
+    &__icon {
+        display: none;
+    }
+    &__arrow-sec {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%);
+        .sgp-banner__arrow {
+            background: none;
+        }
+        svg {
+            width: 12px;
+            height: 12px;
+            vertical-align: unset;
+            position: relative;
+            top: -2px;
+        }
+    }
+    &__prev {
+        margin-right: $spacer-3;
+    }
+}
+
+@include mobile {
+    .sgp-notice {
+        padding-bottom: $spacer-4;
+        &__title-text {
+            display: none;
+        }
+        &__icon {
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin: 2px 0px 2px 3px;
+        }
+        &__title {
+            min-width: 30px;
+            padding: $spacer-0;
+        }
+        &__slider {
+            width: calc(100% - 30px);
+            padding: $spacer-0 $spacer-3 $spacer-0 $spacer-2;
+        }
+        &__item {
+            white-space: unset;
+            text-overflow: unset;
+            height: 40px !important;
+        }
+        &__close-btn {
+            right: 0;
+            top: 0;
+            transform: none;
+            svg {
+                position: absolute;
+                right: 4px;
+                top: 0px;
+                z-index: 1;
+                path {
+                    stroke: #C31126;
+                }
+            }
+            &::after {
+                content: '';
+                background-color: #fff;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                right: -30px;
+                top: -29px;
+                transform: rotate( 45deg);
+            }
+        }
+        &__arrow-sec {
+            top: auto;
+            bottom: -24px;
+            right: 50%;
+            transform: translate(0, -50%);
+            .sgp-banner__arrow {
+                &.slick-disabled {
+                    visibility: hidden;
+                }
+            }
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &__prev {
+            transform: rotate(90deg);
+        }
+        &__next {
+            transform: rotate(90deg);
+        }
+    }
+}

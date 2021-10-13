@@ -1,0 +1,151 @@
+.sgp-locate {
+    padding: $spacer-5 $spacer-0;
+    &__inner {
+        position: relative;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: $spacer-5 $spacer-0;
+        position: relative;
+        &::after {
+            content: "";
+            width: 75%;
+            height: 100%;
+            background: transparent linear-gradient(136deg, #24549D 0%, #0A224D 100%) 0% 0% no-repeat padding-box;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &.slick-slide {
+            display: flex;
+        }
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    &__sec-1,
+    &__sec-2 {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    &__sec-1 {
+        padding-left: $spacer-2;
+        &::before {
+            content: "";
+            background-color: #c31126;
+            width: 50%;
+            height: 100%;
+            margin-top: $spacer-2;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__sec-2 {
+        color: #fff;
+        padding: $spacer-0 $spacer-5;
+    }
+    &__sub-text {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacer-2;
+    }
+    &__descr,
+    .h2 {
+        margin-bottom: $spacer-4;
+    }
+    &__arrow-sec {
+        display: flex;
+        position: absolute;
+        bottom: $spacer-5;
+        right: 64px;
+        .sgp-banner__arrow {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    &__prev {
+        background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38 74.5C17.8416 74.5 1.5 58.1584 1.5 38C1.5 17.8416 17.8416 1.5 38 1.5C58.1584 1.5 74.5 17.8416 74.5 38C74.5 58.1584 58.1584 74.5 38 74.5Z' stroke='white' stroke-width='3'/%3E%3Cpath d='M39.0393 53.3546L23.362 37.6773L39.0393 22L41.0991 24.1743L27.7105 37.6773L41.0991 51.1803L39.0393 53.3546Z' fill='white'/%3E%3Cpath d='M25.5361 36.0752H53V39.2793H25.5361V36.0752Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+    &__next {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='36.5' stroke='white' stroke-width='3'/%3E%3Cpath d='M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z' fill='white'/%3E%3Cpath d='M50.4639 36.0752H23V39.2793H50.4639V36.0752Z' fill='white'/%3E%3C/svg%3E");
+        margin-left: $spacer-4;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-locate {
+        .progress {
+            display: none;
+        }
+        &__sec-2 {
+            padding: $spacer-0 $spacer-3;
+        }
+        .h2 {
+            font-size: 28px !important;
+            line-height: 34px !important;
+        }
+        &__descr,
+        .h2 {
+            margin-bottom: $spacer-3;
+        }
+        &__arrow-sec {
+            right: 52px;
+            .sgp-banner__arrow {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-locate {
+        padding: $spacer-4 $spacer-0;
+        .progress {
+            display: block;
+            margin: $spacer-0 $spacer-3 $spacer-0;
+            width: auto;
+            position: relative;
+            z-index: 1;
+            transform: translateY(-24px);
+        }
+        .h2 {
+            font-size: 24px !important;
+            line-height: 30px !important;
+        }
+        &__item {
+            padding: $spacer-0;
+            display: block;
+            &.slick-slide {
+                display: block;
+            }
+            &::after {
+                content: none;
+            }
+        }
+        &__sec-1 {
+            &::before {
+                height: calc(100% - 8px);
+            }
+        }
+        &__sec-2 {
+            background: transparent linear-gradient(136deg, #24549D 0%, #0A224D 100%) 0% 0% no-repeat padding-box;
+            padding: $spacer-3 $spacer-3 $spacer-5;
+            margin-top: $spacer-1;
+        }
+        &__sub-text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__arrow-sec {
+            display: none;
+        }
+    }
+}
