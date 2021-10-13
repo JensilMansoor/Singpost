@@ -1,17 +1,35 @@
 @font-face {
-    font-family: 'Univers-65';
-    src: url('../fonts/Univers65Bold.eot');
-    src: url('../fonts/Univers65Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Univers65Bold.woff2') format('woff2'), url('../fonts/Univers65Bold.woff') format('woff'), url('../fonts/Univers65Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Univers-55';
+    src: url('../fonts/Univers.eot');
+    src: url('../fonts/Univers.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Univers.woff2') format('woff2'),
+        url('../fonts/Univers.woff') format('woff'),
+        url('../fonts/Univers.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Univers-55';
-    src: url('../fonts/Univers.eot');
-    src: url('../fonts/Univers.eot?#iefix') format('embedded-opentype'), url('../fonts/Univers.woff2') format('woff2'), url('../fonts/Univers.woff') format('woff'), url('../fonts/Univers.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Univers-45';
+    src: url('../fonts/Univers-Light-Normal.eot');
+    src: url('../fonts/Univers-Light-Normal.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Univers-Light-Normal.woff2') format('woff2'),
+        url('../fonts/Univers-Light-Normal.woff') format('woff'),
+        url('../fonts/Univers-Light-Normal.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Univers-65';
+    src: url('../fonts/Univers65Bold.eot');
+    src: url('../fonts/Univers65Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Univers65Bold.woff2') format('woff2'),
+        url('../fonts/Univers65Bold.woff') format('woff'),
+        url('../fonts/Univers65Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
