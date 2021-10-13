@@ -1,0 +1,132 @@
+.sgp-btn {
+    color: $color-blue-2;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    align-items: center;
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-right: $spacer-2;
+        circle {
+            fill: transparent;
+            stroke: $color-blue-2;
+        }
+        path{
+            fill: $color-blue-2;
+        }
+    }
+    &:hover {
+        color: $color-red;
+        text-decoration: underline;
+        svg {
+            circle {
+                fill: $color-red;
+                stroke: $color-white;
+            }
+            path{
+                fill: $color-white;
+            }
+        }
+    }
+    &--white{
+        color: $color-white;
+        svg{
+            circle {
+                stroke: $color-white;
+            }
+            path{
+                fill: $color-white;
+            }
+        }
+        &:hover{
+            color: $color-white;
+            svg{
+                circle {
+                    stroke: $color-red;
+                    fill: $color-red;
+                }
+                path{
+                    fill: $color-white;
+                }
+            }
+        }
+    }
+    &--disabled{
+        pointer-events: none;
+        color: $color-grey-4;
+        svg{
+            circle {
+                stroke: $color-grey-4;
+            }
+            path{
+                fill: $color-grey-4;
+            }
+        }
+    }
+}
+
+// Button inline
+.sgp-link-btn {
+    color: $color-blue-2;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    svg {
+        width: 15px;
+        height: 9px;
+        margin-left: $spacer-2;
+        margin-top: -3px;
+        path{
+            stroke: $color-blue-2;
+        }
+    }
+    &:hover {
+        color: $color-red;
+        svg path{
+            stroke: $color-red;
+        }
+    }
+    &--box{
+        padding: 12px $spacer-3;
+        text-align: center;
+        min-width: 150px;
+        background-color: $color-blue-2;
+        color: $color-white;
+        svg {
+            margin-right: $spacer-2;
+            margin-left: $spacer-0;
+            path{
+                stroke: $color-white;
+            }
+        }
+        &:hover{
+            background-color: $color-red;
+            color: $color-white;
+            svg{
+                path{
+                    stroke: $color-white;
+                }
+            }
+        }
+        &.disabled{
+            pointer-events: none;
+            background-color: $color-grey-4;
+        }
+    }
+    &--border{
+        padding: 12px $spacer-3;
+        text-align: center;
+        min-width: 150px;
+        border: 1px solid $color-blue-2;
+        svg{
+            margin-right: $spacer-2;
+            margin-left: $spacer-0;
+        }
+        &:hover{
+            border: 1px solid $color-red;
+        }
+    }
+}
