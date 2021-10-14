@@ -7,7 +7,6 @@
 @import "base/color";
 @import "base/base";
 @import "base/dev";
-
 // Atom btn-primary
 @import "atom/buttons";
 
@@ -16,6 +15,7 @@
 @import "molecules/sg-locate";
 
 // organisms
+@import "organisms/header";
 @import "organisms/quick-tool-tab";
 @import "organisms/main-banner";
 @import "organisms/pers-bg-overlay-tiles";
