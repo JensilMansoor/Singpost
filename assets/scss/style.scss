@@ -7,9 +7,17 @@
 @import "base/color";
 @import "base/base";
 @import "base/dev";
-// Atom
+
+// Atom btn-primary
+@import "atom/buttons";
 
 // Molecules
+@import "molecules/bg-overlay-tile";
+@import "molecules/sg-locate";
 
 // organisms
 @import "organisms/quick-tool-tab";
+@import "organisms/main-banner";
+@import "organisms/pers-bg-overlay-tiles";
+@import "organisms/pers-mobile-app";
+

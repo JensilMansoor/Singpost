@@ -1,25 +1,27 @@
 // Main colors from singpost
 $color-black: #000000;
 $color-black-2: #000b19;
-$color-blue-1: #002350;
-$color-blue-2: #24549d;
-$color-blue-3: #0777b5;
-$color-red: #c31126;
-$color-grey-5: #f0f1f1;
-$color-grey-6: #fafafa;
-$color-white: #ffffff;
-
-// Additional colors from singpost
-$color-blue-4: #1e8cbf;
-$color-blue-5: #b9e5fa;
-$color-blue-6: #e2f3fc;
 $color-grey-1: #333333;
 $color-grey-2: #404042;
 $color-grey-3: #57585b;
 $color-grey-4: #cccccc;
 
+$color-blue-1: #002350;
+$color-blue-2: #24549d;
+$color-blue-3: #0777b5;
+$color-blue-4: #1e8cbf;
+$color-blue-5: #b9e5fa;
+$color-blue-6: #e2f3fc;
+
 $color-blue-med-1: #458aba;
 $color-blue-med-2: #c2e4f8;
+
+$color-grey-5: #f0f1f1;
+$color-grey-6: #fafafa;
+$color-white: #ffffff;
+
+$color-red: #c31126;
+// Additional colors from singpost
 
 // Gradients from singpost
 @mixin dark-blue-gradient($deg){

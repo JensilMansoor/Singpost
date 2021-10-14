@@ -3,8 +3,7 @@ body {
     @include font-univers-55;
     color: $color-black;
     font-size: 14px;
-    line-height: 18px;
-    font-weight: $font-normal;
+    line-height: 1.3;
     letter-spacing: 0.5px;
     width: 100%;
     min-height: 100%;
@@ -71,39 +70,55 @@ h6,
 .sgp-h5,
 .sgp-h6{
     @include font-univers-65;
+    line-height: 1.3;
 }
 
 
 .sgp-h1,
 .sgp-h2 {
     font-size: 36px;
-    line-height: 50px;
+    // line-height: 50px;
 }
 .sgp-h3 {
     font-size: 21px;
-    line-height: 28px;
+    // line-height: 28px;
 }
 .sgp-h4 {
     font-size: 18px;
-    line-height: 25px;
+    // line-height: 25px;
 }
 .sgp-h5 {
     font-size: 16px;
-    line-height: 21px;
+    // line-height: 21px;
 }
 .sgp-h6 {
     font-size: 14px;
-    line-height: 18px;
+    // line-height: 18px;
 }
 .sgp-small-title{
     font-size: 16px;
-    line-height: 21px;
+    // line-height: 21px;
     color: $color-red;
     letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sgp-progress {
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #C2E4F8;
+    background-image: linear-gradient(to right, #24549D, #24549D);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease-in-out;
+    margin-top: $spacer-3;
+    display: none;
 }
 
 @include mobile-tablet {
-    .progress {
+    .sgp-progress {
         display: block;
     }
 }
