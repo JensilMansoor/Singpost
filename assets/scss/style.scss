@@ -9,7 +9,15 @@
 @import "base/dev";
 // Atom btn-primary
 @import "atom/buttons";
+
 // Molecules
+@import "molecules/bg-overlay-tile";
+@import "molecules/sg-locate";
+
 // organisms
-@import "organisms/home-banner";
 @import "organisms/header";
+@import "organisms/quick-tool-tab";
+@import "organisms/main-banner";
+@import "organisms/pers-bg-overlay-tiles";
+@import "organisms/pers-mobile-app";
+

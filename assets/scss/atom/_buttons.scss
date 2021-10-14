@@ -81,14 +81,12 @@
         height: 9px;
         margin-left: $spacer-2;
         margin-top: -3px;
-        path{
-            stroke: $color-blue-2;
-        }
+        fill: $color-blue-2;
     }
     &:hover {
         color: $color-red;
-        svg path{
-            stroke: $color-red;
+        svg {
+            fill: $color-red;
         }
     }
     &--box{
@@ -100,17 +98,13 @@
         svg {
             margin-right: $spacer-2;
             margin-left: $spacer-0;
-            path{
-                stroke: $color-white;
-            }
+            fill: $color-white;
         }
         &:hover{
             background-color: $color-red;
             color: $color-white;
             svg{
-                path{
-                    stroke: $color-white;
-                }
+                fill: $color-white;
             }
         }
         &.disabled{
