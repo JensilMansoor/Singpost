@@ -1,11 +1,14 @@
 @mixin font-univers-45 {
     font-family: 'Univers-45', sans-serif;
+    font-weight: $font-light;
 }
 @mixin font-univers-55 {
     font-family: 'Univers-55', sans-serif;
+    font-weight: $font-normal;
 }
 @mixin font-univers-65 {
     font-family: 'Univers-65', sans-serif;
+    font-weight: $font-bold;
 }
 
 $font-normal: normal;
