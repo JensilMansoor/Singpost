@@ -1,0 +1,52 @@
+.sgp-mob-app{
+    display: flex;
+    .sgp-locate,
+    &__sec{
+        width: 50%;
+    }
+    &__sec{
+        margin-left: $spacer-3;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner{
+        background-size: cover;
+        background-position: center;
+        margin-top: auto;
+    }
+    &__mob-img{
+        width: 60%;
+        max-width: 320px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__cnt{
+        color: $color-white;
+        padding: $spacer-4;
+        .sgp-small-title{
+            color: $color-white;
+            margin-bottom: $spacer-3;
+        }
+        .sgp-h2{
+            margin-bottom: $spacer-2;
+        }
+    }
+    &__sgp-icon{
+        width: 160px;
+        margin-left: auto;
+        transform: translateY(-50%);
+    }
+    &__btn-sec{
+        display: flex;
+        margin-top: $spacer-5;
+    }
+    &__btn{
+        display: block;
+        margin-right: $spacer-3;
+        img{
+            width: 170px;
+        }
+    }
+}
