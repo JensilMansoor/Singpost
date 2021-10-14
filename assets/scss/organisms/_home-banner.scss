@@ -1,0 +1,119 @@
+.sgp-banner {
+    .sgp-h2 {
+        color: #fff;
+        margin-bottom: $spacer-5;
+        max-width: 600px;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        padding-top: $spacer-3;
+        padding-bottom: 100px;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.slick-slide {
+            display: flex;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    // slick reset
+    .slick-dots {
+        display: none !important;
+    }
+    &.slick-dotted {
+        margin-bottom: $spacer-0;
+    }
+    &__arrow {
+        font-size: 0;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.64 31.35'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 11q%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='M14,31.35,29.64,15.68,14,0,11.9,2.17,25.29,15.68,11.9,29.18Z'/%3E%3Cpath class='cls-1' d='M27.46,14.08H0v3.2H27.46Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        &.slick-disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+    &__next {
+        margin-left: $spacer-4;
+    }
+    &__prev {
+        transform: rotate(180deg);
+    }
+    &__slide-control {
+        min-width: 200px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 120px;
+        right: 32px;
+        padding-bottom: $spacer-1;
+        border-bottom: 1px solid #fff;
+        z-index: 1;
+    }
+    &__pagenation {
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 3px
+    }
+    &__pagenation-bold {
+        @include font-univers-65;
+        font-size: 16px;
+    }
+    &__arrow-sec {
+        margin-left: $spacer-5;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-banner {
+        &__item {
+            &::before {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-banner {
+        .h2 {
+            font-size: 26px;
+            line-height: 32px;
+        }
+        &__item {
+            padding-bottom: 50px;
+        }
+        &__slide-control {
+            bottom: 70px;
+            left: 16px;
+            right: auto;
+        }
+        &__inner {
+            padding-bottom: $spacer-5;
+        }
+    }
+}
+
+@include ie-fix {
+    .sgp-banner__item {
+        height: 500px;
+    }
+}
