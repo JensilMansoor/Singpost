@@ -198,6 +198,205 @@
             padding-right: $spacer-0;
         }
     }
+    &__mega-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-black-2;
+        color: $color-white;
+        z-index: 999;
+        overflow-x: auto;
+        .content-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+    }
+    &__mega-menu-close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+    }
+    &__mega-close-icon {
+        width: 22px;
+        height: auto;
+    }
+    &__mega-col-1 {
+        padding: $spacer-5 $spacer-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        min-width: 150px;
+    }
+    &__mega-logo-link {
+        display: block;
+        margin-bottom: $spacer-4;
+    }
+    &__mega-logo {
+        width: 100px;
+        height: auto;
+        margin: $spacer-0 auto;
+    }
+    &__qick-tools {
+        &.active {
+            .sgp-header__qick-tools-outer {
+                max-height: 5000px;
+            }
+            .sgp-header__qick-btn {
+                .sgp-header__qick-btn-icon {
+                    display: none;
+                }
+                .sgp-header__qick-btn-close-icon {
+                    display: block;
+                }
+            }
+        }
+    }
+    &__qick-tools-outer {
+        overflow: hidden;
+        max-height: 0;
+    }
+    &__qick-btn {
+        display: block;
+        margin: $spacer-0 auto;
+        padding-top: $spacer-3;
+    }
+    &__qick-btn-icon {
+        width: 30px;
+        height: auto;
+    }
+    &__qick-btn-close-icon {
+        width: 18px;
+        height: auto;
+        display: none;
+    }
+    &__qick-tools-link {
+        display: block;
+        text-align: center;
+        opacity: 0.5;
+        margin-bottom: $spacer-4;
+        transition: all 0.3s;
+        &:hover {
+            opacity: 1;
+        }
+        .sgp-header__qick-btn-icon {
+            margin-bottom: $spacer-2;
+        }
+    }
+    &__qick-btn-icon {
+        margin: $spacer-0 auto;
+    }
+    &__qick-tools-txt {
+        font-size: 12px;
+    }
+    &__mega-menu-main {
+        padding: $spacer-6 $spacer-0 $spacer-6 $spacer-6;
+        width: 100%;
+        display: flex;
+    }
+    &__mega-home-menu {
+        width: 33.33%;
+        font-size: 18px;
+        @include font-univers-65;
+        color: $color-grey-4;
+    }
+    &__menu-link {
+        color: $color-grey-4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: $spacer-4;
+        padding-bottom: $spacer-1;
+        position: relative;
+        transition: all 0.3s;
+        svg {
+            width: 8px;
+            height: 13px;
+            path {
+                fill: $color-grey-4;
+                transition: all 0.3s;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0;
+            background-color: $color-white;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        &:hover,
+        &.active {
+            color: $color-white;
+            svg {
+                path {
+                    fill: $color-white;
+                }
+            }
+            &::after {
+                width: 50px;
+            }
+        }
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+    }
+    &__home-head {
+        margin-bottom: $spacer-5;
+    }
+    &__mega-sub-menu-1 {
+        width: 33.33%;
+        padding: 104px $spacer-5 $spacer-0;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        display: none;
+        &:first-child {
+            padding-top: $spacer-0;
+            padding-left: $spacer-0;
+            border-left: 0;
+            display: block;
+        }
+        &.active {
+            display: block;
+        }
+        .sgp-header__menu-link {
+            svg {
+                width: 6px;
+                height: 10px;
+            }
+        }
+    }
+    &__mega-menu-back {
+        color: $color-white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacer-4;
+        svg {
+            width: 8px;
+            height: 13px;
+            margin-right: $spacer-3;
+        }
+    }
+    &__mega-sub-title {
+        display: flex;
+        align-items: center;
+        padding-bottom: $spacer-2;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        margin-bottom: $spacer-4;
+        @include font-univers-65;
+        font-size: 18px;
+        svg {
+            width: 15px;
+            height: 15px;
+            margin-left: $spacer-2;
+        }
+    }
 }
 
 @include mobile-tablet {
