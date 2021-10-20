@@ -1,0 +1,18 @@
+.sgp-header-arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $spacer-4;
+    &__head-sec{
+        .sgp-h2{
+            margin-bottom: $spacer-0;
+        }
+        .sgp-small-title{
+            margin-bottom: $spacer-2;
+        }
+    }
+    .sgp-arrow{
+        margin-bottom: $spacer-1;
+        margin-left: $spacer-3;
+    }
+}

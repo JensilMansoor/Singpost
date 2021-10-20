@@ -1,0 +1,45 @@
+.sgp-arrow{
+    display: flex;
+    align-items: center;
+    &__prev,
+    &__next{
+        font-size: 0;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        &.slick-disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+    &__prev {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg transform='translate(-905 -492)'%3E%3Cpath d='M9.434,1.066a.6.6,0,0,1-.369.123.443.443,0,0,1-.328-.123L.164-7.547A.39.39,0,0,1,0-7.875.39.39,0,0,1,.164-8.2l8.572-8.613a.443.443,0,0,1,.328-.123.6.6,0,0,1,.369.123l.82.82a.443.443,0,0,1,.123.328.6.6,0,0,1-.123.369L3.9-8.941H17.883a.475.475,0,0,1,.349.144.475.475,0,0,1,.144.349V-7.3a.475.475,0,0,1-.144.349.475.475,0,0,1-.349.144H3.9L10.254-.451a.6.6,0,0,1,.123.369.443.443,0,0,1-.123.328Z' transform='translate(921 525)' fill='%2324549d'/%3E%3Cg transform='translate(905 492)' fill='none' stroke='%2324549d' stroke-width='1'%3E%3Crect width='50' height='50' rx='25' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='49' height='49' rx='24.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    &__next {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg transform='translate(-905 -492)'%3E%3Cpath d='M8.941-16.816a.6.6,0,0,1,.369-.123.443.443,0,0,1,.328.123L18.211-8.2a.39.39,0,0,1,.164.328.39.39,0,0,1-.164.328L9.639,1.066a.443.443,0,0,1-.328.123.6.6,0,0,1-.369-.123l-.82-.82A.443.443,0,0,1,8-.082a.6.6,0,0,1,.123-.369l6.357-6.357H.492a.475.475,0,0,1-.349-.144A.475.475,0,0,1,0-7.3V-8.449A.475.475,0,0,1,.144-8.8a.475.475,0,0,1,.349-.144H14.479L8.121-15.3A.6.6,0,0,1,8-15.668.443.443,0,0,1,8.121-16Z' transform='translate(921 525)' fill='%2324549d'/%3E%3Cg transform='translate(905 492)' fill='none' stroke='%2324549d' stroke-width='1'%3E%3Crect width='50' height='50' rx='25' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='49' height='49' rx='24.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        margin-left: $spacer-4;
+    }
+}
+
+@include mobile-tablet{
+    .sgp-arrow{
+        &__prev,
+        &__next {
+            width: 30px;
+            height: 30px;
+        }
+        &__next{
+            margin-left: $spacer-3;
+        }
+    }
+}
+
+@include mobile{
+    .sgp-arrow{
+        display: none;
+    }
+}
