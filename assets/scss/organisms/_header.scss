@@ -208,15 +208,20 @@
         color: $color-white;
         z-index: 999;
         overflow-x: auto;
+        display: none;
         .content-wrapper {
             display: flex;
             min-height: 100vh;
         }
+        &.active {
+            display: block;
+        }
     }
     &__mega-menu-close {
-        position: absolute;
+        position: fixed;
         right: 32px;
         top: 32px;
+        z-index: 1;
     }
     &__mega-close-icon {
         width: 22px;
@@ -301,6 +306,12 @@
         font-size: 18px;
         @include font-univers-65;
         color: $color-grey-4;
+        .sgp-header__menu-link {
+            @include font-univers-65;
+        }
+        &.hide {
+            display: none;
+        }
     }
     &__menu-link {
         color: $color-grey-4;
@@ -350,7 +361,14 @@
     &__home-head {
         margin-bottom: $spacer-5;
     }
-    &__mega-sub-menu-1 {
+    &__mega-sub-menu-outer {
+        display: none;
+        width: 100%;
+        &.active {
+            display: flex;
+        }
+    }
+    &__mega-sub-menu {
         width: 33.33%;
         padding: 104px $spacer-5 $spacer-0;
         border-left: 1px solid rgba(255, 255, 255, 0.4);
@@ -360,6 +378,10 @@
             padding-left: $spacer-0;
             border-left: 0;
             display: block;
+            .sgp-header__mega-menu-back,
+            .sgp-header__mega-sub-title {
+                display: flex;
+            }
         }
         &.active {
             display: block;
@@ -374,9 +396,9 @@
     &__mega-menu-back {
         color: $color-white;
         font-size: 16px;
-        display: flex;
+        display: none;
         align-items: center;
-        margin-bottom: $spacer-4;
+        margin-bottom: $spacer-5;
         svg {
             width: 8px;
             height: 13px;
@@ -384,7 +406,7 @@
         }
     }
     &__mega-sub-title {
-        display: flex;
+        display: none;
         align-items: center;
         padding-bottom: $spacer-2;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -395,6 +417,65 @@
             width: 15px;
             height: 15px;
             margin-left: $spacer-2;
+        }
+    }
+    &__catgry {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 320px;
+        &.hide {
+            display: none;
+        }
+    }
+    &__catgry-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 33.33%;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 35, 80, 0.7);
+        }
+        &:hover {
+            .sgp-btn {
+                text-decoration: underline;
+                svg {
+                    circle {
+                        stroke: $color-red;
+                        fill: $color-red;
+                    }
+                    path {
+                        fill: $color-white;
+                    }
+                }
+            }
+        }
+        .sgp-btn {
+            z-index: 1;
+            position: relative;
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+        }
+    }
+    &__footer {
+        display: none;
+    }
+}
+
+@media (min-width:1920px) {
+    .sgp-header {
+        &__catgry {
+            width: 25%;
         }
     }
 }
@@ -426,6 +507,104 @@
         &__menu-sec {
             display: none;
         }
+        &__mega-menu-close {
+            right: 24px;
+            top: 24px;
+            &.hide {
+                display: none;
+            }
+        }
+        &__mega-close-icon {
+            width: 18px;
+        }
+        &__mega-menu {
+            padding-bottom: $spacer-4;
+            .content-wrapper {
+                flex-direction: column;
+                min-height: calc(100vh - 24px);
+            }
+        }
+        &__qick-tools {
+            display: none;
+        }
+        &__mega-col-1 {
+            padding: $spacer-3 $spacer-0;
+            border-right: 0;
+        }
+        &__mega-logo-link {
+            margin-bottom: $spacer-0;
+        }
+        &__mega-logo {
+            margin: $spacer-0;
+        }
+        &__catgry {
+            position: unset;
+            display: flex;
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+            padding-bottom: $spacer-3;
+            margin-top: auto;
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background-color: $color-blue-5;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color-blue-2;
+                border-radius: 10px;
+            }
+        }
+        &__catgry-item {
+            height: 180px;
+        }
+        &__mega-menu-main {
+            padding: $spacer-4 $spacer-0 $spacer-6;
+        }
+        &__mega-home-menu {
+            width: 100%;
+        }
+        &__mega-sub-menu {
+            background-color: $color-black-2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: $spacer-5;
+            overflow-y: auto;
+            border-left: 0;
+            &:first-child {
+                padding: $spacer-5;
+            }
+        }
+        &__mega-menu-back,
+        &__mega-sub-title {
+            display: flex;
+        }
+        &__footer {
+            margin-top: $spacer-5;
+            display: block;
+        }
+        &__footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: $spacer-3;
+        }
+        &__social {
+            display: flex;
+            padding-left: $spacer-3;
+        }
+        &__social-links {
+            display: block;
+            padding: $spacer-0 $spacer-3;
+        }
+        &__footer-note {
+            text-align: center;
+        }
     }
 }
 
@@ -441,6 +620,18 @@
         &__top-links {
             width: 50%;
             text-align: center;
+        }
+        &__mega-home-menu {
+            font-size: 16px;
+        }
+        &__mega-sub-menu {
+            padding: $spacer-5 $spacer-3;
+            &:first-child {
+                padding: $spacer-5 $spacer-3;
+            }
+        }
+        &__catgry-item {
+            min-width: 220px;
         }
     }
 }
