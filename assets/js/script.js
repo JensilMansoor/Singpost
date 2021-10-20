@@ -20,11 +20,58 @@ $(".sgp-header__menu-drop-link--tab").click(function() {
 });
 // Header menu dropdown tab End
 
-// mega menu quick link start
+// mega menu start
+
+$(".sgp-header__menu-btn-icon--hamberger").click(function() {
+    $(".sgp-header__mega-menu").addClass("active");
+    $("body").css("overflow", "hidden");
+});
+
+$(".sgp-header__mega-menu-close").click(function() {
+    $(".sgp-header__mega-menu").removeClass("active");
+    $("body").removeAttr("style");
+});
+
+
+// menu quick links
 $(".sgp-header__qick-btn").click(function() {
     $(this).parent().toggleClass("active");
 });
-// mega menu quick link end
+
+$(".sgp-header__mega-home-menu .sgp-header__menu-link").click(function() {
+    $(".sgp-header__catgry").addClass("hide");
+    $(this).parent().addClass("hide");
+    let id = $(this)[0].getAttribute("data-id");
+    $(".sgp-header__mega-sub-menu-outer[data-content=" + id + "]").addClass("active");
+});
+
+$(".sgp-header__mega-sub-menu .sgp-header__menu-link").click(function() {
+    $(".sgp-header__mega-sub-menu .sgp-header__menu-link").removeClass("active");
+    $(this).addClass("active");
+    $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu").removeClass("active");
+    let id = $(this)[0].getAttribute("data-id");
+    $(".sgp-header__mega-sub-menu[data-content=" + id + "]").addClass("active");
+});
+
+$(".sgp-header__mega-menu-back--one").click(function() {
+    $(this).parent().closest(".sgp-header__mega-sub-menu-outer").removeClass("active");
+    $(".sgp-header__mega-home-menu, .sgp-header__catgry").removeClass("hide");
+});
+$(".sgp-header__mega-menu-back--two").click(function() {
+    $(this).parent().removeClass("active");
+});
+
+if (window.matchMedia("screen and (max-width: 1023px)").matches) {
+    $(".sgp-header__mega-menu").on("scroll", function() {
+        if ($(".sgp-header__mega-menu").scrollTop() > 50) {
+            $(".sgp-header__mega-menu-close").addClass("hide");
+        } else {
+            $(".sgp-header__mega-menu-close").removeClass("hide");
+        }
+    });
+};
+
+// mega menu end
 
 // Notice Bar Close End
 $(document).ready(function() {
