@@ -50,6 +50,9 @@
         z-index: 5;
         color: #fff;
         padding: $spacer-4;
+        .sgp-small-title{
+            color: $color-white;
+        }
     }
     &__head {
         font-size: 18px;
