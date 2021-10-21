@@ -1,10 +1,10 @@
 .sgp-inline-bnr {
-    padding: $spacer-6 $spacer-0;
     margin-bottom: -130px;
     z-index: 1;
     position: relative;
     &__outer {
         display: flex;
+        box-shadow: 0px 3px 32px rgba(0, 0, 0, 0.16);
     }
     &__bg {
         width: 50%;
@@ -13,21 +13,18 @@
         background-position: center;
     }
     &__cnt {
-        color: #fff;
         width: 50%;
-        background: transparent linear-gradient(99deg, #24549D 0%, #0A224D 100%) 0% 0% no-repeat padding-box;
         padding: $spacer-5;
     }
     &__title {
         font-size: 20px;
-        line-height: 26px;
         margin-bottom: $spacer-4;
     }
 }
 
 @include mobile {
     .sgp-inline-bnr {
-        padding: $spacer-4 $spacer-0;
+        padding: $spacer-5 $spacer-0;
         margin-bottom: $spacer-0;
         &__outer {
             display: block;
@@ -42,7 +39,6 @@
         }
         &__title {
             font-size: 16px;
-            line-height: 22px;
             margin-bottom: $spacer-3;
         }
     }
