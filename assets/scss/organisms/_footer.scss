@@ -1,0 +1,179 @@
+.sgp-footer {
+    color: $color-white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 140px $spacer-0 $spacer-6;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__wrapper {
+        position: relative;
+        display: flex;
+        margin-bottom: $spacer-6;
+    }
+    &__sec-1 {
+        min-width: 25%;
+    }
+    &__sec-2 {
+        width: 75%;
+        padding-left: $spacer-5;
+        margin-left: $spacer-5;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    &__logo {
+        display: block;
+        width: 200px;
+        margin-bottom: $spacer-5;
+    }
+    &__head {
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: $spacer-3;
+        margin-bottom: $spacer-2;
+    }
+    &__text,
+    &__link {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-grey-8;
+    }
+    &__link {
+        display: block;
+        margin-top: $spacer-1;
+        &:nth-of-type(1) {
+            margin-top: $spacer-3;
+        }
+    }
+    &__email {
+        font-size: 14px;
+        padding: $spacer-2 $spacer-4;
+        border-radius: 0;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        display: block;
+        width: 100%;
+        margin-bottom: $spacer-4;
+        &::placeholder {
+            color: $color-grey-8;
+        }
+    }
+    &__social {
+        margin-top: $spacer-3;
+    }
+    &__social-inner {
+        margin-left: $spacer-3;
+    }
+    &__social-inner,
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+    &__social-link {
+        height: 15px;
+        margin-left: $spacer-4;
+        display: block;
+        &:hover {
+            transform: scale(1.12);
+            transition: 0.3s;
+        }
+        &:last-child {
+            .sgp-footer__social-icon {
+                margin-top: 2px;
+            }
+        }
+    }
+    &__social-icon {
+        height: 15px;
+        width: auto;
+    }
+    &__link-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 370px;
+        overflow: auto;
+        margin: (-$spacer-2) (-$spacer-2);
+    }
+    &__link-sec {
+        margin: $spacer-2 $spacer-2 $spacer-3;
+    }
+    &__quick-wrapper {
+        font-size: 14px;
+        line-height: 18px;
+        position: relative;
+    }
+    &__quick-inner {
+        margin: $spacer-0 (-$spacer-3);
+    }
+    &__quick-link {
+        color: $color-grey-8;
+        white-space: nowrap;
+        margin: $spacer-1 $spacer-3;
+        position: relative;
+        display: inline-block;
+        &::before {
+            content: '';
+            background-color: #fff;
+            width: 1px;
+            height: 14px;
+            position: absolute;
+            top: 50%;
+            left: (-$spacer-3);
+            transform: translateY(-50%);
+        }
+        &:hover {
+            color: #fff;
+        }
+        &:first-child::before {
+            content: none;
+        }
+    }
+    &__copyright {
+        margin-bottom: $spacer-2;
+    }
+}
+
+@media(max-width: 1249px) and (min-width: 1024px) {
+    .sgp-footer__link-wrapper {
+        max-height: 600px;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-footer {
+        &__sec-2 {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-footer {
+        padding: $spacer-6 $spacer-0;
+        &__logo {
+            width: 160px;
+            margin-bottom: $spacer-4;
+        }
+        &__wrapper {
+            margin-bottom: $spacer-4;
+        }
+        &__quick-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        &__copyright {
+            margin-top: $spacer-4;
+            margin-bottom: $spacer-0;
+        }
+    }
+}
