@@ -15,6 +15,15 @@
         padding: 12px $spacer-2;
         width: 100%;
         min-width: 150px;
+        display: flex;
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: $spacer-2;
+        }
+        svg:hover{
+            fill: #fff;
+        }
         }
         &__btn:hover{
                 background-color: $color-blue-2;
@@ -30,6 +39,7 @@
                 background-color: $color-blue-2;
                 color: $color-white;
                 border: 1px solid $color-blue-2;
+                font-size: 12px;
             }
         }    
         &__tab{
