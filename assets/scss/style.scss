@@ -9,19 +9,20 @@
 @import "base/dev";
 // Atom btn-primary
 @import "atom/buttons";
-
 // Molecules
 @import "molecules/sgp-slider-arrows";
 @import "molecules/header-with-arrows";
 @import "molecules/bg-overlay-tile";
 @import "molecules/sgp-locate";
 @import "molecules/sgp-tile";
-
 // organisms
 @import "organisms/header";
+@import "organisms/notice-bar";
+@import "organisms/inline-bnr";
 @import "organisms/quick-tool-tab";
 @import "organisms/main-banner";
 @import "organisms/pers-home-bg-overlay-tiles";
 @import "organisms/pers-home-mobile-app";
 @import "organisms/pers-home-featured-news";
+@import "organisms/footer";
 @import "organisms/registered-service";

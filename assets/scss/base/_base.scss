@@ -114,7 +114,7 @@ h6,
     height: 4px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #C2E4F8;
+    // background-color: #C2E4F8;
     background-image: linear-gradient(to right, #24549D, #24549D);
     background-repeat: no-repeat;
     background-size: 0 100%;
@@ -122,10 +122,38 @@ h6,
     margin-top: $spacer-3;
     display: none;
 }
+.slick-dots{
+    display: flex;
+    border-radius: 5px;
+    background-color: $color-blue-med-2;
+    overflow: hidden;
+    bottom: -16px;
+    li{
+        flex: 1;
+        height: 4px;
+        margin: $spacer-0;
+        transition: 0.3s;
+        &.slick-active{
+            background-color: $color-blue-2;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            padding: $spacer-0;
+            &::before{
+                content: none;
+            }
+        }
+    }
+}
 
 @include mobile-tablet {
     .sgp-progress {
         display: block;
+    }
+    .sgp-h1,
+    .sgp-h2 {
+        font-size: 32px;
     }
 }
 

@@ -25,11 +25,14 @@ $(".sgp-header__menu-drop-link--tab").click(function() {
 $(".sgp-header__menu-btn-icon--hamberger").click(function() {
     $(".sgp-header__mega-menu").addClass("active");
     $("body").css("overflow", "hidden");
+    $(".sgp-header__mega-home-menu, .sgp-header__catgry").removeClass("hide");
 });
 
 $(".sgp-header__mega-menu-close").click(function() {
     $(".sgp-header__mega-menu").removeClass("active");
+    $(".sgp-header__mega-sub-menu-outer").removeClass("active");
     $("body").removeAttr("style");
+    $(".sgp-header__mega-sub-menu--one, .sgp-header__mega-sub-menu--two, .sgp-header__mega-sub-menu--three, .sgp-header__mega-sub-menu--one .sgp-header__menu-link").removeClass("active");
 });
 
 
@@ -45,12 +48,30 @@ $(".sgp-header__mega-home-menu .sgp-header__menu-link").click(function() {
     $(".sgp-header__mega-sub-menu-outer[data-content=" + id + "]").addClass("active");
 });
 
-$(".sgp-header__mega-sub-menu .sgp-header__menu-link").click(function() {
-    $(".sgp-header__mega-sub-menu .sgp-header__menu-link").removeClass("active");
+// $(".sgp-header__mega-sub-menu .sgp-header__menu-link").click(function() {
+//     $(".sgp-header__mega-sub-menu .sgp-header__menu-link").removeClass("active");
+//     $(this).addClass("active");
+//     $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu").removeClass("active");
+//     let id = $(this)[0].getAttribute("data-id");
+//     $(".sgp-header__mega-sub-menu[data-content=" + id + "]").addClass("active");
+// });
+
+$(".sgp-header__mega-sub-menu--one .sgp-header__menu-link").click(function() {
+    $(".sgp-header__mega-sub-menu--one .sgp-header__menu-link").removeClass("active");
+    $(".sgp-header__mega-sub-menu--three").removeClass("active");
+    $(".sgp-header__mega-sub-menu--two .sgp-header__menu-link").removeClass("active");
     $(this).addClass("active");
-    $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu").removeClass("active");
+    $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu--two").removeClass("active");
     let id = $(this)[0].getAttribute("data-id");
-    $(".sgp-header__mega-sub-menu[data-content=" + id + "]").addClass("active");
+    $(".sgp-header__mega-sub-menu--two[data-content=" + id + "]").addClass("active");
+});
+
+$(".sgp-header__mega-sub-menu--two .sgp-header__menu-link").click(function() {
+    $(".sgp-header__mega-sub-menu--two .sgp-header__menu-link").removeClass("active");
+    $(this).addClass("active");
+    $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu--three").removeClass("active");
+    let id = $(this)[0].getAttribute("data-id");
+    $(".sgp-header__mega-sub-menu--three[data-content=" + id + "]").addClass("active");
 });
 
 $(".sgp-header__mega-menu-back--one").click(function() {
@@ -61,9 +82,43 @@ $(".sgp-header__mega-menu-back--two").click(function() {
     $(this).parent().removeClass("active");
 });
 
+$(".sgp-header__mega-menu-back--three").click(function() {
+    $(this).parent().removeClass("active");
+});
+
 if (window.matchMedia("screen and (max-width: 1023px)").matches) {
     $(".sgp-header__mega-menu").on("scroll", function() {
         if ($(".sgp-header__mega-menu").scrollTop() > 50) {
+            $(".sgp-header__mega-menu-close").addClass("hide");
+        } else {
+            $(".sgp-header__mega-menu-close").removeClass("hide");
+        }
+    });
+};
+
+if (window.matchMedia("screen and (max-width: 1023px)").matches) {
+    $(".sgp-header__mega-sub-menu--one").on("scroll", function() {
+        if ($(".sgp-header__mega-sub-menu--one").scrollTop() > 50) {
+            $(".sgp-header__mega-menu-close").addClass("hide");
+        } else {
+            $(".sgp-header__mega-menu-close").removeClass("hide");
+        }
+    });
+};
+
+if (window.matchMedia("screen and (max-width: 1023px)").matches) {
+    $(".sgp-header__mega-sub-menu--two").on("scroll", function() {
+        if ($(".sgp-header__mega-sub-menu--two").scrollTop() > 50) {
+            $(".sgp-header__mega-menu-close").addClass("hide");
+        } else {
+            $(".sgp-header__mega-menu-close").removeClass("hide");
+        }
+    });
+};
+
+if (window.matchMedia("screen and (max-width: 1023px)").matches) {
+    $(".sgp-header__mega-sub-menu--three").on("scroll", function() {
+        if ($(".sgp-header__mega-sub-menu--three").scrollTop() > 50) {
             $(".sgp-header__mega-menu-close").addClass("hide");
         } else {
             $(".sgp-header__mega-menu-close").removeClass("hide");

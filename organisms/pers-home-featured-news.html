@@ -112,9 +112,7 @@
                     </div>
                 </div>
     
-                <!-- <div class="sgp-progress" id="locateProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                    <span class="locateSliderLabel sr-only"></span>
-                </div> -->
+                <!-- <div class="sgp-progress" id="featuredNewsProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div> -->
     
             </div>
             
@@ -135,21 +133,30 @@
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
+
         $(".sgp-pers-featured__slider").slick({
             arrows: true,
+            dots: true,
             prevArrow: $('.sgp-pers-featured__prev'),
             nextArrow: $('.sgp-pers-featured__next'),
             slidesToScroll: 1,
             slidesToShow: 3,
             speed: 300,
             infinite: true,
-            responsive: [{
+            slide: ".sgp-tile",
+            responsive: [
+            {
+            breakpoint: 600,
+                settings: {
+                    dots: true
+                }
+            },{
             breakpoint: 767,
-            settings: {
-                slidesToShow: 2
-            }
+                settings: {
+                    slidesToShow: 2
+                }
             }, {
-                breakpoint: 600,
+                breakpoint: 567,
                 settings: {
                     slidesToShow: 1
                 }
