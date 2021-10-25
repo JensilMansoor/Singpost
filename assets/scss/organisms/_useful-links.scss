@@ -1,0 +1,13 @@
+.sgp-useful-links {
+    background-color: $color-grey-7;
+    padding: $spacer-6 $spacer-0;
+    .sgp-tile {
+        background-color: $color-white;
+    }
+}
+
+@include mobile {
+    .sgp-useful-links {
+        padding: $spacer-5 $spacer-0;
+    }
+}

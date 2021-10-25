@@ -1,6 +1,12 @@
 .sgp-tile{
     transition: 0.2s;
     background-color: $color-grey-7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &.slick-slide{
+        display: flex;
+    }
     &:hover{
         box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
     }
@@ -18,6 +24,12 @@
     }
     &__cnt-sec{
         padding: $spacer-4;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .sgp-btn{
+            margin-top: auto;
+        }
     }
     &__small-title{
         font-size: 14px;
@@ -52,6 +64,16 @@
     .sgp-tile{
         &__cnt-sec{
             padding: $spacer-3;
+        }
+    }
+}
+
+@include ie-fix{
+    .sgp-tile{
+        align-items: stretch;
+        &__img-sec{
+            overflow: hidden;
+            min-height: 210px;
         }
     }
 }

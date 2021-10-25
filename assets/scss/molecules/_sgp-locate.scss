@@ -1,6 +1,9 @@
 .sgp-locate {
     &__inner {
         position: relative;
+        &.slick-slider{
+            margin-bottom: $spacer-0;
+        }
     }
     &__img {
         width: 100%;
@@ -67,9 +70,6 @@
 
 @include mobile-tablet {
     .sgp-locate {
-        .sgp-progress {
-            display: none;
-        }
         &__sec-2 {
             padding: $spacer-3;
         }
@@ -86,11 +86,11 @@
 
 @include mobile {
     .sgp-locate {
-        .sgp-progress {
-            display: block;
+        .slick-dots {
+            display: flex;
             margin: $spacer-0 $spacer-3 $spacer-0;
             width: auto;
-            position: relative;
+            position: static;
             z-index: 1;
             transform: translateY(-24px);
         }

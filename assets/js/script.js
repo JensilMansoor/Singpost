@@ -130,8 +130,15 @@ if (window.matchMedia("screen and (max-width: 1023px)").matches) {
 
 // Notice Bar Close End
 $(document).ready(function() {
+    var noticeBar = document.querySelector(".sgp-notice")
+    if ((window.matchMedia("(min-width: 601px)").matches) && noticeBar) {
+        $("body").addClass("sgp-notice__active");
+    } else {
+        $("body").removeClass("sgp-notice__active");
+    }
     $(".sgp-notice__close-btn").click(function() {
         $(".sgp-notice").addClass("hide");
+        $("body").removeClass("sgp-notice__active");
     });
 
     $('.sgp-notice__slider').slick({
@@ -185,64 +192,9 @@ $(".sgp-banner").slick({
     slide: '.sgp-banner__item'
 });
 // Home Banner Slider settings End
-// Help sec Slider settings Start
-$(document).ready(function() {
-    var $slider = $(".sgp-help-tile__slider");
-    var $helpProgressBar = $("#helpProgress");
-    var $helpProgressBarLabel = $("#helpSliderLabel");
-
-    $slider.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
-        var calc = (nextSlide / (slick.slideCount - 1)) * 100;
-
-        $helpProgressBar
-            .css("background-size", calc + "% 100%")
-            .attr("aria-valuenow", calc);
-
-        $helpProgressBarLabel.text(calc + "% completed");
-    });
-
-    $slider.slick({
-        dots: false,
-        infinite: false,
-        arrows: false,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-            }
-        }, ]
-    });
-});
-// Help sec Slider settings End
 
 // SG-locate Slider settings start
-var $locateSlider = $(".sgp-locate__inner");
-var $locateProgressBar = $("#locateProgress");
-var $locateProgressBarLabel = $("#locateSliderLabel");
-
-$locateSlider.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
-    var calc = (nextSlide / (slick.slideCount - 1)) * 100;
-
-    $locateProgressBar
-        .css("background-size", calc + "% 100%")
-        .attr("aria-valuenow", calc);
-
-    $locateProgressBarLabel.text(calc + "% completed");
-});
-
-$locateSlider.slick({
+$(".sgp-locate__inner").slick({
     arrows: true,
     prevArrow: $('.sgp-locate__prev'),
     nextArrow: $('.sgp-locate__next'),
@@ -251,5 +203,126 @@ $locateSlider.slick({
     speed: 300,
     infinite: true,
     slide: '.sgp-locate__item',
+    responsive: [{
+        breakpoint: 600,
+        settings: {
+            dots: true
+        }
+    }]
 });
 // SG-locate Slider settings End
+
+//Personalised home featured news slider Start
+$(".sgp-pers-featured__slider").slick({
+    arrows: true,
+    dots: true,
+    prevArrow: $('.sgp-pers-featured__prev'),
+    nextArrow: $('.sgp-pers-featured__next'),
+    slidesToScroll: 1,
+    slidesToShow: 3,
+    speed: 300,
+    infinite: true,
+    slide: ".sgp-tile",
+    responsive: [{
+        breakpoint: 600,
+        settings: {
+            dots: true
+        }
+    }, {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 2
+        }
+    }, {
+        breakpoint: 567,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
+});
+//Personal home featured news slider ends
+
+//Personal home social feed slider start
+$(".sgp-pers-social__slider").slick({
+    arrows: true,
+    dots: true,
+    prevArrow: $('.sgp-pers-social__prev'),
+    nextArrow: $('.sgp-pers-social__next'),
+    slidesToScroll: 1,
+    slidesToShow: 2,
+    speed: 300,
+    infinite: true,
+    slide: ".sgp-tile",
+    responsive: [{
+        breakpoint: 600,
+        settings: {
+            dots: true
+        }
+    }, {
+        breakpoint: 567,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
+});
+//Personal home social feed slider end
+
+//Useful links slider start
+$(".sgp-useful-links__slider").slick({
+    arrows: true,
+    dots: true,
+    prevArrow: $('.sgp-useful-links__prev'),
+    nextArrow: $('.sgp-useful-links__next'),
+    slidesToScroll: 1,
+    slidesToShow: 3,
+    speed: 300,
+    infinite: false,
+    slide: ".sgp-tile",
+    responsive: [{
+        breakpoint: 600,
+        settings: {
+            dots: true
+        }
+    }, {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 2
+        }
+    }, {
+        breakpoint: 567,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
+});
+//Useful links slider end
+
+//service-announce slider start
+$(".sgp-service-announce__slider").slick({
+    arrows: true,
+    dots: true,
+    prevArrow: $('.sgp-service-announce__prev'),
+    nextArrow: $('.sgp-service-announce__next'),
+    slidesToScroll: 1,
+    slidesToShow: 3,
+    speed: 300,
+    infinite: false,
+    slide: ".sgp-tile",
+    responsive: [{
+        breakpoint: 600,
+        settings: {
+            dots: true
+        }
+    }, {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 2
+        }
+    }, {
+        breakpoint: 567,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
+});
+//service-announce slider end

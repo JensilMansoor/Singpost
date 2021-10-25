@@ -75,7 +75,6 @@
     }
     &__logo {
         width: 150px;
-        height: 51px;
     }
     &__menu-sec {
         margin-left: auto;
@@ -96,7 +95,7 @@
                     content: '';
                     position: absolute;
                     left: 50%;
-                    top: 17px;
+                    top: 18px;
                     transform: translateX(-50%);
                     width: 15px;
                     height: 15px;
@@ -326,6 +325,7 @@
         svg {
             width: 8px;
             height: 13px;
+            margin-left: auto;
             path {
                 fill: $color-grey-4;
                 transition: all 0.3s;
@@ -499,7 +499,6 @@
         }
         &__logo {
             width: 130px;
-            height: 44px;
         }
         &__menu-btn-icon {
             order: 1;
@@ -636,6 +635,14 @@
         }
         &__catgry-item {
             min-width: 220px;
+        }
+    }
+}
+
+@include ie-fix{
+    .sgp-header{
+        &__menu-drop{
+            height: 350px;
         }
     }
 }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_5252" data-name="Group 5252" transform="translate(16397 19744)">
+    <rect id="Rectangle_1177" data-name="Rectangle 1177" width="30" height="30" transform="translate(-16397 -19744)" fill="none"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(-16389.5 -19737.5)">
+      <g id="Layer_1" data-name="Layer 1" transform="translate(0.5 0.5)">
+        <rect id="Rectangle_1173" data-name="Rectangle 1173" width="14.043" height="16.355" rx="0.94" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_131" data-name="Line 131" x1="14.043" transform="translate(0 5.507)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <rect id="Rectangle_1174" data-name="Rectangle 1174" width="9.663" height="6.57" transform="translate(2.031 7.596)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_132" data-name="Line 132" y2="6.57" transform="translate(5.059 7.596)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_133" data-name="Line 133" y2="6.57" transform="translate(8.723 7.596)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_134" data-name="Line 134" x2="6.693" transform="translate(2.031 10.884)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

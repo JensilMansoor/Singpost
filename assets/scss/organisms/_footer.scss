@@ -30,6 +30,7 @@
     &__logo {
         display: block;
         width: 200px;
+        height: 68px;
         margin-bottom: $spacer-5;
     }
     &__head {
@@ -153,6 +154,10 @@
         &__sec-2 {
             display: none;
         }
+        &__quick-wrapper {
+            padding-top: $spacer-4;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
     }
 }
 
@@ -161,6 +166,7 @@
         padding: $spacer-6 $spacer-0;
         &__logo {
             width: 160px;
+            height: auto;
             margin-bottom: $spacer-4;
         }
         &__wrapper {
@@ -174,6 +180,14 @@
         &__copyright {
             margin-top: $spacer-4;
             margin-bottom: $spacer-0;
+        }
+    }
+}
+
+@include ie-fix{
+    .sgp-footer{
+        &__link-wrapper{
+            height: 370px;
         }
     }
 }

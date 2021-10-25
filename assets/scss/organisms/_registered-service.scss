@@ -1,0 +1,72 @@
+.sgp-reg-service{
+    &__wrapper{
+        position: relative;
+        padding-top: 85px;
+    }
+    &__image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+    }
+    &__inner{
+        position: relative;
+        background-color: $color-white;
+        padding: $spacer-6;
+        margin: 0 auto;
+        width: calc(100% - 140px);
+    }
+    &__header{
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: $spacer-4;
+    }
+    &__bodycopy{
+        color: $color-grey-3;
+        list-style: disc;
+        padding-left: $spacer-3;
+        li{
+            margin-bottom: $spacer-3;
+            &:last-child{
+                margin-bottom: $spacer-0; 
+            }
+        }
+    }
+    &__bodylink{
+        color: $color-blue-2;
+        text-decoration: underline;
+    }
+}
+@include tablet {
+    .sgp-reg-service{
+        &__header{
+            font-size: 30px;
+            line-height: 34px;
+        }
+        &__inner{
+            width: calc(100% - 100px);
+        }
+    }
+}
+@include mobile {
+    .sgp-reg-service{
+        &__header{
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: $spacer-3;
+        }
+        &__inner{
+            padding: $spacer-4 $spacer-3;
+            width: calc(100% - 40px);
+        }
+        &__image{
+            height: calc(100% - 70px);
+        }
+    }
+    
+}

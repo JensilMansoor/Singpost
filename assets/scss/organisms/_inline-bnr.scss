@@ -1,8 +1,10 @@
 .sgp-inline-bnr {
     padding: $spacer-6 $spacer-0;
-    margin-bottom: -130px;
     z-index: 1;
     position: relative;
+    &--with-footer {
+        margin-bottom: -130px;
+    }
     &__outer {
         display: flex;
         box-shadow: 0px 3px 32px rgba(0, 0, 0, 0.16);
@@ -27,7 +29,9 @@
 @include mobile {
     .sgp-inline-bnr {
         padding: $spacer-5 $spacer-0;
-        margin-bottom: $spacer-0;
+        &--with-footer {
+            margin-bottom: $spacer-0;
+        }
         &__outer {
             display: block;
         }

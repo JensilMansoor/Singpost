@@ -4,19 +4,50 @@
         margin-bottom: $spacer-5;
         max-width: 600px;
     }
-    .sgp-small-title{
+    .sgp-small-title {
         color: $color-white;
         margin-bottom: $spacer-3;
     }
     &__item {
         position: relative;
-        display: flex;
-        align-items: center;
-        min-height: 500px;
+        // display: flex;
+        // align-items: center;
+        // min-height: 500px;
+        // background-size: cover;
+        // background-position: center;
+        // padding-top: $spacer-3;
+        // padding-bottom: 100px;
+        // &::before {
+        //     content: "";
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: rgba(0, 0, 0, 0.3);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        // }
+        // &.slick-slide {
+        //     display: flex;
+        // }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center;
+        &--mob{
+            display: none;
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
         padding-top: $spacer-3;
         padding-bottom: 100px;
+        min-height: 500px;
         &::before {
             content: "";
             width: 100%;
@@ -26,12 +57,9 @@
             top: 0;
             left: 0;
         }
-        &.slick-slide {
-            display: flex;
+        .content-wrapper-small{
+            position: relative;
         }
-    }
-    &__inner {
-        position: relative;
     }
     // slick reset
     .slick-dots {
@@ -40,11 +68,11 @@
     &.slick-dotted {
         margin-bottom: $spacer-0;
     }
-    .sgp-arrow{
+    .sgp-arrow {
         margin-left: $spacer-5;
     }
     &__next,
-    &__prev{
+    &__prev {
         width: 15px;
         height: 15px;
     }
@@ -77,9 +105,18 @@
 
 @include mobile-tablet {
     .sgp-banner {
-        &__item {
+        &__inner {
+            min-height: 650px;
             &::before {
                 background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__bg{
+            &--desk{
+                display: none;
+            }
+            &--mob{
+                display: block;
             }
         }
     }
@@ -87,26 +124,33 @@
 
 @include mobile {
     .sgp-banner {
-        .h2 {
-            font-size: 26px;
-            line-height: 32px;
+        .sgp-h2 {
+            margin-bottom: $spacer-4;
         }
-        &__item {
-            padding-bottom: 50px;
+        &__inner {
+            padding-bottom: 80px;
         }
+        // &__bg{
+            
+        // }
         &__slide-control {
-            bottom: 70px;
+            bottom: 85px;
             left: 16px;
             right: auto;
         }
         &__inner {
-            padding-bottom: $spacer-5;
+            min-height: 0px;
+            padding-top: $spacer-5;
+            padding-bottom: 150px;
+        }
+        .sgp-arrow {
+            display: flex;
         }
     }
 }
 
 @include ie-fix {
-    .sgp-banner__item {
+    .sgp-banner__inner {
         height: 500px;
     }
 }

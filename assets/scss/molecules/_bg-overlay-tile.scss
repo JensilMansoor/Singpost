@@ -1,5 +1,5 @@
 .sgp-tile-bg {
-    min-height: 400px;
+    min-height: 320px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
 
 @include mobile {
     .sgp-tile-bg {
-        min-height: 140px;
+        min-height: 155px;
         &::before {
             bottom: 8px;
             left: 8px;
@@ -118,6 +118,11 @@
             right: 8px;
             width: calc(100% - 16px);
             height: calc(100% - 16px);
+        }
+        &__bg{
+            &::after{
+                background-color: rgba(0, 0, 0, 0.7);
+            }
         }
         &__cnt {
             padding: $spacer-3;

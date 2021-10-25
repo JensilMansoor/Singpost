@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 
-    <title>HNM</title>
+    <title>SingPost</title>
 </head>
 
 <body>
@@ -28,10 +28,6 @@
                 <a href="" class="sgp-notice__item">Please note that due to the COVID-19 situation, international deliveries may take longer than usual. We seek your understanding in this difficult time. Click here for more updates.</a>
                 <a href="" class="sgp-notice__item">Please note that due to the COVID-19 situation, international deliveries may take longer than usual. We seek your understanding in this difficult time. Click here for more updates.</a>
             </div>
-            <!-- <div class="sgp-notice__arrow-sec">
-                <button class="sgp-banner__arrow sgp-notice__prev"><svg viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 11L0.999999 6L6 1" stroke="white"/></svg></button>
-                <button class="sgp-banner__arrow sgp-notice__next"><svg viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="white"/></svg></button>
-            </div> -->
 
             <div class="sgp-arrow">
                 <button class="sgp-arrow__prev sgp-notice__prev"><svg viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 11L0.999999 6L6 1" stroke="white"/></svg></button>
@@ -54,41 +50,6 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            var noticeBar = $(".sgp-notice");
-            if((window.matchMedia("min-width: 601px")) && noticeBar){
-                $("body").css("padding-top","26px");
-            }
-            else{
-                $("body").css("padding-top","0");
-            }
-            $(".sgp-notice__close-btn").click(function() {
-                $("body").css("padding-top","0");
-            });
-
-            $('.sgp-notice__slider').slick({
-                dots: false,
-                infinite: false,
-                arrows: true,
-                prevArrow: $('.sgp-notice__prev'),
-                nextArrow: $('.sgp-notice__next'),
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [{
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        vertical: true,
-                        verticalSwiping: true,
-                    }
-                }, ]
-            });
-        });
-    </script>
 </body>
 
 </html>

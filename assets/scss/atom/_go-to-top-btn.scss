@@ -1,0 +1,25 @@
+.sgp-go-top-btn {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $color-red;
+    padding: $spacer-2;
+    svg {
+        width: 14px;
+        height: 8px;
+        margin-right: $spacer-3;
+    }
+    &:hover {
+        color: $color-white;
+    }
+}
+
+@include mobile {
+    .sgp-go-top-btn {
+        display: flex;
+    }
+}

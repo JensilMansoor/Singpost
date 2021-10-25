@@ -38,7 +38,7 @@ button {
     background-color: transparent;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
     display: block;
@@ -63,6 +63,7 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
 h1,
 h2,
 h3,
@@ -74,73 +75,104 @@ h6,
 .sgp-h3,
 .sgp-h4,
 .sgp-h5,
-.sgp-h6{
+.sgp-h6 {
     @include font-univers-65;
     line-height: 1.3;
 }
 
+.sgp-ptb-4 {
+    padding-top: $spacer-6;
+    padding-bottom: $spacer-6;
+}
+
+.sgp-pt-4 {
+    padding-top: $spacer-6;
+}
+
+.sgp-pb-4 {
+    padding-bottom: $spacer-6;
+}
+
+.sgp-mtb-4 {
+    margin-top: $spacer-6;
+    margin-bottom: $spacer-6;
+}
+
+.sgp-mt-4 {
+    margin-top: $spacer-6;
+}
+
+.sgp-mb-4 {
+    margin-bottom: $spacer-6;
+}
 
 .sgp-h1,
 .sgp-h2 {
     font-size: 36px;
     // line-height: 50px;
 }
+
 .sgp-h3 {
     font-size: 21px;
     // line-height: 28px;
 }
+
 .sgp-h4 {
     font-size: 18px;
     // line-height: 25px;
 }
+
 .sgp-h5 {
     font-size: 16px;
     // line-height: 21px;
 }
+
 .sgp-h6 {
     font-size: 14px;
     // line-height: 18px;
 }
-.sgp-small-title{
+
+.sgp-small-title {
     font-size: 16px;
     // line-height: 21px;
     color: $color-red;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.sgp-progress {
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 10px;
-    overflow: hidden;
-    // background-color: #C2E4F8;
-    background-image: linear-gradient(to right, #24549D, #24549D);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: background-size .4s ease-in-out;
-    margin-top: $spacer-3;
-    display: none;
-}
-.slick-dots{
+
+// .sgp-progress {
+//     display: block;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     background-color: #C2E4F8;
+//     background-image: linear-gradient(to right, #24549D, #24549D);
+//     background-repeat: no-repeat;
+//     background-size: 0 100%;
+//     transition: background-size .4s ease-in-out;
+//     margin-top: $spacer-3;
+//     display: none;
+// }
+.slick-dots {
     display: flex;
     border-radius: 5px;
     background-color: $color-blue-med-2;
     overflow: hidden;
     bottom: -16px;
-    li{
+    li {
         flex: 1;
         height: 4px;
         margin: $spacer-0;
         transition: 0.3s;
-        &.slick-active{
+        &.slick-active {
             background-color: $color-blue-2;
         }
-        button{
+        button {
             width: 100%;
             height: 100%;
             padding: $spacer-0;
-            &::before{
+            &::before {
                 content: none;
             }
         }
@@ -164,12 +196,32 @@ h6,
     .content-wrapper-small {
         padding: $spacer-0 $spacer-3;
     }
+    .sgp-ptb-4 {
+        padding-top: $spacer-5;
+        padding-bottom: $spacer-5;
+    }
+    .sgp-pt-4 {
+        padding-top: $spacer-5;
+    }
+    .sgp-pb-4 {
+        padding-bottom: $spacer-5;
+    }
+    .sgp-mtb-4 {
+        margin-top: $spacer-5;
+        margin-bottom: $spacer-5;
+    }
+    .sgp-mt-4 {
+        margin-top: $spacer-5;
+    }
+    .sgp-mb-4 {
+        margin-bottom: $spacer-5;
+    }
     .sgp-h1,
     .sgp-h2 {
         font-size: 28px;
         line-height: 33px;
     }
-    .sgp-small-title{
+    .sgp-small-title {
         font-size: 12px;
         line-height: 16px;
     }

@@ -1,16 +1,20 @@
-.sgp-mob-app{
+.sgp-mob-app {
     display: flex;
+    margin: $spacer-0 (-$spacer-2);
     .sgp-locate,
-    &__sec{
-        width: 50%;
+    &__sec {
+        width: calc(50% - 16px);
+        margin: $spacer-0 $spacer-2;
+        .sgp-h2{
+            text-align: left;
+        }
     }
-    &__sec{
-        margin-left: $spacer-3;
+    &__sec {
         position: relative;
         display: flex;
         flex-direction: column;
     }
-    &__inner{
+    &__inner {
         background-size: cover;
         background-position: bottom;
         display: flex;
@@ -21,79 +25,81 @@
         padding: $spacer-5 $spacer-4;
         min-height: 60%;
     }
-    &__mob-img{
+    &__mob-img {
         width: 60%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
     }
-    &__cnt{
+    &__cnt {
         color: $color-white;
         width: 60%;
-        .sgp-small-title{
+        .sgp-small-title {
             color: $color-white;
             margin-bottom: $spacer-3;
         }
-        .sgp-h2{
+        .sgp-h2 {
             margin-bottom: $spacer-2;
         }
     }
-    &__sgp-icon{
+    &__sgp-icon {
         width: 160px;
         position: absolute;
         top: 0;
         right: 0;
         transform: translateY(-50%);
     }
-    &__btn-sec{
+    &__btn-sec {
         display: flex;
         margin-top: $spacer-5;
     }
-    &__btn{
+    &__btn {
         display: block;
         margin-right: $spacer-3;
-        &:last-child{
+        &:last-child {
             margin-right: $spacer-0;
         }
     }
 }
 
-@include mobile-tablet{
-    .sgp-mob-app{
+@include mobile-tablet {
+    .sgp-mob-app {
         display: block;
+        margin: $spacer-0;
         .sgp-locate,
-        &__sec{
+        &__sec {
             width: 100%;
+            margin: $spacer-0;
         }
-        &__sec{
+        &__sec {
             margin-top: $spacer-4;
             margin-left: $spacer-0;
         }
-        &__mob-img{
+        &__mob-img {
             display: none;
         }
-        &__cnt{
+        &__cnt {
             width: 100%;
-            .sgp-small-title{
+            .sgp-small-title {
                 margin-bottom: $spacer-2;
             }
-            .sgp-h2{
+            .sgp-h2 {
                 margin-bottom: $spacer-0;
             }
         }
-        &__inner{
+        &__inner {
             padding: $spacer-1 $spacer-3 $spacer-4;
         }
-        &__head-sec{
+        &__head-sec {
             display: flex;
             align-items: center;
             margin-left: (-$spacer-3);
         }
-        &__btn-sec{
+        &__btn-sec {
             width: 50%;
         }
-        &__sgp-icon{
+        &__sgp-icon {
             width: 130px;
             position: static;
             transform: translate(0);
@@ -101,13 +107,13 @@
     }
 }
 
-@include mobile{
-    .sgp-mob-app{
-        &__sec{
-            margin-top: $spacer-4;
+@include mobile {
+    .sgp-mob-app {
+        &__sec {
+            margin-top: $spacer-3;
             padding-bottom: 70px;
         }
-        &__btn-sec{
+        &__btn-sec {
             width: 100%;
             margin-top: $spacer-0;
             position: absolute;
@@ -115,7 +121,7 @@
             bottom: -16px;
             transform: translateY(100%);
         }
-        &__inner{
+        &__inner {
             padding-bottom: $spacer-3;
         }
     }
