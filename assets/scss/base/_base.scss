@@ -261,8 +261,14 @@ strong {
 }
 
 @mixin scroll-bar-y {
-    &::-webkit-scrollbar {
+    // &::-webkit-scrollbar {
+    //     width: 5px;
+    // }
+    &::-webkit-scrollbar:vertical {
         width: 5px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 5px;
     }
     &::-webkit-scrollbar-track {
         background-color: $color-grey-5;
@@ -282,7 +288,13 @@ strong {
 }
 
 @mixin scroll-bar-x {
-    &::-webkit-scrollbar {
+    // &::-webkit-scrollbar {
+    //     height: 5px;
+    // }
+    &::-webkit-scrollbar:vertical {
+        width: 5px;
+    }
+    &::-webkit-scrollbar:horizontal {
         height: 5px;
     }
     &::-webkit-scrollbar-track {
