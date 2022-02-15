@@ -35,86 +35,182 @@
                 <a href="" title="Singapore Post" class="sgp-header__logo-link">
                     <img src="../assets/images/signpost-logo-personal.png" alt="Singapore Post" class="sgp-header__logo">
                 </a>
-                <div class="sgp-header__menu-sec">
-                    <div class="sgp-header__drop-menu">
+                <ul class="sgp-header__menu-sec">
+                    <li class="sgp-header__drop-menu">
                         <span class="sgp-header__drop-menu-item">Send & Receive<svg xmlns="http://www.w3.org/2000/svg" class="sgp-header__drop-menu-icon" viewBox="0 0 10 5.938"><path d="M4.75-3.125H4.719A.457.457,0,0,0,5-3.031a.457.457,0,0,0,.281-.094L9.906-7.719A.435.435,0,0,0,10-7.984a.435.435,0,0,0-.094-.266l-.625-.625A.457.457,0,0,0,9-8.969a.338.338,0,0,0-.25.094L5-5.156,1.25-8.875A.338.338,0,0,0,1-8.969a.457.457,0,0,0-.281.094L.094-8.25A.435.435,0,0,0,0-7.984a.373.373,0,0,0,.125.266Z" transform="translate(0 8.969)" fill="#555"/></svg>
                         </span>
-                        <div class="sgp-header__menu-drop">
-                            <div class="sgp-header__menu-drop-col">
-                                <a href="" class="sgp-header__menu-drop-btn">Service Announcements
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12.25" height="12.086" viewBox="0 0 12.25 12.086"><path d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H9.652L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(0 11.293)" fill="#24549d"/></svg> 
-                                </a>
-                                <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab" data-id="sendingwithinSingapore">Sending within Singapore<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
-                                <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab" data-id="sendingOverseas">Sending Overseas<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
-                                <a href="" title="Receive Mail / Parcel" class="sgp-header__menu-drop-link">Receive Mail / Parcel</a>
-                                <a href="" title="Declaration" class="sgp-header__menu-drop-link">Declaration</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--tab-expan active" data-content="sendingwithinSingapore">
-                                <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">Registered Service (Singapore)</a>
-                                <a href="" title="Basic Services (Local)" class="sgp-header__menu-drop-link">Basic Services (Local)</a>
-                                <a href="" title="Tracked Services" class="sgp-header__menu-drop-link">Tracked Services</a>
-                                <a href="" title="Prepaid Packaging" class="sgp-header__menu-drop-link">Prepaid Packaging</a>
-                                <a href="" title="Speedpost Singapore Delivery" class="sgp-header__menu-drop-link">Speedpost Singapore Delivery</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--tab-expan" data-content="sendingOverseas">
-                                <a href="" title="Speedpost Singapore Delivery" class="sgp-header__menu-drop-link">Speedpost Singapore Delivery</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/send-receive-menu-img.jpg);"></div>
-                        </div>
-                    </div>
-                    <div class="sgp-header__drop-menu">
+                        <ul class="sgp-header__menu-drop">
+                            <li class="sgp-header__menu-drop-col">
+                                <ul class="sgp-header__menu-drop-inner">
+                                    <li class="sgp-header__menu-drop-inner-item"><a href="" class="sgp-header__menu-drop-btn">Service Announcements
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12.25" height="12.086" viewBox="0 0 12.25 12.086"><path d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H9.652L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(0 11.293)" fill="#24549d"/></svg> 
+                                    </a></li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab">Sending within Singapore<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
+                                        <ul class="sgp-header__menu-drop-sub d-none">
+                                            <li>
+                                                <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">Registered Service (Singapore)</a>
+                                            </li>
+                                            <li>
+                                                <a href="" title="Basic Services (Local)" class="sgp-header__menu-drop-link">Basic Services (Local)</a>
+                                            </li>
+                                            <li>
+                                                <a href="" title="Tracked Services" class="sgp-header__menu-drop-link">Tracked Services</a>
+                                            </li>
+                                            <li>
+                                                <a href="" title="Prepaid Packaging" class="sgp-header__menu-drop-link">Prepaid Packaging</a>
+                                            </li>
+                                            <li>
+                                                <a href="" title="Speedpost Singapore Delivery" class="sgp-header__menu-drop-link">Speedpost Singapore Delivery</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab">Sending Overseas<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
+                                        <ul class="sgp-header__menu-drop-sub d-none">
+                                            <li>
+                                                <a href="" title="Speedpost Singapore Delivery" class="sgp-header__menu-drop-link">Speedpost Singapore Delivery</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Receive Mail / Parcel" class="sgp-header__menu-drop-link">Receive Mail / Parcel</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Declaration" class="sgp-header__menu-drop-link">Declaration</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--tab-expan active">
+                                <ul class="sgp-header__menu-drop-sub">
+                                    <li>
+                                        <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">Registered Service (Singapore)</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="Basic Services (Local)" class="sgp-header__menu-drop-link">Basic Services (Local)</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="Tracked Services" class="sgp-header__menu-drop-link">Tracked Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="Prepaid Packaging" class="sgp-header__menu-drop-link">Prepaid Packaging</a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="Speedpost Singapore Delivery" class="sgp-header__menu-drop-link">Speedpost Singapore Delivery</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/send-receive-menu-img.jpg);"></li>
+                        </ul>
+                    </li>
+                    <li class="sgp-header__drop-menu">
                         <span class="sgp-header__drop-menu-item">Shop<svg xmlns="http://www.w3.org/2000/svg" class="sgp-header__drop-menu-icon" viewBox="0 0 10 5.938"><path d="M4.75-3.125H4.719A.457.457,0,0,0,5-3.031a.457.457,0,0,0,.281-.094L9.906-7.719A.435.435,0,0,0,10-7.984a.435.435,0,0,0-.094-.266l-.625-.625A.457.457,0,0,0,9-8.969a.338.338,0,0,0-.25.094L5-5.156,1.25-8.875A.338.338,0,0,0,1-8.969a.457.457,0,0,0-.281.094L.094-8.25A.435.435,0,0,0,0-7.984a.373.373,0,0,0,.125.266Z" transform="translate(0 8.969)" fill="#555"/></svg>
                         </span>
-                        <div class="sgp-header__menu-drop">
-                            <div class="sgp-header__menu-drop-col">
-                                <a href="" title="Packing Materials" class="sgp-header__menu-drop-link">Packing Materials</a>
-                                <a href="" title="Postage-paid Packaging" class="sgp-header__menu-drop-link">Postage-paid Packaging</a>
-                                <a href="" title="Sample Store" class="sgp-header__menu-drop-link">Sample Store</a>
-                                <a href="" title="vPost" class="sgp-header__menu-drop-link">vPost</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--two sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/shop-menu-img.jpg);"></div>
-                        </div>
-                    </div>
-                    <div class="sgp-header__drop-menu">
+                        <ul class="sgp-header__menu-drop">
+                            <li class="sgp-header__menu-drop-col">
+                                <ul class="sgp-header__menu-drop-inner">
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Packing Materials" class="sgp-header__menu-drop-link">Packing Materials</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Postage-paid Packaging" class="sgp-header__menu-drop-link">Postage-paid Packaging</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Sample Store" class="sgp-header__menu-drop-link">Sample Store</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="vPost" class="sgp-header__menu-drop-link">vPost</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--two sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/shop-menu-img.jpg);"></li>
+                        </ul>
+                    </li>
+                    <li class="sgp-header__drop-menu">
                         <span class="sgp-header__drop-menu-item">Pay<svg xmlns="http://www.w3.org/2000/svg" class="sgp-header__drop-menu-icon" viewBox="0 0 10 5.938"><path d="M4.75-3.125H4.719A.457.457,0,0,0,5-3.031a.457.457,0,0,0,.281-.094L9.906-7.719A.435.435,0,0,0,10-7.984a.435.435,0,0,0-.094-.266l-.625-.625A.457.457,0,0,0,9-8.969a.338.338,0,0,0-.25.094L5-5.156,1.25-8.875A.338.338,0,0,0,1-8.969a.457.457,0,0,0-.281.094L.094-8.25A.435.435,0,0,0,0-7.984a.373.373,0,0,0,.125.266Z" transform="translate(0 8.969)" fill="#555"/></svg>
                         </span>
-                        <div class="sgp-header__menu-drop">
-                            <div class="sgp-header__menu-drop-col">
-                                <a href="" title="Education Bills" class="sgp-header__menu-drop-link">Education Bills</a>
-                                <a href="" title="Financial Institution Bills" class="sgp-header__menu-drop-link">Financial Institution Bills</a>
-                                <a href="" title="Government Bills & Fines" class="sgp-header__menu-drop-link">Government Bills & Fines</a>
-                                <a href="" title="Healthcare Bills" class="sgp-header__menu-drop-link">Healthcare Bills</a>
-                                <a href="" title="Insurance Bills" class="sgp-header__menu-drop-link">Insurance Bills</a>
-                                <a href="" title="Utility Bills" class="sgp-header__menu-drop-link">Utility Bills</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col">
-                                <a href="" title="Other Bills & Payments" class="sgp-header__menu-drop-link">Other Bills & Payments</a>
-                                <a href="" title="Telecom Bills" class="sgp-header__menu-drop-link">Telecom Bills</a>
-                                <a href="" title="Conservancy Bills" class="sgp-header__menu-drop-link">Conservancy Bills</a>
-                                <a href="" title="Donations" class="sgp-header__menu-drop-link">Donations</a>
-                                <a href="" title="Top-Ups" class="sgp-header__menu-drop-link">Top-Ups</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/pay-menu-img.jpg);"></div>
-                        </div>
-                    </div>
-                    <div class="sgp-header__drop-menu">
+                        <ul class="sgp-header__menu-drop">
+                            <li class="sgp-header__menu-drop-col">
+                                <ul class="sgp-header__menu-drop-inner">
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Education Bills" class="sgp-header__menu-drop-link">Education Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Financial Institution Bills" class="sgp-header__menu-drop-link">Financial Institution Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Financial Institution Bills" class="sgp-header__menu-drop-link">Financial Institution Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Healthcare Bills" class="sgp-header__menu-drop-link">Healthcare Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Insurance Bills" class="sgp-header__menu-drop-link">Insurance Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Utility Bills" class="sgp-header__menu-drop-link">Utility Bills</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col">
+                                <ul class="sgp-header__menu-drop-inner">
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Other Bills & Payments" class="sgp-header__menu-drop-link">Other Bills & Payments</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Telecom Bills" class="sgp-header__menu-drop-link">Telecom Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Conservancy Bills" class="sgp-header__menu-drop-link">Conservancy Bills</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Donations" class="sgp-header__menu-drop-link">Donations</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Top-Ups" class="sgp-header__menu-drop-link">Top-Ups</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/pay-menu-img.jpg);"></li>
+                        </ul>
+                    </li>
+                    <li class="sgp-header__drop-menu">
                         <span class="sgp-header__drop-menu-item">Other Services<svg xmlns="http://www.w3.org/2000/svg" class="sgp-header__drop-menu-icon" viewBox="0 0 10 5.938"><path d="M4.75-3.125H4.719A.457.457,0,0,0,5-3.031a.457.457,0,0,0,.281-.094L9.906-7.719A.435.435,0,0,0,10-7.984a.435.435,0,0,0-.094-.266l-.625-.625A.457.457,0,0,0,9-8.969a.338.338,0,0,0-.25.094L5-5.156,1.25-8.875A.338.338,0,0,0,1-8.969a.457.457,0,0,0-.281.094L.094-8.25A.435.435,0,0,0,0-7.984a.373.373,0,0,0,.125.266Z" transform="translate(0 8.969)" fill="#555"/></svg>
                         </span>
-                        <div class="sgp-header__menu-drop">
-                            <div class="sgp-header__menu-drop-col">
-                                <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab" data-id="financialServices">Financial Services<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
-                                <a href="" title="Money Services" class="sgp-header__menu-drop-link">Money Services</a>
-                                <a href="" title="Applications / Collections" class="sgp-header__menu-drop-link">Applications / Collections</a>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--tab-expan active" data-content="financialServices">
-                                <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">AXA@POST</a>
-                                <p class="sgp-header__menu-drop-desc">Standard Chartered SingPost Spree Credit Card</p>
-                                <p class="sgp-header__menu-drop-desc">Standard Chartered Business Instalment Loan</p>
-                            </div>
-                            <div class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/other-services-menu-img.jpg);"></div>
-                        </div>
-                    </div>
-                </div>
+                        <ul class="sgp-header__menu-drop">
+                            <li class="sgp-header__menu-drop-col">
+                                <ul class="sgp-header__menu-drop-inner">
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <div class="sgp-header__menu-drop-link sgp-header__menu-drop-link--tab">Financial Services<svg xmlns="http://www.w3.org/2000/svg" width="5.195" height="8.75" viewBox="0 0 5.195 8.75"><path d="M5.141-5.031V-5a.4.4,0,0,0,.082-.246A.4.4,0,0,0,5.141-5.5L1.121-9.543a.381.381,0,0,0-.232-.082.381.381,0,0,0-.232.082L.109-9a.4.4,0,0,0-.082.246.3.3,0,0,0,.082.219L3.363-5.25.109-1.969a.3.3,0,0,0-.082.219A.4.4,0,0,0,.109-1.5l.547.547a.381.381,0,0,0,.232.082.327.327,0,0,0,.232-.109Z" transform="translate(-0.027 9.625)"/></svg></div>
+                                        <ul class="sgp-header__menu-drop-sub d-none">
+                                            <li>
+                                                <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">AXA@POST</a>
+                                                <p class="sgp-header__menu-drop-desc">Standard Chartered SingPost Spree Credit Card</p>
+                                                <p class="sgp-header__menu-drop-desc">Standard Chartered Business Instalment Loan</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Money Services" class="sgp-header__menu-drop-link">Money Services</a>
+                                    </li>
+                                    <li class="sgp-header__menu-drop-inner-item">
+                                        <a href="" title="Applications / Collections" class="sgp-header__menu-drop-link">Applications / Collections</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--tab-expan active">
+                                <ul class="sgp-header__menu-drop-sub">
+                                    <li>
+                                        <a href="" title="Registered Service (Singapore)" class="sgp-header__menu-drop-link">AXA@POST</a>
+                                        <p class="sgp-header__menu-drop-desc">Standard Chartered SingPost Spree Credit Card</p>
+                                        <p class="sgp-header__menu-drop-desc">Standard Chartered Business Instalment Loan</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sgp-header__menu-drop-col sgp-header__menu-drop-col--bg-img" style="background-image: url(../assets/images/other-services-menu-img.jpg);"></li>
+                        </ul>
+                    </li>
+                </ul>
                 <a href="" title="Search" class="sgp-header__menu-btn-icon sgp-header__menu-btn-icon--search">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35"><g transform="translate(22946 24144)"><rect width="35" height="35" transform="translate(-22946 -24144)" fill="none"/><path d="M19.883,1.328A.422.422,0,0,1,20,1.641a.571.571,0,0,1-.117.352l-.391.352a.486.486,0,0,1-.352.156.371.371,0,0,1-.312-.156L13.789-2.7a.371.371,0,0,1-.156-.312V-3.4a8.014,8.014,0,0,1-2.52,1.582,8.02,8.02,0,0,1-2.988.566A7.891,7.891,0,0,1,4.043-2.344,8.209,8.209,0,0,1,1.094-5.293,7.891,7.891,0,0,1,0-9.375a7.891,7.891,0,0,1,1.094-4.082,8.209,8.209,0,0,1,2.949-2.949A7.891,7.891,0,0,1,8.125-17.5a7.891,7.891,0,0,1,4.082,1.094,8.209,8.209,0,0,1,2.949,2.949A7.891,7.891,0,0,1,16.25-9.375a8.02,8.02,0,0,1-.566,2.988A8.014,8.014,0,0,1,14.1-3.867h.391a.486.486,0,0,1,.352.156ZM8.125-2.5a6.767,6.767,0,0,0,3.457-.918,6.773,6.773,0,0,0,2.5-2.5A6.767,6.767,0,0,0,15-9.375a6.767,6.767,0,0,0-.918-3.457,6.773,6.773,0,0,0-2.5-2.5,6.767,6.767,0,0,0-3.457-.918,6.767,6.767,0,0,0-3.457.918,6.773,6.773,0,0,0-2.5,2.5A6.767,6.767,0,0,0,1.25-9.375a6.767,6.767,0,0,0,.918,3.457,6.773,6.773,0,0,0,2.5,2.5A6.767,6.767,0,0,0,8.125-2.5Z" transform="translate(-22938 -24118.5)" fill="#333"/></g></svg>
                 </a>
@@ -385,29 +481,23 @@
                 <div class="sgp-header__catgry">
                     <a href="" title="Personal" class="sgp-header__catgry-item" style="background-image: url(../assets/images/personal-meganav-img.jpg);">
                         <div class="sgp-btn sgp-btn--white">
-                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="38" cy="38" r="36.5" stroke-width="3"/>
-                                <path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" />
-                                <path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/>
-                            </svg>Personal
+                            <span class="sgp-btn__icon">
+                                <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                            </span>Personal
                         </div>
                     </a>
                     <a href="" title="Business" class="sgp-header__catgry-item" style="background-image: url(../assets/images/business-meganav-img.jpg);">
                         <div class="sgp-btn sgp-btn--white">
-                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="38" cy="38" r="36.5" stroke-width="3"/>
-                                <path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" />
-                                <path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/>
-                            </svg>Business
+                            <span class="sgp-btn__icon">
+                                <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                            </span>Business
                         </div>
                     </a>
                     <a href="" title="About Us" class="sgp-header__catgry-item" style="background-image: url(../assets/images/about-us-meganav-img.jpg);">
                         <div class="sgp-btn sgp-btn--white">
-                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="38" cy="38" r="36.5" stroke-width="3"/>
-                                <path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" />
-                                <path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/>
-                            </svg>About Us
+                            <span class="sgp-btn__icon">
+                                <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                            </span>About Us
                         </div>
                     </a>
                 </div>

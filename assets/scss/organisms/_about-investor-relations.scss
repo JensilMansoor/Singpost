@@ -1,0 +1,46 @@
+.sgp-investor-rel{
+    .sgp-stock-box{
+        display: none;
+    }
+    &__btn-sec{
+        padding-left: $spacer-6;
+        margin-top: $spacer-2;
+    }
+    .sgp-useful-links{
+        padding: $spacer-0;
+    }
+}
+@include mobile-tablet{
+    .sgp-investor-rel{
+        .sgp-pers-featured{
+            &__wrapper{
+                .slick-dots{
+                    bottom: -8px;
+                }
+            }
+        }
+        .sgp-service{
+            &__wrapper{
+                padding-bottom: 12px;
+            }
+        }  
+    }
+}
+@include mobile{
+    .sgp-investor-rel{
+        .sgp-stock-box{
+            display: block;
+            margin: $spacer-0 (-$spacer-5);
+        }
+        
+        .sgp-service{
+            margin: $spacer-0 (-$spacer-3);
+            &__wrapper{
+                width: auto;
+            }
+        }
+        &__mob-hidden{
+            display: none;
+        }
+    }
+}

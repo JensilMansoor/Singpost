@@ -1,0 +1,44 @@
+.sgp-our-framework{
+    padding: $spacer-6 $spacer-0;
+    .sgp-info-tab .tab-content{
+        padding: $spacer-0;
+        background-color: transparent;
+    }
+    .nav-item{
+        margin-right: $spacer-3;
+        margin-left: $spacer-0;
+        display: flex;
+        &:last-child{
+            margin-right: $spacer-0; 
+        }
+    }
+    .sgp-snr-steps{
+        &__box-color{
+            background-color: $color-white;
+            width: calc(50% - 16px);
+        }
+        &__box-head{
+            color: $color-black;
+        }
+        &__box-disc{
+            color: $color-grey-3
+        }
+    }
+
+    .sgp-link-btn--box{
+        background-color: transparent;
+        border: 1px solid #24549D;
+        color: #24549D;
+        &::after{
+            background-color: #0777b5;
+        }
+        &:hover{
+            color: $color-white;
+            // border: 1px solid #24549d;
+        }
+        &.active{
+            background-color: #24549d;
+            color: $color-white;
+        }
+    }
+}

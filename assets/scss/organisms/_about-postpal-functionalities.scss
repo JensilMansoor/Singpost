@@ -1,0 +1,158 @@
+.sgp-postpal-func{
+    &__img-sec{
+        position: relative;
+    }
+    &__tooltip{
+        display: none;
+        color: $color-blue-2;
+        .sgp-h4{
+            margin-bottom: $spacer-2;
+        }
+    }
+    &__btn{
+        height: 39px;
+        width: 39px;
+        border-radius: 50%;
+        background-color: $color-yellow;
+        position: absolute;
+        cursor: pointer;
+        &::before,
+        &::after{
+            content: "";
+            background-color: $color-white;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &::before{
+            width: 23px;
+            height: 4px;
+        }
+        &::after{
+            width: 4px;
+            height: 23px;
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+        .sgp-postpal-func__tooltip{
+            display: block;
+            transform: translate(-50%,-100%);
+            margin-left: 18px;
+            margin-top: -11px;
+            width: 280px;
+            background-color: $color-white;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            cursor: default;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s;
+            position: relative;
+            z-index: 1;
+            &::before{
+                content: "";
+                width: 15px;
+                height: 15px;
+                background-color: $color-white;
+                transform: rotate(-45deg) translateX(-50%);
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+            }
+        }
+        &.active{
+            &::after
+            {
+                opacity: 0;
+            }
+            .sgp-postpal-func__tooltip{
+                opacity: 1;
+                visibility: visible;
+                animation: fadeIn 0.3s forwards;
+            }
+        }
+    }
+    &__btn-1{
+        top: 33%;
+        left: 46%;
+    }
+    &__btn-2{
+        top: 35%;
+        left: 19%;
+    }
+    &__btn-3{
+        top: 50%;
+        left: 22%;
+    }
+    &__btn-4{
+        top: 54%;
+        left: 59%;
+    }
+    &__btn-5{
+        top: 63%;
+        left: 62%;
+    }
+    &__btn-6{
+        top: 55%;
+        left: 69%;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@include mobile-tablet{
+    .sgp-postpal-func{
+        &__btn{
+            width: 30px;
+            height: 30px;
+            &::before{
+                width: 18px;
+                height: 3px;
+            }
+            &::after{
+                width: 3px;
+                height: 18px;
+            }
+            .sgp-postpal-func__tooltip{
+                margin-left: 13px;
+            }
+        }
+    }
+}
+@include mobile{
+    .sgp-postpal-func{
+        &__tooltip{
+            padding: $spacer-3;
+            background-color: $color-grey-7;
+            opacity: 0;
+            &.active{
+                display: block;
+                animation: fadeIn 0.8s forwards;
+            }
+        }
+        &__btn{
+            width: 15px;
+            height: 15px;
+            &::before{
+                width: 8px;
+                height: 1px;
+            }
+            &::after{
+                width: 1px;
+                height: 8px;
+            }
+        }
+        &__desc{
+            color: $color-grey-2;
+        }
+    }
+}

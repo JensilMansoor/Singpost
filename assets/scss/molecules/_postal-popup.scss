@@ -1,0 +1,50 @@
+.spg-postal-popup {
+    position: relative;
+    &.active {
+        .spg-postal-popup__expan {
+            display: block;
+        }
+    }
+    .sgp-link-btn {
+        padding: $spacer-2;
+    }
+    &__expan {
+        background-color: $color-white;
+        padding: $spacer-4;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 52px;
+        box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.16);
+        display: none;
+        z-index: 9;
+        width: 220px;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            bottom: -8px;
+            width: 18px;
+            height: 17px;
+            background-color: $color-white;
+        }
+        .sgp-link-btn {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+    .sgp-text-box {
+        margin-bottom: $spacer-3;
+        &__input {
+            min-width: 100%;
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 10px;
+        height: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+.sgp-notice-box{
+    border: 1px solid $color-red;
+    padding: 10px;
+    color: $color-red;
+    &__icon{
+        width: 30px;
+        height: 20px;
+        margin-right: $spacer-2;
+    }
+    &__inner{
+        display: flex;
+    }
+    &__desc{
+        font-size: 12px;
+    }
+    .sgp-btn{
+        margin-top: $spacer-2;
+        margin-left: 38px;
+        color: $color-red;
+        &__icon{
+            &::before{
+                box-shadow: inset 0 0 0 1px $color-red;
+            }
+            svg{
+                fill: $color-red;
+            }
+        }
+    }
+}

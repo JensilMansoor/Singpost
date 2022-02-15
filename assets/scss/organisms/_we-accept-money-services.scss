@@ -1,0 +1,55 @@
+.sgp-we-accept {
+    padding: $spacer-6 $spacer-0;
+    &--bottom{
+        padding-bottom: $spacer-0;    
+    }
+    &__outer {
+        display: flex;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    &__tiles {
+        margin: $spacer-0 $spacer-2;
+        width: calc(33.33% - 16px);
+    }
+    &__feature-outer {
+        margin: $spacer-0 $spacer-2;
+        width: calc(66.66% - 16px);
+    }
+    .sgp-feature-tile {
+        margin-bottom: $spacer-3;
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-we-accept {
+        &__outer {
+            display: block;
+            margin: $spacer-0;
+        }
+        &__tiles {
+            width: 100%;
+            margin: $spacer-0 $spacer-0 $spacer-3;
+            .sgp-tile {
+                width: 50%;
+            }
+        }
+        &__feature-outer {
+            width: 100%;
+            margin: $spacer-0;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-we-accept {
+        padding: $spacer-5 $spacer-0;
+        &__tiles {
+            .sgp-tile {
+                width: 100%;
+            }
+        }
+    }
+}

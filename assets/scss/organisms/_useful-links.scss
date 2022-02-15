@@ -3,6 +3,29 @@
     padding: $spacer-6 $spacer-0;
     .sgp-tile {
         background-color: $color-white;
+        &__small-title{
+            font-size: 12px;
+            margin-bottom: $spacer-3;
+            em{
+                padding-right: $spacer-2;
+                margin-right: $spacer-2;
+                border-right: 1px solid $color-grey-3;
+            }
+        }
+    }
+    &__btn-sec{
+        display: flex;
+        flex-wrap: wrap;
+        margin: $spacer-0 (-$spacer-2);
+        .sgp-btn{
+            margin: $spacer-1 $spacer-2;
+        }
+    }
+    &--white{
+        background-color: $color-white;
+        .sgp-tile {
+            background-color: $color-grey-7;
+        }
     }
 }
 

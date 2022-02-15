@@ -91,6 +91,20 @@
                 width: calc(100% - 8px);
                 min-height: 180px;
             }
+            &--border {
+                min-height: 155px;
+                .sgp-tile-bg {
+                    &__desc {
+                        display: none;
+                    }
+                    &__head {
+                        margin-bottom: $spacer-0;
+                    }
+                }
+                .sgp-btn {
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,39 @@
+.sgp-report-tile {
+    padding: $spacer-6 $spacer-0;
+    &__outer {
+        display: flex;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    .sgp-tile-bg {
+        width: 50%;
+        margin: $spacer-0 $spacer-2;
+        justify-content: center;
+        min-height: 250px;
+    }
+    .sgp-tile-box__inner{
+        box-shadow: none;
+        padding-bottom: $spacer-0;
+    }
+}
+
+@include mobile {
+    .sgp-report-tile {
+        padding: $spacer-5 $spacer-0;
+        &__outer {
+            padding-bottom: $spacer-2;
+            overflow-x: auto;
+            @include scroll-bar-x;
+        }
+        .sgp-tile-bg {
+            min-width: 280px;
+        }
+    }
+}
+
+@include ie-fix {
+    .sgp-report-tile {
+        .sgp-tile-bg {
+            height: 250px;
+        }
+    }
+}

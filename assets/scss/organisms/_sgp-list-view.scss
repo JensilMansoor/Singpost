@@ -1,0 +1,103 @@
+.sgp-list-view{
+    .sgp-tile{
+        &--list{
+            margin-bottom: $spacer-3;
+        &:last-child{
+            margin-bottom: $spacer-0;
+        }
+        }
+        &__img-sec{
+            & > * {
+                display: none;
+            }
+        }
+        .sgp-tile__tag{
+            display: inline-block;
+            position: static;
+            margin-right: $spacer-2;
+        }
+        &__cnt-sec{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .sgp-btn{
+                margin-top: (-$spacer-4);
+                margin-left: $spacer-4;
+                white-space: nowrap;
+            }
+        }
+        &__cnt-inner{
+            margin-bottom: $spacer-0;
+        }
+        &__day{
+            font-size: 14px;
+            color: $color-grey-3;
+            margin-bottom: $spacer-2;
+            text-transform: uppercase;
+        }
+        &__desc{
+            margin: $spacer-2 $spacer-6 $spacer-0 $spacer-0;
+            &--two-col{
+                display: inline-flex;
+                margin-bottom: $spacer-0;
+                margin-right: $spacer-6;
+                span{
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &__desc-icon{
+            top: -1px;
+        }
+        &__desc-black{
+            min-width: 0;
+            margin-right: $spacer-3;
+        }
+        .sgp-h3,
+        .sgp-h4,
+        .sgp-h5,
+        .sgp-h6{
+            margin-bottom: $spacer-2;
+        }
+    }
+    // .sgp-sort .sgp-select{
+    //     padding: $spacer-0 $spacer-3 12px $spacer-1;
+    // }
+    // .sgp-sort .sgp-input-text{
+    //     padding: $spacer-0 $spacer-1 12px;
+    // }
+}
+
+@include mobile-tablet{
+    .sgp-list-view{
+        display: flex;
+        .sgp-tile{
+            width: 100%;
+            min-width: 300px;
+            margin-right: $spacer-3;
+            &:last-child{
+                margin-right: $spacer-0;
+            }
+            &__cnt-sec{
+                display: block;
+                .sgp-btn{
+                    margin-top: auto;
+                    margin-left: $spacer-0;
+                }
+            }
+            &__cnt-inner{
+                margin-bottom: $spacer-3;
+            }
+        }
+        &--block{
+            &.sgp-list-view{
+                display: block;
+            }
+        }
+        // .sgp-sort .sgp-select{
+        //     padding: 11px $spacer-6 11px $spacer-3;
+        // }
+    }
+}

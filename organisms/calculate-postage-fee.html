@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Singapore Post</title>
+</head>
+
+<body>
+    <!-- Calculate postage fee start -->
+    <div class="sgp-calc-postage">
+        <div class="content-wrapper-small">
+            <div class="sgp-calc-postage__wrapp">
+                <div class="sgp-calc-postage__main">
+                    <div class="sgp-header-arrow">
+                        <div class="sgp-header-arrow__head-sec">
+                            <p class="sgp-small-title">Donec quam felis</p>
+                            <h2 class="sgp-h2">Calculate Your Postage Fee</h2>
+                        </div>
+                    </div>
+                    <div class="sgp-calc-postage__progress">
+                        <div class="sgp-calc-postage__progress-outer active">
+                            <div class="sgp-calc-postage__progress-dot">
+                                <span class="sgp-calc-postage__progress-txt">1</span>
+                            </div>
+                            <p class="sgp-calc-postage__progress-label">I want to send...</p>
+                        </div>
+                        <div class="sgp-calc-postage__progress-outer">
+                            <div class="sgp-calc-postage__progress-dot">
+                                <span class="sgp-calc-postage__progress-txt">2</span>
+                            </div>
+                            <p class="sgp-calc-postage__progress-label">Service</p>
+                        </div>
+                    </div>
+                    <div class="sgp-calc-postage__row">
+                        <select name="sgpSelect" class="sgp-select">
+                            <option value="0">Select</option>
+                            <option value="1">Select-1</option>
+                            <option value="2">Select-2</option>
+                            <option value="3">Select-3</option>
+                        </select>
+                        <select name="sgpCountry" class="sgp-select">
+                            <option value="0">Destination Country</option>
+                            <option value="1">Country-1</option>
+                            <option value="2">Country-2</option>
+                            <option value="3">Country-3</option>
+                        </select>
+                    </div>
+                    <div class="sgp-calc-postage__row">
+                        <input type="text" class="sgp-input-text">
+                        <a href="" title="Grams" class="sgp-calc-postage__value-btn active">Grams</a>
+                        <a href="" title="Kilograms" class="sgp-calc-postage__value-btn">Kilograms</a>
+                    </div>
+                    <a href="" title="See Delivery Times & Rates (Mail/Postal)" class="sgp-link">See Delivery Times & Rates (Mail/Postal)</a>
+                    <a href="" title="What can’t I send?" class="sgp-link">What can’t I send?</a>
+                    <a href="" title="Calculate Now" class="sgp-link-btn sgp-link-btn--box">Calculate Now<svg xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7"><path d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z" transform="translate(0 8.75)"></path></svg></a>
+                </div>
+                <div class="sgp-calc-postage__result">
+                    <div class="sgp-calc-postage__result-box">
+                        <div class="sgp-calc-postage__result-box-head">Your Postage</div>
+                        <div class="sgp-calc-postage__result-box-row">
+                            <div class="sgp-calc-postage__result-box-label">To:</div>
+                            <div class="sgp-calc-postage__result-box-value">100 Serangoon Rd, Singapore 218005</div>
+                        </div>
+                        <div class="sgp-calc-postage__result-box-row">
+                            <div class="sgp-calc-postage__result-box-label">Selected:</div>
+                            <div class="sgp-calc-postage__result-box-value">1 kg - Parcel Package <br /><strong>Basic Package (No Tracking)<br />2 working days</strong></div>
+                        </div>
+                        <div class="sgp-calc-postage__result-box-row">
+                            <div class="sgp-calc-postage__result-box-label">Total:</div>
+                            <div class="sgp-calc-postage__result-box-value sgp-calc-postage__result-box-value--total">S$1.50</div>
+                        </div>
+                    </div>
+                    <a href="" title="Buy a packing material" class="sgp-btn">
+                        <span class="sgp-btn__icon">
+                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z"></path><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"></path></svg>
+                        </span>Buy a packing material
+                    </a>
+                    <a href="" title="Locate Us" class="sgp-btn">
+                        <span class="sgp-btn__icon">
+                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z"></path><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"></path></svg>
+                        </span>Locate Us
+                    </a>
+                </div>
+            </div>
+            <div class="sgp-calc-postage__tiles">
+                <h2 class="sgp-h3">Please select one of the following package sizes</h2>
+                <div class="sgp-calc-postage__tiles-outer">
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <!-- <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p> -->
+                            <h4 class="sgp-h4">Mail</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col sgp-tile__desc--two-col--center"><span>From</span><span class="sgp-pdp__price-current sgp-pdp__price-current--val">S$157.50</span></p>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <!-- <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p> -->
+                            <h4 class="sgp-h4">Parcel</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col sgp-tile__desc--two-col--center"><span>From</span><span class="sgp-pdp__price-current sgp-pdp__price-current--val">S$157.50</span></p>
+                            <div class="sgp-package-tiles__drop">
+                                <div class="sgp-custom-select">
+                                    <div class="sgp-custom-select__value">Small Parcel</div>
+                                    <ul class="sgp-custom-select__expan">
+                                        <li class="sgp-custom-select__item">select 1</li>
+                                        <li class="sgp-custom-select__item">select 2</li>
+                                        <li class="sgp-custom-select__item">select 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sgp-calc-postage__tiles-btn">
+                    <a href="" title="Reset" class="sgp-link-btn sgp-link-btn--border">Reset<svg xmlns="http://www.w3.org/2000/svg" width="13.563" height="13.563" viewBox="0 0 13.563 13.563">
+                        <path id="Path_1021" data-name="Path 1021" d="M13.453-12.031a.316.316,0,0,1,.232.1.316.316,0,0,1,.1.232v4.375a.316.316,0,0,1-.1.232.316.316,0,0,1-.232.1H9.078a.316.316,0,0,1-.232-.1.316.316,0,0,1-.1-.232V-7.6a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H12.2a5.722,5.722,0,0,0-2.133-2.311A5.716,5.716,0,0,0,7-11.1a5.713,5.713,0,0,0-2.939.793A5.837,5.837,0,0,0,1.928-8.176,5.717,5.717,0,0,0,1.148-5.25a5.713,5.713,0,0,0,.793,2.939A5.837,5.837,0,0,0,4.074-.178,5.717,5.717,0,0,0,7,.6a5.687,5.687,0,0,0,2.119-.4A5.954,5.954,0,0,0,10.91-.9a.381.381,0,0,1,.232-.082.327.327,0,0,1,.232.109l.191.191a.314.314,0,0,1,.082.232.273.273,0,0,1-.109.232A6.746,6.746,0,0,1,9.461,1.066,6.633,6.633,0,0,1,7,1.531,6.573,6.573,0,0,1,3.609.615,6.886,6.886,0,0,1,1.135-1.846,6.526,6.526,0,0,1,.219-5.236a6.675,6.675,0,0,1,.9-3.4,6.746,6.746,0,0,1,2.461-2.475,6.6,6.6,0,0,1,3.4-.916,6.675,6.675,0,0,1,3.4.9,6.642,6.642,0,0,1,2.461,2.461V-11.7a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1Z" transform="translate(-0.219 12.031)"/>
+                      </svg></a>
+                    <a href="" title="Continue" class="sgp-link-btn sgp-link-btn--box">Continue<svg xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7"><path d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z" transform="translate(0 8.75)"></path></svg></a>
+                </div>
+            </div>
+
+            <div class="sgp-calc-postage__tiles sgp-calc-postage__tiles--services">
+                <h2 class="sgp-h3">Please select one of the following services</h2>
+                <div class="sgp-calc-postage__tiles-outer">
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <div class="sgp-tag">Recommended</div>
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <div class="sgp-tag">Recommended</div>
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                            <span class="sgp-tile__tag sgp-tile__tag--red"><img src="../assets/images/tick-white.svg" alt="">Tracking</span>
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <div class="sgp-tag">Recommended</div>
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                            <span class="sgp-tile__tag sgp-tile__tag--red"><img src="../assets/images/tick-white.svg" alt="">Tracking</span>
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                            <span class="sgp-tile__tag sgp-tile__tag--red"><img src="../assets/images/tick-white.svg" alt="">Tracking</span>
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                            <span class="sgp-tile__tag sgp-tile__tag--red"><img src="../assets/images/tick-white.svg" alt="">Tracking</span>
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+                    <div class="sgp-tile sgp-tile--parcel">
+                        <div class="sgp-tile__img-sec">
+                            <div class="sgp-tag">Recommended</div>
+                            <label class="sgp-checkbox">
+                                <input type="checkbox"/>
+                                <svg viewBox="0 0 24 24" filter="url(#goo-light)">
+                                    <defs><filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" /></filter></defs>
+                                    <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
+                                    <circle class="dot" cx="10.5" cy="15.5" r="1.5" />
+                                    <circle class="drop" cx="25" cy="-1" r="2" />
+                                </svg>
+                                <span class="sgp-checkbox__custom"></span>
+                            </label>
+                            <img src="../assets/images/basic-mail-regular.jpg" alt="Philatelic Store at The Fullerton Hotel">
+                            <span class="sgp-tile__tag sgp-tile__tag--red"><img src="../assets/images/tick-white.svg" alt="">Tracking</span>
+                        </div>
+                        <div class="sgp-tile__cnt-sec">
+                            <p class="sgp-tile__small-title">BASIC SERVICES (LOCAL)</p>
+                            <h4 class="sgp-h4">Basic Package</h4>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Weight:</span><span>≤2kg	</span>
+                            </p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>324 x 229 x 65 mm	</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Max. Dimensions:</span><span>240 x 162 x 6 mm (Regular)</span></p>
+                            <p class="sgp-tile__desc sgp-tile__desc--two-col"><span class="sgp-tile__desc-black">Working Days:</span><span>1 - 2</span></p>
+                            <div class="sgp-pdp">
+                                <p class="sgp-pdp__price">
+                                    <span class="sgp-pdp__price-current">S$15.00 to $25.00</span>
+                                </p>
+                                <div class="spg-postal-popup">
+                                    <button class="sgp-link-btn sgp-link-btn--border">Calculate</button>
+                                    <div class="spg-postal-popup__expan">
+                                        <button class="spg-postal-popup__close">
+                                            <img src="../assets/images/blue-close-icon.svg" alt="">
+                                        </button>
+                                        <div class="sgp-text-box">
+                                            <p class="sgp-text-box__text">Postal code from:</p>
+                                            <input type="text" placeholder="" class="sgp-text-box__input">
+                                        </div>
+                                        <div class="sgp-text-box">
+                                            <p class="sgp-text-box__text">Postal code to:</p>
+                                            <input type="text" placeholder="" class="sgp-text-box__input">
+                                        </div>
+                                        <a href="" class="sgp-link-btn sgp-link-btn--box">Submit Now<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sgp-tile__btn-sec">
+                            <a href="" class="sgp-link-btn sgp-link-btn--box">VIEW DETAILS<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g id="Group_5253" data-name="Group 5253" transform="translate(10625 24131)"><rect id="Rectangle_1171" data-name="Rectangle 1171" width="18" height="18" transform="translate(-10625 -24131)" fill="none"></rect><path id="Path_1023" data-name="Path 1023" d="M5.961-11.211a.4.4,0,0,1,.246-.082.3.3,0,0,1,.219.082l5.715,5.742a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L6.426.711a.3.3,0,0,1-.219.082A.4.4,0,0,1,5.961.711L5.414.164a.3.3,0,0,1-.082-.219A.4.4,0,0,1,5.414-.3L9.652-4.539H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-4.867v-.766a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1h9.32L5.414-10.2a.4.4,0,0,1-.082-.246.3.3,0,0,1,.082-.219Z" transform="translate(-10622 -24116.707)"></path></g></svg></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sgp-calc-postage__tiles-btn">
+                    <a href="" title="Reset" class="sgp-link-btn sgp-link-btn--border">Reset<svg xmlns="http://www.w3.org/2000/svg" width="13.563" height="13.563" viewBox="0 0 13.563 13.563">
+                        <path id="Path_1021" data-name="Path 1021" d="M13.453-12.031a.316.316,0,0,1,.232.1.316.316,0,0,1,.1.232v4.375a.316.316,0,0,1-.1.232.316.316,0,0,1-.232.1H9.078a.316.316,0,0,1-.232-.1.316.316,0,0,1-.1-.232V-7.6a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H12.2a5.722,5.722,0,0,0-2.133-2.311A5.716,5.716,0,0,0,7-11.1a5.713,5.713,0,0,0-2.939.793A5.837,5.837,0,0,0,1.928-8.176,5.717,5.717,0,0,0,1.148-5.25a5.713,5.713,0,0,0,.793,2.939A5.837,5.837,0,0,0,4.074-.178,5.717,5.717,0,0,0,7,.6a5.687,5.687,0,0,0,2.119-.4A5.954,5.954,0,0,0,10.91-.9a.381.381,0,0,1,.232-.082.327.327,0,0,1,.232.109l.191.191a.314.314,0,0,1,.082.232.273.273,0,0,1-.109.232A6.746,6.746,0,0,1,9.461,1.066,6.633,6.633,0,0,1,7,1.531,6.573,6.573,0,0,1,3.609.615,6.886,6.886,0,0,1,1.135-1.846,6.526,6.526,0,0,1,.219-5.236a6.675,6.675,0,0,1,.9-3.4,6.746,6.746,0,0,1,2.461-2.475,6.6,6.6,0,0,1,3.4-.916,6.675,6.675,0,0,1,3.4.9,6.642,6.642,0,0,1,2.461,2.461V-11.7a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1Z" transform="translate(-0.219 12.031)"></path>
+                      </svg></a>
+                    <a href="" title="Continue" class="sgp-link-btn sgp-link-btn--box">Continue<svg xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7"><path d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z" transform="translate(0 8.75)"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Calculate postage fee end -->
+    <!-- JS -->
+    <script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+.sgp-calender {
+    &__wrapper{
+        // width: 360px;
+        // margin: 3em auto;
+        display: flex;
+        align-items: flex-start;
+        // padding: 2em;
+        // border-radius: 5px;
+        background: #fff;
+    }
+
+    table {
+        clear: both;
+        width: 100%;
+        // border: 1px solid #dcdcff;
+        border-radius: 3px;
+        border-collapse: collapse;
+        color: #444;
+    }
+
+    td {
+        height: 48px;
+        text-align: center;
+        vertical-align: middle;
+        // border-right: 1px solid #dcdcff;
+        border: 1px solid $color-blue-med-2;
+        width: 14.28571429%;
+    }
+
+    td.not-current {
+        opacity: 0.3;
+    }
+
+    td.today {
+        @include font-univers-65;
+        color: $color-blue-2;
+        background-color: $color-grey-7;
+    }
+
+    // thead td {
+    //     border: none;
+    //     color: #28283b;
+    //     text-transform: uppercase;
+    //     font-size: 1.5em;
+    // }
+
+    // #btnPrev {
+    //     float: left;
+    //     margin-bottom: 20px;
+    // }
+
+    // #btnPrev:before {
+    //     content: '\f104';
+    //     font-family: FontAwesome;
+    //     padding-right: 4px;
+    // }
+
+    #btnNext {
+        .sgp-btn__icon{
+            margin-right: $spacer-0;
+            margin-left: $spacer-2;
+        }
+    }
+
+    // #btnNext:after {
+    //     content: '\f105';
+    //     font-family: FontAwesome;
+    //     padding-left: 4px;
+    // }
+
+    // #btnPrev,
+    // #btnNext {
+    //     background: transparent;
+    //     border: none;
+    //     outline: none;
+    //     font-size: 1em;
+    //     color: #c0c0c0;
+    //     cursor: pointer;
+    //     font-family: "Roboto Condensed", sans-serif;
+    //     text-transform: uppercase;
+    //     transition: all 0.3s ease;
+    // }
+
+    // #btnPrev:hover,
+    // #btnNext:hover {
+    //     color: #28283b;
+    //     font-weight: bold;
+    // }
+    // custom style start
+    &__outer{
+        width: 100%
+    }
+    &__row{
+        td{
+            text-align: right;
+            vertical-align: top;
+            padding: 10px;
+            color: $color-grey-1;
+            height: 90px;
+            position: relative;
+        }
+    }
+    &__nav{
+        min-height: 65.5px;
+        max-height: 65.5px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    &__nav-prev{
+        margin-right: -78px;
+    }
+    &__nav-next{
+        margin-left: -80px;
+    }
+    &__event-day{
+        display: inline-block;
+        @include font-univers-55;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 50%;
+        border: 1px solid $color-blue-3;
+        color: $color-blue-3;
+        text-align: center;
+
+    }
+    &__event-detail{
+        @include font-univers-55;
+        font-size: 10px;
+        color: $color-white;
+        text-align: left;
+        background-color: $color-blue-2;
+        padding: 5px 5px 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    &__event-list{
+        display: none;
+    }
+    thead{
+        td{
+            border: 0;
+            padding-bottom: $spacer-3;
+        }
+        .sgp-calender{
+            &__date-current{
+                color: $color-grey-3;
+                display: inline-block;
+                position: relative;
+                padding-left: 20px;
+                &::before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background-color: $color-red;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            &__month-selected{
+                @include font-univers-65;
+                font-size: 21px;
+                text-transform: uppercase;
+                color: $color-blue-2;
+                display: block;
+                border: none;
+                margin-bottom: $spacer-1;
+            }
+        }
+    }
+    .days{
+        td{
+            background-color: $color-blue-1;
+            color: $color-white;
+            text-transform: uppercase;
+            border: 1px solid $color-blue-1;
+        }
+    }
+    // custom style end
+}
+
+@include mobile{
+    .sgp-calender{
+        font-size: 12px;
+        thead .sgp-calender__month-selected{
+            font-size: 16px;
+        }
+        #btnNext .sgp-btn__icon{
+            margin-left: $spacer-0;
+        }
+        &__row{
+            td {
+                height: 50px;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+        &__nav{
+            font-size: 0;
+            min-height: 57px;
+            max-height: 57px;
+            .sgp-btn__icon{
+                margin: $spacer-0;
+            }
+        }
+        &__nav-prev{
+            margin-right: -34px;
+        }
+        &__nav-next{
+            margin-left: -34px;
+        }
+        &__event {
+            &.active{
+                pointer-events: none;
+                border: 1px solid $color-blue-2;
+                .sgp-calender__event-day{
+                    border-color: $color-blue-2;
+                    color: $color-white;
+                }
+            }
+        }
+        td.today.sgp-calender__event.active,
+        &__event.active{
+            background-color: $color-blue-2;
+        }
+        &__event-detail{
+            display: none;
+        }
+        &__event-list{
+            margin-top: $spacer-3;
+            display: block;
+            // &.active{
+            //     display: block;
+            // }
+        }
+        &__event-on{
+            background-color: $color-blue-2;
+            color: $color-white;
+            padding: $spacer-2 10px;
+            border: 1px solid $color-blue-2;
+        }
+        &__event-name{
+            border: 1px solid $color-blue-med-2;
+            padding: 10px;
+            color: $color-grey-3;
+        }
+        &__event-date{
+            font-style: italic;
+        }
+    }
+}

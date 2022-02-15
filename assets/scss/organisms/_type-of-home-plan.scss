@@ -1,0 +1,22 @@
+.sgp-of-home-plan {
+    .sgp-plan-table {
+        &__table {
+            td {
+                text-align: left;
+            }
+        }
+    }
+    &__table-cnt {
+        padding: $spacer-3;
+    }
+    &__cnt-head {
+        @include font-univers-65;
+        margin-bottom: $spacer-2;
+    }
+    &__table-cnt-txt {
+        color: $color-grey-3;
+    }
+    .sgp-home-plan-tab {
+        margin-top: $spacer-4;
+    }
+}

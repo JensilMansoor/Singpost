@@ -1,0 +1,111 @@
+.sgp-plan-table {
+    &__table {
+        width: 100%;
+        th,
+        td {
+            border: 1px solid #eee;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $color-white;
+        }
+        th {
+            color: $color-white;
+            @include font-univers-65;
+            font-size: 16px;
+            padding: $spacer-3;
+            &:first-child {
+                border: 0;
+                background-color: transparent;
+            }
+        }
+        .sgp-plan-table__sticky {
+            width: 40%;
+        }
+        .sgp-plan-table__recomend {
+            background-color: $color-pink;
+            color: $color-white;
+            padding: $spacer-2;
+            position: relative;
+            bottom: -1px;
+        }
+        .sgp-plan-table__spacer {
+            background-color: transparent;
+            padding: $spacer-0;
+            width: 16px;
+            border: 0;
+        }
+        .sgp-accordion-custom {
+            text-align: left;
+        }
+    }
+    &__td-inner {
+        color: $color-grey-1;
+        padding: $spacer-3;
+        background-color: $color-white;
+    }
+    &__icon {
+        width: 12px;
+        margin: $spacer-0 auto;
+    }
+    &__td-box {
+        display: none;
+    }
+    &__recomend-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 20px;
+            margin-right: $spacer-2;
+        }
+    }
+}
+
+@include tablet {
+    .sgp-plan-table {
+        &__table {
+            th {
+                &:first-child {
+                    box-shadow: none;
+                }
+            }
+            .sgp-plan-table__sticky {
+                width: 30%;
+                position: sticky;
+                top: 0;
+                left: 0;
+                box-shadow: inset 0 0 0 1px #eee;
+            }
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-plan-table {
+        overflow-x: auto;
+    }
+}
+
+@include mobile {
+    .sgp-plan-table {
+        &__table {
+            th {
+                &:first-child {
+                    box-shadow: none;
+                }
+            }
+            td {
+                vertical-align: bottom;
+            }
+            .sgp-plan-table__sticky {
+                position: sticky;
+                top: 0;
+                left: 0;
+                width: calc(100vw - 32px);
+            }
+        }
+        &__td-box {
+            height: 50px;
+        }
+    }
+}

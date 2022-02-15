@@ -1,0 +1,38 @@
+.sgp-tracking-info {
+    padding: $spacer-6 $spacer-0;
+    .sgp-h2 {
+        margin-bottom: $spacer-3;
+    }
+    .sgp-pers-featured {
+        &__wrapper {
+            display: flex;
+        }
+    }
+    .sgp-tile {
+        width: calc(100% - 16px);
+        &:hover {
+            background-color: $color-grey-7;
+            box-shadow: none;
+        }
+        .sgp-h5 {
+            min-height: 0px;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-tracking-info {
+        padding: $spacer-5 $spacer-0;
+        .sgp-pers-featured {
+            &__wrapper {
+                display: block;
+            }
+        }
+        .sgp-tile {
+            margin-bottom: $spacer-3;
+            &:last-child {
+                margin-bottom: $spacer-0;
+            }
+        }
+    }
+}

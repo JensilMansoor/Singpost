@@ -1,0 +1,67 @@
+.sgp-custom-select {
+    position: relative;
+    &.active {
+        z-index: 2;
+        .sgp-custom-select {
+            &__expan {
+                display: block;
+            }
+            &__value {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &__value {
+        @include font-univers-45;
+        border: 1px solid $color-grey-4;
+        padding: 10px $spacer-5 10px $spacer-3;
+        width: 100%;
+        color: $color-black;
+        cursor: pointer;
+        &--white{
+            background-color: $color-white;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 16px;
+            right: $spacer-3;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.125' height='7.793' viewBox='0 0 13.125 7.793'%3E%3Cpath id='Path_1018' data-name='Path 1018' d='M6.234-4.1H6.193a.6.6,0,0,0,.369.123A.6.6,0,0,0,6.932-4.1L13-10.131a.571.571,0,0,0,.123-.349A.571.571,0,0,0,13-10.828l-.82-.82a.6.6,0,0,0-.369-.123.443.443,0,0,0-.328.123L6.563-6.768,1.641-11.648a.443.443,0,0,0-.328-.123.6.6,0,0,0-.369.123l-.82.82A.571.571,0,0,0,0-10.479a.49.49,0,0,0,.164.349Z' transform='translate(0 11.771)' fill='%2324549d'/%3E%3C/svg%3E%0A");
+            background-size: 10px 5px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 16px);
+            background-position: center;
+            width: 14px;
+            height: 8px;
+            transition: all 0.3s;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    &__expan {
+        background-color: $color-white;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.16);
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: $spacer-2 $spacer-0;
+        display: none;
+        max-height: 150px;
+        overflow-y: auto;
+        @include scroll-bar-y;
+    }
+    &__item {
+        padding: $spacer-2 $spacer-3;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            color: $color-blue-2;
+            text-decoration: underline;
+        }
+    }
+}

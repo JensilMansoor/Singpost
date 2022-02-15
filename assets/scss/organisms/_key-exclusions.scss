@@ -1,0 +1,47 @@
+.key-exclusions{
+    .sgp-h2{
+        margin-bottom: $spacer-4;
+    }
+    .sgp-snr-steps{
+        &__box-head{
+            color: $color-grey-1;
+        }
+        &__box-disc{
+            color: $color-grey-3;
+        }
+        &__box-color{
+            border: 1px solid $color-red;
+            &--blue{
+                .sgp-snr-steps__box-head{
+                    padding-top: $spacer-0;
+                }
+                border: 1px solid $color-blue-2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            // &.sgp-only-mob{
+            //     display: none;
+            // }
+            // &.sgp-only-desk{
+            //     display: flex;
+            // }
+        }
+        &__border-box-mobile-show{
+            display: none;
+        }
+    }
+}
+
+@include mobile{
+    .key-exclusions{
+        .sgp-snr-steps{
+            &__box-color--blue{
+                display: none;
+            }
+            &__border-box-mobile-show{
+                display: flex;
+            }
+        }
+    }
+}

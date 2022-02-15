@@ -1,0 +1,74 @@
+.sgp-sheild-plan {
+    padding: $spacer-6 $spacer-0;
+    background-color: $color-grey-7;
+    &__table {
+        display: flex;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    &__col {
+        width: calc(33.33% - 16px);
+        margin: $spacer-0 $spacer-2;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+        }
+    }
+    &__table-head {
+        color: $color-white;
+        padding: $spacer-3;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    &__table-cnt {
+        background-color: $color-white;
+        padding: $spacer-3;
+        height: 100%;
+    }
+    &__cnt-row {
+        margin-bottom: $spacer-2;
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+        .sgp-h5 {
+            margin-bottom: $spacer-1;
+        }
+    }
+    &__txt {
+        color: $color-grey-3;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-sheild-plan {
+        &__table {
+            padding-bottom: $spacer-3;
+            overflow-x: auto;
+            @include scroll-bar-x;
+        }
+        &__col {
+            width: 100%;
+            min-width: 290px;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-sheild-plan {
+        padding: $spacer-5 $spacer-0;
+        &__table-head {
+            font-size: 18px;
+        }
+    }
+}
+
+.country {
+    margin-top: -10px;
+}
+
+@media (max-width:767px) {
+    .country {
+        margin-top: -20px;
+    }
+}

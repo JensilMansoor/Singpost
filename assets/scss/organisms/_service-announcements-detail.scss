@@ -1,0 +1,13 @@
+.sgp-service-announcements-detail {
+    .sgp-list {
+        color: $color-grey-3;
+    }
+    .sgp-postal-revision {
+        &__img {
+            margin-bottom: $spacer-4;
+        }
+    }
+    .sgp-prev-next-btn {
+        padding-top: $spacer-4;
+    }
+}

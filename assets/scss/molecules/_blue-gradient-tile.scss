@@ -1,0 +1,34 @@
+.sgp-tile-blue{
+    @include medium-blue-gradient(138deg);
+    padding: $spacer-4;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__label{
+        background-color: $color-blue-1;
+        padding: $spacer-2 $spacer-3;
+        color: $color-white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        & + .sgp-tile-blue__cnt{
+            margin-top: 34px;
+        }
+    }
+    &__cnt{
+        color: $color-white;
+        .sgp-h4{
+            margin-bottom: $spacer-3;
+        }
+    }
+    &__desc{
+        margin-bottom: $spacer-4;
+    }
+}
+
+@include mobile{
+    .sgp-tile-blue{
+        padding: $spacer-4;
+    }
+}

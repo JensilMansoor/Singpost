@@ -1,0 +1,19 @@
+.sgp-tiles-grid{
+    padding: $spacer-6 $spacer-0 $spacer-2;
+    .sgp-pers-featured{
+        &__wrapper{
+            & > .slick-list{
+                padding: $spacer-5 $spacer-0 $spacer-0;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .sgp-tiles-grid{
+        .sgp-tile-bg{
+            margin: $spacer-0 $spacer-2;
+            height: auto;
+        }
+    }
+}

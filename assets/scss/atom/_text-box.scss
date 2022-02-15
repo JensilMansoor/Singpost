@@ -1,0 +1,72 @@
+.sgp-text-box {
+    &__text {
+        color: $color-black;
+        padding-bottom: $spacer-2;
+        Span {
+            color: $color-red;
+        }
+    }
+    &__input,
+    &__text-area {
+        @include font-univers-45;
+        border: 1px solid $color-grey-4;
+        padding: 10px $spacer-3;
+        width: 100%;
+        min-width: 200px;
+        color: $color-black;
+        &--icon{
+            &::after{
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: $color-blue-2;
+            }
+        }
+    }
+    &__text-area {
+        height: 120px;
+        display: block;
+        resize: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        @include scroll-bar-y;
+    }
+    &__icon-outer{
+        position: relative;
+        .sgp-text-box{
+            &__input{
+                padding-right: $spacer-5;
+            }
+        }
+    }
+    &__icon{
+        position: absolute;
+        top: 13px;
+        right: 16px;
+        width: 14px;
+        height: 14px;
+    }
+    &__error {
+        font-size: 12px;
+        color: $color-red;
+        margin-top: $spacer-1;
+        display: none;
+        svg {
+            width: 12px;
+            height: 12px;
+            margin-right: $spacer-1;
+            margin-top: -2px;
+        }
+        &--show {
+            display: block;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-text-box {
+        &__input {
+            min-width: 0;
+        }
+    }
+}

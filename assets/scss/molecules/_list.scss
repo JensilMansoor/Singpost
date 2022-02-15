@@ -1,0 +1,47 @@
+.sgp-list {
+    list-style: disc;
+    padding-left: $spacer-3;
+    li {
+        margin-bottom: $spacer-1;
+    }
+    &--order {
+        list-style: decimal;
+    }
+    &--roman {
+        list-style: lower-roman;
+    }
+    &--tick {
+        list-style: none;
+        padding-left: 20px;
+        li {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: -20px;
+                top: 4px;
+                width: 10px;
+                height: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.523' height='9.625' viewBox='0 0 12.523 9.625'%3E%3Cpath id='Path_1018' data-name='Path 1018' d='M11.922-9.98a.3.3,0,0,1,.219-.082.4.4,0,0,1,.246.082l.766.793a.26.26,0,0,1,.109.219.34.34,0,0,1-.109.246l-8.2,8.2a.3.3,0,0,1-.219.082A.4.4,0,0,1,4.484-.52L.848-4.184A.26.26,0,0,1,.738-4.4a.34.34,0,0,1,.109-.246l.766-.766a.34.34,0,0,1,.246-.109.26.26,0,0,1,.219.109L4.73-2.762Z' transform='translate(-0.738 10.063)' fill='%2324549d'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+    &--dash {
+        list-style: none;
+        li {
+            position: relative;
+            &::after {
+                content: '-';
+                position: absolute;
+                left: -20px;
+                font-size: 14px;
+            }
+        }
+    }
+    &--alpha {
+        list-style: lower-alpha;
+    }
+}

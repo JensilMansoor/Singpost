@@ -1,0 +1,165 @@
+.sgp-terms-n-cond{
+    background-color: $color-grey-7;
+    padding: $spacer-6 $spacer-0;
+    &.sgp-end-result{
+        background-color: $color-grey-5;
+        .sgp-terms-n-cond{
+            &__tile--full{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: -24px;
+                    right: 0px;
+                    background-image: url(../images/business-end-result-double-quote.svg);
+                    background-size: 70px 52px;
+                    width: 70px;
+                    height: 52px;
+                }
+            }
+            &__tile--two-tile{
+                border: 1px solid $color-blue-med-2;
+            }
+            &__result-head{
+                font-size: 18px;
+                @include font-univers-65;
+                margin-bottom: $spacer-1;
+            }
+            &__blue-head{
+                font-size: 36px;
+                @include font-univers-65;
+                margin-bottom: $spacer-1;
+                color: $color-blue-2;
+            }
+        }
+    }
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$spacer-2;
+    } 
+    &__tile{
+        background-color: $color-white;
+        padding: $spacer-4;
+        margin: $spacer-2;
+        width: calc(25% - 16px);
+        &:hover{
+            box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
+        }
+        li{
+            color: $color-grey-3;
+            list-style: disc;
+            margin-left: $spacer-3;
+        }
+        p{
+            color: $color-grey-3;
+            font-size: 14px;
+            &.sgp-mar-btm{
+                margin-bottom: $spacer-2;
+            }
+        }
+        &--two-tile{
+            &.sgp-terms-n-cond__tile{
+                width: calc(50% - 16px);
+                // &:nth-child(2n){
+                //     margin-right: $spacer-0;
+                // }
+                // &:last-child{
+                //     margin-right: $spacer-0;
+                // }
+            }
+        }
+        &--three-tile{
+            &.sgp-terms-n-cond__tile{
+                width: calc(33.3% - 16px);
+                // margin-right: $spacer-3;
+                // &:nth-child(3n){
+                //     margin-right: $spacer-0;
+                // }
+                // &:last-child{
+                //     margin-right: $spacer-0;
+                // }
+            }
+        }
+        &--flex1{
+            &.sgp-terms-n-cond__tile{
+                flex: 1;
+            }
+        }
+        &--full{
+            width: 100%;
+            // margin: $spacer-3 $spacer-0;
+        }
+    }
+    &__head{
+        color: $color-black;
+        font-size: 16px;
+        padding-bottom: $spacer-2;
+        @include font-univers-65;
+    }
+    &__desc{
+        color: $color-grey-3;
+        font-size: 14px;
+    }
+}
+@include mobile-tablet {
+    padding: $spacer-5 $spacer-0;
+.sgp-terms-n-cond{
+    &__tile{
+        width: calc(50% - 16px);
+        // &:nth-child(even){
+        //     margin-right: $spacer-0;
+        // }
+        // &:last-child{
+        //     margin-right: $spacer-0;
+        // }
+        &--two-tile{
+            &.sgp-terms-n-cond__tile{
+                width: calc(50% - 16px);
+                // &:nth-child(even){
+                //     margin-right: $spacer-0;
+                // }
+                // &:last-child{
+                //     margin-right: $spacer-0;
+                // }
+            }
+        }   
+        &--three-tile{
+            &.sgp-terms-n-cond__tile{
+                width: calc(50% - 16px);
+            }
+        }   
+    }
+}
+}
+@include mobile {
+.sgp-terms-n-cond{
+    &__wrap{
+        flex-direction: column;
+        margin: $spacer-0;
+    }
+    &__tile{
+        width: 100%;
+        padding: $spacer-3;
+        margin: $spacer-0 $spacer-0 $spacer-2 $spacer-0;
+        &--two-tile, &--three-tile{
+            &.sgp-terms-n-cond__tile{
+                width: 100%; 
+            }
+        }
+    }
+    &.sgp-end-result{
+        .sgp-terms-n-cond{
+            &__tile--full{
+                &::after{
+                    content: "";
+                    top: -14px;
+                    background-size: 40px 30px;
+                    width: 40px;
+                    height: 30px;
+                }
+            }
+        }
+    }    
+}   
+}

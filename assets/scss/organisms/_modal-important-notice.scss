@@ -1,0 +1,12 @@
+.sgp-imp-notice{
+    .sgp-h3{
+        margin-bottom: $spacer-3;
+    }
+    &__desc{
+        color: $color-grey-3;
+        margin-bottom: $spacer-2;
+        &:last-child{
+            margin-bottom: $spacer-0;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.sgp-milestones-slider {
+    padding: $spacer-6 $spacer-0;
+    .sgp-header-arrow {
+        align-items: center;
+        .sgp-h2 {
+            margin-bottom: $spacer-3;
+        }
+    }
+    .sgp-awards-slider {
+        &__nav {
+            &::before {
+                bottom: 23px;
+            }
+            .slick-list {
+                padding-right: 50px;
+            }
+        }
+        &__year {
+            position: relative;
+            // background-color: #ededed;
+            padding-top: $spacer-6;
+        }
+        &__year-txt {
+            margin-bottom: $spacer-0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(50%);
+            z-index: 1;
+            color: $color-red;
+            font-size: 24px;
+            font-style: italic;
+        }
+        &__for {
+            margin-top: $spacer-0;
+            .slick-list {
+                padding-right: 50px;
+            }
+        }
+        &__item {
+            margin: $spacer-0 $spacer-2;
+            padding: $spacer-0;
+            background-color: $color-white;
+            &.slick-slide {
+                display: block;
+            }
+        }
+        &__item-img-outer {
+            width: 100%;
+        }
+        &__item-cnt {
+            width: 100%;
+            padding-left: $spacer-0;
+            padding-top: $spacer-3;
+            .sgp-h3 {
+                color: $color-black;
+            }
+        }
+        &__desc {
+            color: $color-grey-3;
+        }
+    }
+}

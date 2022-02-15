@@ -1,0 +1,134 @@
+.sgp-stock-info{
+    padding: $spacer-6 $spacer-0;
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -8px;
+    }
+    &__image-outer{
+        margin: 0 $spacer-2;
+        width: calc(70% - 16px);
+    }
+    &__img{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        min-height: 360px;
+    }
+    .sgp-stock-box{
+        margin: 0 $spacer-2;
+        width: calc(30% - 16px);
+    }
+    // &__blue-head{
+    //     background-color: $color-blue-1;
+    //     padding: $spacer-3 $spacer-4;
+    //     p{
+    //         font-size: 21px;
+    //         color: $color-white;
+    //         font-weight: bold;
+    //     }
+    //     span{
+    //         font-size: 14px;
+    //         font-style: italic;
+    //         font-weight: normal;
+    //     }
+    // }
+    // &__cont-wrap{
+    //     border: 1px solid $color-blue-med-2;
+    //     padding: $spacer-4;
+    //     hr{
+    //         border-top: 1px solid $color-blue-med-2;
+    //         margin: $spacer-4 $spacer-0;
+    //     }
+    // }
+    // &__row{
+    //     display: flex;
+    //     margin-bottom: $spacer-3;
+    //     &:last-child{
+    //         margin-bottom: $spacer-0;
+    //     }
+    // }
+    // &__row-detail{
+    //     color: $color-grey-1;
+    //     min-width: 185px;
+    // }
+    // &__row-val{
+    //     color: $color-black;
+    //     font-weight: bold;
+    //     &--blue{
+    //         color: $color-blue-4;
+    //     }
+    //     &--red{
+    //         color: $color-red;
+    //     }
+    // }
+    &__table-wrap{
+        margin-top: $spacer-6;
+    }
+    &__td-border{
+        width: 100%;
+        border-top: 1px solid $color-blue-med-2;
+        border-left: 1px solid $color-blue-med-2;
+        color: $color-black;
+        .grey{
+           color: $color-grey-3;
+        }
+        td{
+            border-bottom: 1px solid $color-blue-med-2;
+            border-right: 1px solid $color-blue-med-2;
+            padding: $spacer-2 $spacer-3;
+            vertical-align: middle;
+        }
+    }
+}
+@include mobile-tablet{
+    .sgp-stock-info{
+        // &__row-detail{
+        //     min-width: 170px;
+        // } 
+        // .sgp-stock-box{
+        //     width: calc(45% - 16px);
+        // }
+        // &__image-outer{
+        //     width: calc(55% - 16px);
+        // }
+        &__image-outer,
+        .sgp-stock-box{
+            width: 100%;
+        }
+        &__image-outer{
+            margin-bottom: $spacer-3;
+        }
+        &__img{
+            min-height: 280px;
+        }
+    }
+}
+@include mobile{
+    .sgp-stock-info{
+        padding: $spacer-5 $spacer-0;
+        &__image-outer{
+            width: 100%;
+            margin-bottom: $spacer-2;
+        }
+        .sgp-stock-box{
+            width: 100%;
+        }
+        &__img{
+            min-height: 160px;
+        }
+        &__table-wrap{
+            margin-top: $spacer-5;
+        }
+        // &__row{
+        //     margin-bottom: $spacer-2;
+        // }
+        // &__cont-wrap{
+        //     padding: $spacer-4 $spacer-3;
+        //     hr{
+        //         margin: $spacer-3 $spacer-0;
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,59 @@
+.sgp-locate-result{
+    .sgp-h4{
+        margin-bottom: $spacer-3;
+    }
+    &__current{
+        margin-bottom: $spacer-3;
+        .sgp-h6{
+            margin-bottom: $spacer-1;
+        }
+    }
+    &__sec{
+        margin-top: $spacer-3;
+        border-top: 1px solid $color-blue-med-2;
+        padding-top: $spacer-3;
+    }
+    &__tile-wrapper{
+        margin: $spacer-0 (-$spacer-2)
+    }
+    &__tile{
+        display: flex;
+        justify-content: space-between;
+        padding: $spacer-3;
+        border: 1px solid $color-blue-med-2;
+        margin: 10px $spacer-2;
+        cursor: pointer;
+        transition: 0.3s;
+        .sgp-checkbox{
+            border-radius: 50%;
+        }
+        &:hover,
+        &.active{
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+        }
+        &.active{
+            background-color: $color-grey-7;
+            border: 1px solid transparent;
+            pointer-events: none;
+        }
+    }
+    &__name{
+        color: $color-blue-2;
+        margin-bottom: $spacer-1;
+    }
+    &__note{
+        font-size: 12px;
+        font-style: italic;
+        margin-top: $spacer-2;
+    }
+}
+
+@include ie-fix{
+    .sgp-locate-result{
+        &__tile{
+            .sgp-checkbox__custom{
+                border-radius: 50%;
+            }
+        }
+    }
+}

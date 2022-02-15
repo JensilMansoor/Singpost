@@ -1,0 +1,25 @@
+.sgp-search-input{
+    position: relative;
+    .sgp-input-text{
+        width: 100%;
+        padding-right: $spacer-5;
+    }
+    &__btn{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: -1px;
+        right: 0;
+        svg{
+            width: 100%;
+            height: 100%;
+            fill: $color-blue-2;
+        }
+    }
+}
+
+@include mobile-tablet{
+    .sgp-search-input{
+        display: none;
+    }
+}

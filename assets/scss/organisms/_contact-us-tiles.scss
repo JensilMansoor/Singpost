@@ -1,0 +1,39 @@
+.sgp-contct-tiles {
+    &__outer {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    &__tile {
+        background-color: $color-grey-7;
+        padding: $spacer-4;
+        width: calc(33.33% - 16px);
+        margin: $spacer-2;
+        .sgp-h6 {
+            color: $color-red;
+            margin-bottom: $spacer-2;
+        }
+    }
+    &__number {
+        @include font-univers-65;
+        margin-bottom: $spacer-2;
+    }
+    &__desc {
+        color: $color-grey-3;
+        font-style: italic;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-contct-tiles {
+        &__outer {
+            overflow-x: auto;
+            @include scroll-bar-x;
+            flex-wrap: nowrap;
+            padding-bottom: $spacer-2;
+        }
+        &__tile {
+            min-width: 280px;
+        }
+    }
+}

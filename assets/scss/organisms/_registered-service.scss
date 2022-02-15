@@ -1,12 +1,47 @@
 .sgp-reg-service{
+    &--community{
+        &.sgp-val-added{
+            background-color: $color-white;
+            padding: $spacer-0;
+        }
+        &.sgp-reg-service{
+            .sgp-reg-service__inner{
+                width: 100%;
+            }
+            .sgp-reg-service__bodycopy{
+                padding-left: $spacer-0;
+                list-style: none;
+                text-align: center;
+                &--bold{
+                    font-weight: bold;
+                }
+                &:last-child{
+                    margin-bottom: $spacer-0;
+                }
+                }
+                .slick-arrow.slick-hidden{
+                    display: block;
+                }
+                .slick-dots{
+                    display: block;
+                }
+                .sgp-pers-featured__wrapper{
+                    padding: $spacer-0 $spacer-5;
+                }
+                .sgp-pers-featured__wrapper > .slick-list{
+                    padding: 0px;
+                }
+        }
+    }
     &__wrapper{
         position: relative;
         padding-top: 85px;
+        
     }
     &__image{
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 333px;
         top: 0;
         bottom: 0;
         background-size: cover;
@@ -18,6 +53,16 @@
         padding: $spacer-6;
         margin: 0 auto;
         width: calc(100% - 140px);
+        p{
+            margin-bottom: $spacer-3;
+            color: $color-grey-3;
+        }
+        .sgp-small-title{
+            text-align: center;
+        }
+        &--no-pad{
+            padding-bottom: 0px;
+        }
     }
     &__header{
         font-size: 36px;
@@ -55,6 +100,28 @@
 }
 @include mobile {
     .sgp-reg-service{
+        &--community{
+            &.sgp-reg-service{
+                .sgp-reg-service__inner{
+                    width: 100%;
+                    padding: $spacer-4 $spacer-0;
+                }
+                .sgp-reg-service__bodycopy{
+                    text-align: left;
+                }
+                .slick-dots{
+                    display: flex;
+                    margin: $spacer-0
+                }
+                .sgp-pers-featured__wrapper{
+                    padding: $spacer-0 $spacer-2;
+                }
+            }
+        }
+        &__wrapper{
+            padding-top: 55px;
+                
+        }
         &__header{
             font-size: 24px;
             line-height: 28px;
@@ -64,9 +131,9 @@
             padding: $spacer-4 $spacer-3;
             width: calc(100% - 40px);
         }
-        &__image{
-            height: calc(100% - 70px);
-        }
+        // &__image{
+        //     height: calc(100% - 70px);
+        // }
     }
     
 }

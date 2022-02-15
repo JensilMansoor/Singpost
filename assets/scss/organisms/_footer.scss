@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 140px $spacer-0 $spacer-6;
+    padding: 70px $spacer-0 $spacer-6;
     &::before {
         content: "";
         width: 100%;
@@ -13,6 +13,9 @@
         top: 0;
         left: 0;
     }
+    &--pt {
+        padding-top: 140px;
+    }
     &__wrapper {
         position: relative;
         display: flex;
@@ -20,6 +23,9 @@
     }
     &__sec-1 {
         min-width: 25%;
+        .sgp-h6{
+            text-transform: uppercase;
+        }
     }
     &__sec-2 {
         width: 75%;
@@ -49,8 +55,8 @@
     &__link {
         display: block;
         margin-top: $spacer-1;
-        &:nth-of-type(1) {
-            margin-top: $spacer-3;
+        a:hover {
+            color: $color-white;
         }
     }
     &__email {
@@ -82,9 +88,12 @@
         height: 15px;
         margin-left: $spacer-4;
         display: block;
-        &:hover {
-            transform: scale(1.12);
-            transition: 0.3s;
+        a {
+            display: block;
+            &:hover {
+                transform: scale(1.12);
+                transition: 0.3s;
+            }
         }
         &:last-child {
             .sgp-footer__social-icon {
@@ -100,12 +109,19 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        max-height: 370px;
+        max-height: 500px;
         overflow: auto;
         margin: (-$spacer-2) (-$spacer-2);
+        @include scroll-bar-x;
     }
     &__link-sec {
         margin: $spacer-2 $spacer-2 $spacer-3;
+        .sgp-h6 {
+            text-transform: uppercase;
+            &+.sgp-footer__link {
+                margin-top: $spacer-3;
+            }
+        }
     }
     &__quick-wrapper {
         font-size: 14px;
@@ -163,7 +179,10 @@
 
 @include mobile {
     .sgp-footer {
-        padding: $spacer-6 $spacer-0;
+        padding: $spacer-6 $spacer-0 65px;
+        &--pt {
+            padding-top: $spacer-6;
+        }
         &__logo {
             width: 160px;
             height: auto;
@@ -184,10 +203,10 @@
     }
 }
 
-@include ie-fix{
-    .sgp-footer{
-        &__link-wrapper{
-            height: 370px;
+@include ie-fix {
+    .sgp-footer {
+        &__link-wrapper {
+            height: 500px;
         }
     }
 }

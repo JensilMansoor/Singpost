@@ -1,0 +1,48 @@
+.sgp-how-to-apply {
+    padding: $spacer-6 $spacer-0;
+    .sgp-header-arrow {
+        margin-bottom: $spacer-4;
+    }
+    .sgp-pers-featured {
+        &__wrapper {
+            display: flex;
+        }
+    }
+    .sgp-tile {
+        width: calc(50% - 16px);
+        &:hover {
+            box-shadow: none;
+        }
+        .sgp-h5 {
+            font-size: 20px;
+            min-height: auto;
+            color: $color-black;
+        }
+        &__cnt-sec {
+            color: $color-grey-1;
+        }
+    }
+    &__logo {
+        width: auto;
+        height: 45px;
+        margin-bottom: $spacer-4;
+        align-self: flex-start;
+    }
+}
+
+@include mobile {
+    .sgp-how-to-apply {
+        padding: $spacer-5 $spacer-0;
+        .sgp-pers-featured {
+            &__wrapper {
+                display: block;
+            }
+        }
+        .sgp-tile {
+            width: calc(100% - 16px);
+            &:first-child {
+                margin-bottom: $spacer-3;
+            }
+        }
+    }
+}

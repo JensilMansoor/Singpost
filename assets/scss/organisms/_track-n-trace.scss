@@ -1,0 +1,312 @@
+.sgp-track-trace {
+    background-color: $color-grey-7;
+    padding: $spacer-6 $spacer-0;
+    .sgp-search {
+        max-width: 1000px;
+        margin-bottom: $spacer-3;
+        &__input {
+            border-color: $color-grey-4;
+            color: $color-black;
+            &::placeholder {
+                color: $color-grey-4;
+            }
+        }
+    }
+    &__error {
+        display: flex;
+        margin-bottom: $spacer-3;
+        &.hide {
+            display: none;
+        }
+    }
+    &__error-icon {
+        margin-right: $spacer-2;
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &__error-txt {
+        color: $color-red;
+    }
+    &__notes {
+        background-color: $color-blue-4;
+        padding: $spacer-4;
+        color: $color-white;
+        .sgp-list {
+            li {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .sgp-link {
+        margin-bottom: $spacer-4;
+        display: inline-block;
+    }
+    &__notes-head {
+        font-size: 16px;
+        margin-bottom: $spacer-2;
+    }
+    &__details-box {
+        background-color: $color-white;
+        padding: $spacer-4;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+        margin-bottom: $spacer-4;
+    }
+    &__details-head {
+        display: flex;
+        margin-bottom: $spacer-2;
+    }
+    &__head-icon {
+        width: 30px;
+        margin-right: $spacer-4;
+    }
+    &__details-title {
+        font-size: 18px;
+        color: $color-blue-2;
+    }
+    &__details-cnt {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 54px;
+        margin: $spacer-0 (-$spacer-2) (-$spacer-2);
+    }
+    &__details-row {
+        display: flex;
+        width: calc(33.33% - 16px);
+        margin: $spacer-2
+    }
+    &__details-label {
+        @include font-univers-65;
+        margin-right: $spacer-3;
+    }
+    &__details-value {
+        color: $color-grey-3;
+        &--bold {
+            color: $color-red;
+            @include font-univers-65;
+        }
+    }
+    &__updated-box {
+        margin-bottom: $spacer-4;
+        .sgp-accordion {
+            &__btn {
+                background-color: $color-red;
+                color: $color-white;
+                cursor: auto;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .sgp-track-trace {
+            &__track-icon {
+                margin-left: $spacer-0;
+            }
+            &__journey-inner {
+                border: 0;
+            }
+            &__journey-main {
+                color: $color-red;
+            }
+            &__desc {
+                color: $color-grey-3;
+                strong {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+    &__journey-outer {
+        position: relative;
+        padding-left: $spacer-2;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $color-blue-2;
+        }
+    }
+    &__journey-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: $spacer-3;
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+        &.active {
+            .sgp-track-trace {
+                &__dot {
+                    background-color: $color-white;
+                    border: 2px solid $color-blue-2;
+                    transform: scale(1.4);
+                }
+                &__journey-inner {
+                    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+    &__track-icon {
+        width: 50px;
+        margin: $spacer-0 $spacer-4;
+        &--mob {
+            display: none;
+        }
+    }
+    &__journey-inner {
+        display: flex;
+        padding: $spacer-3;
+        border: 1px solid $color-blue-med-2;
+        width: calc(100% - 112px);
+        color: $color-blue-2;
+    }
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: $color-blue-2;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        display: block;
+        z-index: 1;
+    }
+    &__journey-main {
+        width: 30%;
+        @include font-univers-65;
+    }
+    &__cnt-detail {
+        width: 70%;
+        padding-left: $spacer-3;
+    }
+    &__date {
+        font-size: 18px;
+    }
+    &__time {
+        svg {
+            width: 14px;
+            height: 14px;
+            margin-right: $spacer-2;
+        }
+    }
+    &__desc {
+        margin-bottom: $spacer-2;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-track-trace {
+        &__details-cnt {
+            padding-left: $spacer-0;
+        }
+        &__details-row {
+            display: flex;
+            width: calc(100% - 16px);
+            margin: 8px;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-track-trace {
+        padding: $spacer-5 $spacer-0;
+        &__notes {
+            padding: $spacer-3;
+        }
+        &__details-box {
+            padding: $spacer-3;
+        }
+        &__journey-outer {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: $spacer-3;
+            padding-top: $spacer-2;
+            &::after {
+                width: 872px;
+                height: 1px;
+                top: 13px;
+                left: 8px;
+            }
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background-color: $color-blue-5;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color-blue-2;
+                border-radius: 10px;
+            }
+        }
+        &__journey-box {
+            display: block;
+            margin-right: $spacer-3;
+            margin-bottom: $spacer-0;
+            &:last-child {
+                margin-right: $spacer-0;
+            }
+            &.active {
+                &::after {
+                    border-top: 0;
+                    border-left: 0;
+                }
+            }
+        }
+        &__track-icon {
+            display: none;
+            &--mob {
+                display: block;
+                margin: $spacer-0 $spacer-3 $spacer-0 $spacer-0;
+            }
+        }
+        &__journey-inner {
+            display: block;
+            width: 280px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                top: -6px;
+                left: 23px;
+                background-color: $color-white;
+                border-top: 1px solid $color-blue-med-2;
+                border-left: 1px solid $color-blue-med-2;
+            }
+        }
+        &__journey-main {
+            width: 100%;
+            display: flex;
+            margin-bottom: $spacer-2;
+        }
+        &__cnt-detail {
+            width: 100%;
+            padding-left: $spacer-0;
+        }
+        &__desc {
+            strong {
+                display: block;
+            }
+        }
+        &__dot {
+            margin: $spacer-0 $spacer-0 $spacer-3 $spacer-4;
+        }
+        &__updated-box {
+            .sgp-track-trace {
+                &__journey-inner {
+                    padding: $spacer-0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

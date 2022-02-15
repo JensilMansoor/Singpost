@@ -1,0 +1,77 @@
+.sgp-postal-revision {
+    padding: $spacer-6 $spacer-0;
+    .sgp-info-tab {
+        .tab-content {
+            padding: $spacer-3 $spacer-0 $spacer-0;
+            background-color: $color-white;
+        }
+    }
+    .sgp-rate-table {
+        margin-bottom: $spacer-3;
+        table {
+            th,
+            td {
+                width: 20%;
+            }
+        }
+    }
+    &__parcel-table {
+        max-width: 742px;
+        margin: $spacer-3 $spacer-0;
+    }
+    &__international-table {
+        .sgp-rate-table {
+            table {
+                th,
+                td {
+                    width: 16.66%;
+                }
+            }
+        }
+    }
+    &__img {
+        margin-bottom: 16px;
+    }
+    &__icon {
+        max-width: 200px;
+        margin-bottom: 16px;
+    }
+    &__txt {
+        color: $color-grey-3;
+        margin-bottom: 16px;
+    }
+    &__hd{
+        color: $color-black;
+        font-size: 18px;
+        margin-bottom: 16px;
+        @include font-univers-65;
+    }
+    &__sub-head {
+        margin-bottom: $spacer-3;
+    }
+    .sgp-list {
+        margin-bottom: $spacer-3;
+    }
+    .sgp-prev-next-btn {
+        padding-top: $spacer-3;
+    }
+    &__btn {
+        margin-bottom: $spacer-3;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-postal-revision {
+        &__parcel-table {
+            table {
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-postal-revision {
+        padding: $spacer-5 $spacer-0;
+    }
+}

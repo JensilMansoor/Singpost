@@ -1,0 +1,29 @@
+.sgp-tag-link {
+    display: flex;
+    &__label {
+        white-space: nowrap;
+        margin-top: $spacer-2;
+        margin-right: $spacer-3;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $spacer-0 (-$spacer-1);
+        .sgp-link-btn--border {
+            border-radius: 50px;
+            text-transform: inherit;
+            padding: 6px $spacer-3;
+            min-width: auto;
+            margin: $spacer-1;
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-tag-link {
+        display: block;
+        &__label {
+            margin: $spacer-0 $spacer-0 $spacer-2;
+        }
+    }
+}

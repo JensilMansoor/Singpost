@@ -1,0 +1,19 @@
+.sgp-color-box{
+    padding: $spacer-5 $spacer-4;
+    flex: 1;
+    margin-right: $spacer-4;
+    max-height: 250px;
+    &__box-img{
+        height: 80px;
+        width: auto;
+    }
+    &__box-head{
+        font-size: 18px;
+        color: $color-white;
+        padding: $spacer-4 $spacer-0;
+    }
+    &__box-disc{
+        font-size: 14px;
+        color: $color-white;
+    }
+}

@@ -1,0 +1,15 @@
+.sgp-page-back {
+    padding-top: $spacer-3;
+    .sgp-link-btn {
+        svg {
+            margin-left: $spacer-0;
+            margin-right: $spacer-2;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-page-back {
+        display: none;
+    }
+}

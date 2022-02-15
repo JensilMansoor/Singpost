@@ -1,0 +1,52 @@
+.sgp-sort{
+    display: flex;
+    margin-bottom: $spacer-4;
+    &__label{
+        @include font-univers-65;
+        margin-right: $spacer-3;
+        white-space: nowrap;
+    }
+    &--publication{
+        &.sgp-sort{
+            .sgp-select{
+                min-width: 220px;
+            }
+        }
+    }
+    .sgp-select,
+    .sgp-input-text{
+        margin-right: $spacer-3;
+        min-width: 165px;
+    }
+    .sgp-search-input{
+        margin-left: auto;
+        max-width: 370px;
+        width: 100%;
+        &--left{
+            margin-left: 0;
+        }
+        .sgp-input-text{
+            margin-right: $spacer-0;
+        }
+        &--left{
+            margin-left: $spacer-0;
+            max-width: 320px;
+        }
+    }
+    .sgp-filter__btn{
+        flex: none;
+        margin-right: $spacer-3;
+    }
+    .sgp-btn{
+        margin-left: auto;
+    }
+}
+
+@include mobile-tablet{
+    .sgp-sort{
+        overflow: auto;
+        &__label{
+            display: none;
+        }
+    }
+}

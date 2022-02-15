@@ -1,0 +1,35 @@
+.sgp-pdp{
+    &__desc{
+        color: $color-grey-3;
+        display: flex;
+        margin-bottom: $spacer-2;
+    }
+    &__desc-black{
+        color: $color-black-2;
+        min-width: 130px;
+        margin-right: $spacer-1;
+    }
+    &__price{
+        font-size: 18px;
+        color: $color-black;
+        margin-top: $spacer-3;
+    }
+    &__price-actual{
+        display: inline-block;
+        text-decoration: line-through;
+        margin-right: $spacer-2;
+    }
+    &__price-current{
+        @include font-univers-65;
+        color: $color-red;
+        &--val{
+            color: $color-grey-1;
+            padding-left: $spacer-2;
+            font-size: 18px;
+        }
+    }
+    &__item-note{
+        color: $color-grey-3;
+        font-style: italic;
+    }
+}
