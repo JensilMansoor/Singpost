@@ -1,0 +1,80 @@
+.sgp-rate-table {
+    table {
+        width: 100%;
+        th,
+        td {
+            border: 1px solid $color-blue-med-2;
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        th {
+            @include font-univers-65;
+        }
+        .sgp-rate-table {
+            &__main-head {
+                background-color: $color-blue-3;
+                border: 1px solid $color-blue-3;
+                color: $color-white;
+            }
+            &__Weight-head {
+                background-color: $color-blue-1;
+                border: 1px solid $color-blue-1;
+                color: $color-white;
+            }
+            &__sub-head {
+                background-color: $color-blue-5;
+                border: 1px solid $color-blue-5;
+                color: $color-blue-2;
+            }
+            &__bg-grey {
+                background-color: $color-grey-7;
+            }
+            &__bg-grey-2 {
+                background-color: $color-grey-5;
+            }
+            &__bg-blue-6 {
+                background-color: $color-blue-6;
+            }
+            &__bg-blue-2 {
+                background-color: $color-blue-2;
+                color: $color-white
+            }
+            &__sub-title {
+                @include font-univers-65;
+                margin-bottom: $spacer-2;
+            }
+        }
+    }
+    &__size-img {
+        width: 200px;
+        margin: $spacer-0 auto;
+    }
+    &__light-txt {
+        @include font-univers-45;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-rate-table {
+        overflow-x: auto;
+        position: relative;
+        table {
+            min-width: 700px;
+            .sgp-fixed-side {
+                position: sticky;
+                left: 0;
+                top: 0;
+                background-color: $color-white;
+                border: 0;
+                box-shadow: inset 0 0 0 1px $color-blue-med-2;
+                z-index: 1;
+                &.sgp-rate-table__Weight-head {
+                    background-color: $color-blue-1;
+                    border: 1px solid $color-blue-1;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

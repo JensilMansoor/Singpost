@@ -1,0 +1,95 @@
+.sgp-help-tile {
+    padding: $spacer-5 $spacer-0 $spacer-6;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    .content-wrapper{
+        display: block;
+    }
+    .sgp-tile-box{
+        &__inner{
+            background-color: $color-black-2;
+            position: relative;
+        }
+        &__wave{
+            top: auto;
+            bottom: 90px;
+            &--two{
+                bottom: -35px;
+            }
+        }
+        &__tile {
+            margin: $spacer-0 auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &__slider {
+        max-width: 950px;
+        margin: $spacer-0 auto;
+    }
+    .sgp-tile-help {
+        background-color: $color-black-2;
+        margin: $spacer-0 $spacer-2;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        width: calc(20% - 16px);
+    }
+    .slick-track {
+        display: flex;
+    }
+}
+
+@include mobile-tablet{
+    .sgp-help-tile {
+        .sgp-tile-box{
+            &__tile {
+                margin: $spacer-0 (-$spacer-2) $spacer-4;
+                
+            }
+        }
+        &__slider{
+            .slick-dots {
+                width: calc(100% - 16px);
+                margin: $spacer-0 $spacer-2;
+                li{
+                    flex: 1;
+                    margin: $spacer-0;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-help-tile {
+        // padding: $spacer-4 $spacer-0;
+        // margin-top: -70px;
+        // &__box {
+        //     padding: $spacer-4 $spacer-3;
+        // }
+        .sgp-header-arrow__head-sec .sgp-small-title{
+            display: none;
+        }
+        &__slider {
+            margin: $spacer-0 -4px;
+        }
+        .sgp-tile-help {
+            margin: $spacer-0 $spacer-1;
+        }
+        // &__title {
+        //     font-size: 14px;
+        //     line-height: 20px;
+        //     text-align: left;
+        //     margin-bottom: $spacer-2;
+        // }
+        // .h2 {
+        //     font-size: 18px;
+        //     line-height: 24px;
+        //     text-align: left;
+        //     margin-bottom: $spacer-3;
+        // }
+    }
+}

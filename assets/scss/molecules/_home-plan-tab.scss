@@ -1,0 +1,68 @@
+.sgp-home-plan-tab {
+    .nav-item {
+        width: 33.333%;
+    }
+    .tab-content {
+        background-color: transparent;
+        padding: $spacer-4 $spacer-0 $spacer-0;
+    }
+    &__tile-outer {
+        display: flex;
+    }
+    .sgp-tile {
+        flex: 1;
+        margin-right: $spacer-3;
+        background-color: $color-white;
+        &:last-child {
+            margin-right: $spacer-0;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+        .sgp-h5 {
+            font-size: 18px;
+            min-height: 0;
+        }
+        &__small-title {
+            text-transform: inherit;
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-home-plan-tab {
+        .sgp-tile {
+            .sgp-h5 {
+                font-size: 16px;
+                min-height: 0;
+            }
+        }
+        .nav-item {
+            display: table;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-home-plan-tab {
+        &__tile-outer {
+            overflow-x: auto;
+            padding-bottom: $spacer-3;
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background-color: $color-blue-5;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color-blue-2;
+                border-radius: 10px;
+            }
+        }
+        .sgp-tile {
+            width: auto;
+            min-width: 230px;
+        }
+    }
+}

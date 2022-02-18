@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>SingPost</title>
+</head>
+
+<body>
+        <div style="padding-top: 100px;">
+            <!-- Bg Overlay Tiles Box Start -->
+            <div class="sgp-tile-box sgp-tile-box--pos">
+                <div class="content-wrapper-small sgp-tile-box__inner">
+                    <div class="sgp-header-arrow">
+                        <div class="sgp-header-arrow__head-sec">
+                            <p class="sgp-small-title">FEATURED SERVICES</p>
+                            <h2 class="sgp-h2">Nullam dictum felis eu pede mollis pretium</h2>
+                        </div>
+                        <div class="sgp-arrow">
+                            <button class="sgp-arrow__prev sgp-tile-box__prev">.</button>
+                            <button class="sgp-arrow__next sgp-tile-box__next">.</button>
+                        </div>
+                    </div>
+                    <div class="sgp-tile-box__tile sgp-tile-box__slider">
+                        <img src="../assets/images/wave-1.svg" alt="wave" class="sgp-tile-box__wave">
+                        <img src="../assets/images/wave-1.svg" alt="wave" class="sgp-tile-box__wave sgp-tile-box__wave--two">
+                        <a href="" title="" class="sgp-tile-bg">
+                            <div class="sgp-tile-bg__bg" style="background-image: url(../assets/images/Post-Office-Services-help.jpg);"></div>
+                            <div class="sgp-tile-bg__cnt">
+                                <h3 class="sgp-tile-bg__head">eCommerce Solutions</h3>
+                                <p class="sgp-tile-bg__desc">Explore end-to-end, full-scale solutions to grow your eCommerce business beyond horizons.</p>
+                                <span class="sgp-btn sgp-btn--white">
+                                    <span class="sgp-btn__icon">
+                                        <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                                    </span>Read More
+                                </span>
+                            </div>
+                        </a>
+                        <a href="" title="" class="sgp-tile-bg">
+                            <div class="sgp-tile-bg__bg" style="background-image: url(../assets/images/Post-Office-Services-help.jpg);"></div>
+                            <div class="sgp-tile-bg__cnt">
+                                <h3 class="sgp-tile-bg__head">eCommerce Solutions</h3>
+                                <p class="sgp-tile-bg__desc">Explore end-to-end, full-scale solutions to grow your eCommerce business beyond horizons.</p>
+                                <span class="sgp-btn sgp-btn--white">
+                                    <span class="sgp-btn__icon">
+                                        <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                                    </span>Read More
+                                </span>
+                            </div>
+                        </a>
+                        <a href="" title="" class="sgp-tile-bg">
+                            <div class="sgp-tile-bg__bg" style="background-image: url(../assets/images/Post-Office-Services-help.jpg);"></div>
+                            <div class="sgp-tile-bg__cnt">
+                                <h3 class="sgp-tile-bg__head">eCommerce Solutions</h3>
+                                <p class="sgp-tile-bg__desc">Explore end-to-end, full-scale solutions to grow your eCommerce business beyond horizons.</p>
+                                <span class="sgp-btn sgp-btn--white">
+                                    <span class="sgp-btn__icon">
+                                        <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z" /><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"/></svg>
+                                    </span>Read More
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bg Overlay Tiles Box End -->
+        </div>
+
+    <!-- JS -->
+    <script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        $(".sgp-tile-box__slider").slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+            slide: ".sgp-tile-bg",
+            prevArrow: ".sgp-tile-box__prev",
+            nextArrow: ".sgp-tile-box__next",
+            responsive: [{
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 567,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.sgp-sticky-bar {
+    background-color: $color-blue-1;
+    padding: 6px $spacer-0;
+    z-index: 99;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 83px;
+    transition: opacity 0.3s;
+    &__outer {
+        display: flex;
+    }
+    &__item {
+        width: 25%;
+        padding-right: $spacer-2;
+        color: $color-white;
+        display: inline-flex;
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: $spacer-2;
+        }
+        &:hover {
+            color: $color-white;
+            text-decoration: underline;
+        }
+        &.active{
+            text-decoration: underline;
+            pointer-events: none;
+        }
+    }
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.sgp-sticky-module {
+    opacity: 0;
+    visibility: hidden;
+    height: 114px;
+    margin-top: -114px;
+}
+
+@include mobile-tablet {
+    .sgp-sticky-bar {
+        top: 60px;
+        &__outer {
+            overflow-x: auto;
+        }
+        &__item {
+            width: auto;
+            padding-right: $spacer-4;
+            white-space: nowrap;
+        }
+    }
+    .sgp-sticky-module {
+        height: 92px;
+        margin-top: -92px;
+    }
+}

@@ -1,0 +1,153 @@
+.sgp-community {
+    padding: $spacer-6 $spacer-0;
+    position: relative;
+    overflow: hidden;
+    .content-wrapper-small {
+        position: relative;
+    }
+    &.sgp-community-heritage-tile {
+        .sgp-community {
+            &__tile {
+                text-align: left;
+                &.sgp-tile-with-icon {
+                    margin: $spacer-0 $spacer-2;
+                }
+                a.sgp-btn {
+                    margin-top: $spacer-3;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        margin: auto;
+                        position: relative;
+                        z-index: 2;
+                        fill: #24549d;
+                        transition: fill 0.4s;
+                        transition: none;
+                    }
+                }
+                &:hover {
+                    .sgp-btn {
+                        color: $color-white;
+                        text-decoration: underline;
+                    }
+                    .sgp-btn__icon::before {
+                        box-shadow: inset 0 0 0 35px #c31126;
+                        transform: scale3d(1.1, 1.1, 1);
+                    }
+                    a.sgp-btn svg {
+                        fill: $color-white;
+                        transition: none;
+                    }
+                }
+            }
+            &__tile-head {
+                font-size: 18px;
+            }
+        }
+    }
+    &__bg-img {
+        position: absolute;
+        left: -50px;
+        top: -70px;
+        width: 200px;
+    }
+    &__outer {
+        display: flex;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    &__cnt,
+    &__img-outer {
+        width: 50%;
+        margin: $spacer-0 $spacer-2;
+    }
+    &__txt {
+        color: $color-grey-3;
+        margin-bottom: $spacer-3;
+    }
+    &__tile-wrapper {
+        display: flex;
+        margin: $spacer-4 (-$spacer-2) $spacer-0;
+    }
+    &__tile {
+        width: 50%;
+        margin: $spacer-0 $spacer-2;
+        border: 1px solid $color-blue-med-2;
+        padding: $spacer-4;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $color-blue-2;
+            svg {
+                .sgp-community {
+                    &__svg-rect-dot {
+                        stroke: $color-white;
+                    }
+                    &__svg-rect-fill {
+                        fill: $color-white;
+                    }
+                    &__svg-object {
+                        fill: $color-blue-2;
+                    }
+                }
+            }
+            .sgp-community__tile-head {
+                color: $color-white;
+            }
+            .sgp-community__tile-desc {
+                color: $color-white;
+            }
+        }
+        svg {
+            width: 70px;
+            height: 70px;
+            * {
+                transition: all 0.3s;
+            }
+        }
+    }
+    &__tile-head {
+        color: $color-blue-2;
+        font-size: 16px;
+        @include font-univers-65;
+        margin-top: $spacer-3;
+    }
+    &__tile-desc {
+        color: $color-grey-3;
+        font-size: 14px;
+        margin-top: $spacer-3;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-community {
+        &__bg-img {
+            display: none;
+        }
+        &__outer {
+            display: block;
+            margin: $spacer-0;
+        }
+        &__cnt,
+        &__img-outer {
+            width: 100%;
+            margin: $spacer-0;
+        }
+        &__cnt {
+            margin-bottom: $spacer-4;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-community {
+        padding: $spacer-5 $spacer-0;
+        &__tile {
+            padding: $spacer-3;
+            svg {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+}

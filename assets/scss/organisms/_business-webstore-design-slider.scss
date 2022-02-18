@@ -1,0 +1,23 @@
+.sgp-design-slider{
+    .sgp-header-arrow{
+        position: relative;
+        .sgp-arrow{
+            position: absolute;
+            top: 50%;
+            right: 32px;
+            transform: translate(0px, -50%);
+        }
+    }
+    .sgp-tag-link{
+        margin-top: $spacer-3;
+    }
+}
+@include mobile-tablet{
+    .sgp-design-slider{
+        .sgp-header-arrow{
+            .sgp-arrow{
+                display: none;
+            }
+        }
+    }
+}

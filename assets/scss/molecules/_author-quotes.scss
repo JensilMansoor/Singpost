@@ -1,0 +1,48 @@
+.sgp-author-quotes {
+    padding: $spacer-3;
+    border: 1px solid $color-blue-med-2;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40.356' height='30' viewBox='0 0 40.356 30'%3E%3Cpath id='Path_386' data-name='Path 386' d='M40.209-119.062q5.5-1.655,7.313-6.085a10.921,10.921,0,0,0,.747-4.27H39.942v-14.039H55.1v11.263q0,7.633-3.71,12.464t-11.183,6.272Zm-25.2,0q5.391-1.708,7.26-5.872a9.022,9.022,0,0,0,.854-4.484H14.746v-14.039H29.96v11.263q0,7.847-3.817,12.6t-11.13,6.139Z' transform='translate(-14.746 143.457)' fill='%2324549d' opacity='0.2'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    &__img-outer {
+        width: 80px;
+    }
+    &__cnt {
+        width: calc(100% - 80px);
+        padding-left: $spacer-3;
+    }
+    &__name {
+        font-size: 16px;
+        margin-bottom: $spacer-2;
+        em {
+            @include font-univers-65;
+        }
+    }
+    &__txt {
+        color: $color-grey-3;
+    }
+}
+
+@include mobile {
+    .sgp-author-quotes {
+        &__img-outer {
+            display: none;
+        }
+        &__cnt {
+            width: 100%;
+            padding-left: $spacer-0;
+        }
+    }
+}

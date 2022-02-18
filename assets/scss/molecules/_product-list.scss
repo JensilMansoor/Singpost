@@ -1,0 +1,24 @@
+.sgp-pro-list{
+    padding-top: $spacer-4;
+    &--reset{
+        &.sgp-pro-list{
+            padding-top: $spacer-0;
+        }
+    }
+    p{
+        padding-bottom: $spacer-2;
+        @include font-univers-65;
+        color: $color-black;
+    }
+    ul{
+        list-style: decimal outside none;
+        margin-left: $spacer-3;
+        color: $color-grey-3;
+        li{
+            padding-bottom: $spacer-1;
+            &:last-child{
+                padding-bottom: $spacer-0;
+            }
+        }
+    }
+}

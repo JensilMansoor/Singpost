@@ -1,0 +1,171 @@
+.sgp-quick-tool {
+    position: fixed;
+    right: 20px;
+    bottom: 81px;
+    z-index: 99;
+    display: none;
+    &.show {
+        display: block;
+    }
+    &__btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #0777B5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.161);
+        position: relative;
+        img {
+            width: 25px;
+        }
+        .sgp-quick-tool__btn-close-icon {
+            display: none;
+            width: 15px;
+        }
+        &:hover {
+            .sgp-quick-tool__tooltip {
+                display: block;
+            }
+        }
+    }
+    &__tooltip {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+        padding: $spacer-2;
+        font-size: 10px;
+        line-height: 16px;
+        white-space: nowrap;
+        display: none;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: -5px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            transform: rotate(45deg);
+        }
+    }
+    &__expan {
+        transition: all 0.3s;
+        display: none;
+        .sgp-quick-tool__btn {
+            background-color: $color-blue-2;
+            margin-bottom: $spacer-2;
+        }
+    }
+    &.active {
+        .sgp-quick-tool__expan {
+            display: block;
+        }
+        .sgp-quick-tool__btn-close-icon {
+            display: block;
+        }
+        .sgp-quick-tool__btn-icon {
+            display: none;
+        }
+        .sgp-quick-tool__btn--main {
+            .sgp-quick-tool__tooltip {
+                display: none;
+            }
+        }
+    }
+    &__popup {
+        display: none;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-quick-tool {
+        &.active {
+            z-index: 999;
+            .sgp-quick-tool__popup {
+                display: block;
+            }
+            .sgp-quick-tool__expan {
+                display: none;
+            }
+        }
+        &__popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-black-2;
+            padding: $spacer-3 $spacer-0;
+            color: $color-white;
+            overflow-y: auto;
+            display: none;
+            .sgp-header__footer {
+                margin-top: auto;
+                padding-top: $spacer-4;
+                border-top: 1px solid $color-blue-6;
+                width: 100%;
+            }
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                min-height: calc(100vh - 32px);
+            }
+        }
+        &__popup-close {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            width: 18px;
+            height: 18px;
+        }
+        &__popup-link-outer {
+            display: flex;
+            flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
+            margin: $spacer-0 (-$spacer-1);
+            padding: $spacer-4 $spacer-0;
+            width: 100%;
+        }
+        &__popup-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: $spacer-3;
+            background-color: $color-white;
+            width: calc(50% - 8px);
+            margin: $spacer-1;
+            min-height: 130px;
+            justify-content: center;
+            svg {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        &__popup-txt {
+            color: $color-blue-2;
+            text-align: center;
+            margin-top: $spacer-2;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-quick-tool {
+        bottom: 20px;
+        right: 74px;
+        &__btn {
+            width: 40px;
+            height: 40px;
+            img {
+                width: 22px;
+            }
+        }
+    }
+}

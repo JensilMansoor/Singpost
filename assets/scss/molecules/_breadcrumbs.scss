@@ -1,0 +1,60 @@
+.sgp-breadcrumbs {
+    background-color: $color-grey-1;
+    color: $color-grey-4;
+    padding: $spacer-1 $spacer-0;
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sgp-link-btn {
+        font-size: 12px;
+        color: $color-white;
+        padding: $spacer-1 $spacer-0;
+        svg {
+            fill: $color-white;
+        }
+    }
+    &__link {
+        padding: $spacer-1 $spacer-3 $spacer-1 $spacer-0;
+        margin-right: $spacer-2;
+        position: relative;
+        z-index: 10;
+        font-size: 12px;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cg id='Group_5256' data-name='Group 5256' transform='translate(13283 23650)'%3E%3Crect id='Rectangle_1193' data-name='Rectangle 1193' width='8' height='10' transform='translate(-13283 -23650)' fill='none'/%3E%3Cpath id='Path_1018' data-name='Path 1018' d='M4.406-4.312v.023a.343.343,0,0,0,.07-.211.343.343,0,0,0-.07-.211L.961-8.18a.326.326,0,0,0-.2-.07.326.326,0,0,0-.2.07l-.469.469a.343.343,0,0,0-.07.211.253.253,0,0,0,.07.188L2.883-4.5.094-1.687a.253.253,0,0,0-.07.188.343.343,0,0,0,.07.211L.563-.82a.326.326,0,0,0,.2.07.28.28,0,0,0,.2-.094Z' transform='translate(-13281.023 -23640.75)' fill='%23ccc'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 10px;
+            height: 10px;
+        }
+        &:last-child {
+            color: $color-white;
+            padding-right: $spacer-0;
+            margin-right: $spacer-0;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link-icon {
+        display: none;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-breadcrumbs {
+        &__link-txt {
+            display: none;
+        }
+        &__link-icon {
+            display: inline-block;
+            width: 15px;
+        }
+    }
+}

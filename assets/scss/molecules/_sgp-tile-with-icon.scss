@@ -1,0 +1,27 @@
+.sgp-tile-with-icon {
+    padding: $spacer-4;
+    background-color: $color-white;
+    &__icon {
+        margin-bottom: $spacer-3;
+        svg,
+        img {
+            width: 65px;
+            height: 65px;
+        }
+    }
+    .sgp-h4 {
+        margin-bottom: $spacer-2;
+    }
+    &__desc {
+        color: $color-grey-3;
+    }
+}
+a.sgp-tile-with-icon{
+    display: block;
+}
+
+@include mobile {
+    .sgp-tile-with-icon {
+        padding: $spacer-3;
+    }
+}

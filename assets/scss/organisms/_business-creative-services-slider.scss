@@ -1,0 +1,54 @@
+.sgp-creative{
+    &__item,
+    .slick-slide.sgp-creative__item{
+        display: flex;
+        align-items: center;
+    }
+    &__wrapper{
+        margin: $spacer-0 (-$spacer-1);
+    }
+    &__item{
+        margin: $spacer-0 $spacer-1;
+    }
+    &__sec-1,
+    &__sec-2{
+        width: 50%;
+    }
+    &__sec-1{
+        margin-right: $spacer-4;
+    }
+    &__desc{
+        font-size: 16px;
+    }
+    .sgp-tag-link__wrapper{
+        margin: $spacer-3 (-$spacer-2) $spacer-0;
+        .sgp-link-btn{
+            margin: $spacer-1 $spacer-2;
+        }
+    }
+}
+
+@include mobile-tablet{
+    .sgp-creative{
+        &__desc{
+            font-size: 14px;
+        }
+    }
+}
+
+@include mobile{
+    .sgp-creative{
+        &__item,
+        .slick-slide.sgp-creative__item{
+            display: block;
+        }
+        &__sec-1,
+        &__sec-2{
+            width: 100%;
+        }
+        &__sec-1{
+            margin-right: $spacer-0;
+            margin-bottom: $spacer-3;
+        }
+    }
+}

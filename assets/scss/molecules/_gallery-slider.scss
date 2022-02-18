@@ -1,0 +1,26 @@
+.sgp-gallery-slider {
+    padding: $spacer-0 $spacer-5;
+    &__item {
+        margin: $spacer-0 $spacer-2;
+    }
+    .slick-list {
+        padding-right: $spacer-6;
+    }
+    .slick-dots{
+        margin: $spacer-0 $spacer-2;
+        width: calc(100% - 16px);
+    }
+    &.sgp-arrow-center {
+        .sgp-arrow {
+            width: calc(100% + 16px);
+            left: -4px;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-gallery-slider {
+        padding: $spacer-0;
+        margin: $spacer-0 (-$spacer-2);
+    }
+}

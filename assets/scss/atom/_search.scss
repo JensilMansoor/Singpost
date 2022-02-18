@@ -1,0 +1,36 @@
+.sgp-search {
+    display: flex;
+    max-width: 870px;
+    &__input {
+        @include font-univers-45;
+        flex: 1;
+        background-color: transparent;
+        border: 1px solid $color-blue-med-2;
+        color: $color-grey-1;
+        padding: $spacer-2 $spacer-3;
+        &::placeholder {
+            color: $color-grey-4;
+        }
+    }
+    &__icon {
+        display: none;
+    }
+}
+
+@include mobile {
+    .sgp-search {
+        .sgp-link-btn {
+            min-width: 0;
+            span {
+                display: none;
+            }
+            svg {
+                display: none;
+            }
+        }
+        &__icon {
+            display: block;
+            width: 15px;
+        }
+    }
+}

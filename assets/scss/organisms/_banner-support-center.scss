@@ -1,0 +1,107 @@
+.sgp-banner-support-center {
+    .sgp-banner {
+        &__inner {
+            padding: $spacer-6 $spacer-0;
+            &::before {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__bg {
+            background-position: top center;
+        }
+    }
+    .sgp-h2 {
+        text-align: center;
+        margin: $spacer-0 auto $spacer-4;
+    }
+    .sgp-search {
+        max-width: 600px;
+        margin: $spacer-0 auto $spacer-4;
+        &__input{
+            border: 1px solid $color-white;
+            border-right: 0;
+            color: $color-white;
+            &::placeholder {
+                color: $color-white;
+            }
+        }
+    }
+    &__popular-search {
+        color: $color-white;
+    }
+    &__popular-title {
+        display: none;
+    }
+    &__related-outer {
+        text-align: center;
+    }
+    &__link {
+        background-color: $color-blue-3;
+        padding: $spacer-2 $spacer-3;
+        border-radius: 50px;
+        display: inline-block;
+        margin: $spacer-1;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $color-blue-2;
+            box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
+        }
+    }
+    &__link-num {
+        display: none;
+    }
+}
+
+@include tablet {
+    .sgp-banner-support-center {
+        .sgp-banner {
+            &__inner {
+                min-height: 450px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-banner-support-center {
+        &__popular-title {
+            display: block;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: $spacer-2;
+            margin-bottom: $spacer-3;
+        }
+        &__link {
+            background-color: transparent;
+            padding: $spacer-0;
+            margin: $spacer-0 $spacer-0 $spacer-2;
+            display: flex;
+            width: 100%;
+            &:hover {
+                background-color: transparent;
+                box-shadow: none;
+                text-decoration: underline;
+                .sgp-banner-support-center__link-num {
+                    text-decoration: none !important;
+                    background-color: $color-blue-2;
+                    border: 1px solid $color-blue-2;
+                }
+            }
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+        &__link-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid $color-white;
+            margin-right: $spacer-2;
+            position: relative;
+            top: -4px;
+        }
+    }
+}

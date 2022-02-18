@@ -1,0 +1,72 @@
+.sgp-covid-updates{
+    .sgp-social-head{
+        margin-bottom: $spacer-4;
+    }
+    .sgp-h6{
+        margin-bottom: $spacer-2;
+    }
+    &__desc{
+        color: $color-grey-3;
+        margin-bottom: $spacer-3;
+    }
+    &__italic{
+        font-style: italic;
+        margin-bottom: $spacer-6;
+        .sgp-covid-updates__desc{
+            margin-bottom: $spacer-1;
+        }
+    }
+    &__status{
+        margin-top: $spacer-6;
+        color: $color-grey-3;
+        .sgp-h3{
+            margin-bottom: $spacer-3;
+        }
+        .sgp-h5,
+        .sgp-h6{
+            margin-bottom: $spacer-2;
+        }
+        .sgp-covid-updates__desc{
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: $spacer-0;
+            }
+        }
+    }
+    .sgp-notice-box{
+        margin-bottom: $spacer-5;
+    }
+    .sgp-search{
+        max-width: 580px;
+        margin-bottom: $spacer-6;
+        &__input{
+            color: $color-grey-1;
+            border: 1px solid $color-blue-med-2;
+        }
+    }
+    .sgp-rate-table{
+        margin-bottom: $spacer-3;
+        table{
+            th,td{
+                text-align: left;
+            }
+            td{
+                color: $color-grey-3;
+            }
+        }
+    }
+    .sgp-prev-next-btn{
+        margin-top: $spacer-4;
+    }
+}
+
+@include mobile{
+    .sgp-covid-updates{
+        &__status{
+            margin-top: $spacer-4;
+        }
+        &__italic{
+            margin-bottom: $spacer-5;
+        }
+    }
+}

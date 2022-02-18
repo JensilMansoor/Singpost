@@ -1,0 +1,26 @@
+.sgp-here-with-you {
+    .content-wrapper-small {
+        padding-bottom: $spacer-5;
+    }
+    .sgp-h6 {
+        margin-bottom: $spacer-3;
+    }
+    .sgp-list {
+        color: $color-grey-3;
+        li {
+            p {
+                margin-bottom: $spacer-2;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-here-with-you {
+        padding-top: $spacer-0;
+        &__img {
+            width: calc(100% + 32px);
+            margin: $spacer-0 (-$spacer-3);
+        }
+    }
+}

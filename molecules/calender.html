@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>SingPost</title>
+</head>
+
+<body>
+    <div class="content-wrapper-small sgp-ptb-6">
+        <!-- Calender start -->
+        <div class="sgp-calender">
+            <div class="sgp-calender__wrapper">
+                <div class="sgp-calender__nav sgp-calender__nav-prev">
+                    <button id="btnPrev" class="sgp-btn">
+                        <span class="sgp-btn__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30">
+                                <g data-name="Group 5256" transform="translate(-179 -2675)">
+                                <rect  data-name="Rectangle 1193" width="30" height="30" transform="translate(179 2675)" fill="none"/>
+                                <path  data-name="Path 1019" d="M6.289.711a.4.4,0,0,1-.246.082A.3.3,0,0,1,5.824.711L.109-5.031A.26.26,0,0,1,0-5.25a.26.26,0,0,1,.109-.219l5.715-5.742a.3.3,0,0,1,.219-.082.4.4,0,0,1,.246.082l.547.547a.3.3,0,0,1,.082.219.4.4,0,0,1-.082.246L2.6-5.961h9.324a.316.316,0,0,1,.232.1.316.316,0,0,1,.1.232v.766a.316.316,0,0,1-.1.232.316.316,0,0,1-.232.1H2.6L6.836-.3a.4.4,0,0,1,.082.246.3.3,0,0,1-.082.219Z" transform="translate(188 2695.293)"/>
+                                </g>
+                            </svg>
+                        </span>PREV
+                    </button>
+                </div>
+                <div id="divCal" class="sgp-calender__outer"></div>
+                <div class="sgp-calender__nav sgp-calender__nav-next">
+                    <button id="btnNext" class="sgp-btn">
+                        NEXT<span class="sgp-btn__icon">
+                            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9608 53.3546L52.6381 37.6773L36.9608 22L34.901 24.1743L48.2896 37.6773L34.901 51.1803L36.9608 53.3546Z"></path><path d="M50.4639 36.0752H23V39.2793H50.4639V36.0752Z"></path></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="sgp-calender__event-list">
+                <p class="sgp-calender__event-on">Event(s) on <span class="sgp-calender__event-date">30 Jun 2020</span></p>
+                <p class="sgp-calender__event-name">End of Q1 FY2020/21</p>
+            </div>
+        </div>
+        <!-- Calender end -->
+    </div>
+
+    <!-- JS -->
+    <script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+
+        var MonthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' ];
+
+        // Set the current month, year
+        var d = new Date();
+
+        var curMonth = d.getMonth();
+        var curYear = d.getFullYear();
+        var curDay = d.getDate();
+        const currDate = curDay + " " + MonthName[curMonth] + " " + curYear;
+
+        var Cal = function(divId) {
+
+        //Store div id
+        this.divId = divId;
+
+        // Days of week, starting on Sunday
+        this.DaysOfWeek = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+        ];
+
+        // Months, stating on January
+        this.Months = MonthName;
+
+        // Set the current month, year
+        this.currMonth = curMonth;
+        this.currYear = curYear;
+        this.currDay = curDay;
+
+        };
+
+        // Goes to next month
+        Cal.prototype.nextMonth = function() {
+        if ( this.currMonth == 11 ) {
+        this.currMonth = 0;
+        this.currYear = this.currYear + 1;
+        }
+        else {
+        this.currMonth = this.currMonth + 1;
+        }
+        this.showcurr();
+        };
+
+        // Goes to previous month
+        Cal.prototype.previousMonth = function() {
+        if ( this.currMonth == 0 ) {
+        this.currMonth = 11;
+        this.currYear = this.currYear - 1;
+        }
+        else {
+        this.currMonth = this.currMonth - 1;
+        }
+        this.showcurr();
+        };
+
+        // Show current month
+        Cal.prototype.showcurr = function() {
+        this.showMonth(this.currYear, this.currMonth);
+        };
+
+        // Show month (year, month)
+        Cal.prototype.showMonth = function(y, m) {
+
+        var d = new Date()
+        // First day of the week in the selected month
+        , firstDayOfMonth = new Date(y, m, 1).getDay()
+        // Last day of the selected month
+        , lastDateOfMonth =  new Date(y, m+1, 0).getDate()
+        // Last day of the previous month
+        , lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
+
+        var html = '<table>';
+
+        // Write selected month and year
+        html += '<thead><tr>';
+        html += '<td colspan="7"><span class="sgp-calender__month-selected">' + this.Months[m] + ' ' + y + '</span>' + '<span class="sgp-calender__date-current">Today: ' + currDate + '</span></td>';
+        html += '</tr></thead>';
+        
+
+
+        // Write the header of the days of the week
+        html += '<tr class="days">';
+        for(var i=0; i < this.DaysOfWeek.length;i++) {
+        html += '<td>' + this.DaysOfWeek[i] + '</td>';
+        }
+        html += '</tr>';
+
+        // Write the days
+        var i=1;
+        do {
+
+        var dow = new Date(y, m, i).getDay();
+
+        // If Sunday, start new row
+        if ( dow == 0 ) {
+            html += '<tr class="sgp-calender__row">';
+        }
+        // If not Sunday but first day of the month
+        // it will write the last days from the previous month
+        else if ( i == 1 ) {
+            html += '<tr class="sgp-calender__row">';
+            var k = lastDayOfLastMonth - firstDayOfMonth+1;
+            for(var j=0; j < firstDayOfMonth; j++) {
+            html += '<td class="not-current">' + k + '</td>';
+            k++;
+            }
+        }
+
+        // Write the current day in the loop
+        var chk = new Date();
+        var chkY = chk.getFullYear();
+        var chkM = chk.getMonth();
+        if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
+
+            // sgp-calender__event for td and sgp-calender__event-detail for event detail to style particular event
+            html += '<td class="today sgp-calender__event"><span class="sgp-calender__event-day">' + i + '</span><span class="sgp-calender__event-detail">' + 'Event details' + '</span></td>';
+        } else {
+            html += '<td class="normal"><span>' + i + '</span></td>';
+        }
+        // If Saturday, closes the row
+        if ( dow == 6 ) {
+            html += '</tr>';
+        }
+        // If not Saturday, but last day of the selected month
+        // it will write the next few days from the next month
+        else if ( i == lastDateOfMonth ) {
+            var k=1;
+            for(dow; dow < 6; dow++) {
+            html += '<td class="not-current">' + k + '</td>';
+            k++;
+            }
+        }
+
+        i++;
+        }while(i <= lastDateOfMonth);
+
+        // Closes table
+        html += '</table>';
+
+        // Write HTML to the div
+        document.getElementById(this.divId).innerHTML = html;
+        };
+
+        // On Load of the window
+        window.onload = function() {
+
+        // Start calendar
+        var c = new Cal("divCal");			
+        c.showcurr();
+
+        // Bind next and previous button clicks
+        getId('btnNext').onclick = function() {
+        c.nextMonth();
+        onCalenderChange();
+        };
+        getId('btnPrev').onclick = function() {
+        c.previousMonth();
+        onCalenderChange();
+        };
+        }
+
+        // Get element by id
+        function getId(id) {
+        return document.getElementById(id);
+        }
+
+        function onEventClick(e,element){
+            var eventDate = $(element).find(".sgp-calender__event-day").text() + " " + $(".sgp-calender__month-selected").text();
+            var eventName = $(element).find(".sgp-calender__event-detail").text();
+            $(".sgp-calender__event").removeClass("active");
+            $(element).addClass("active");
+            $(".sgp-calender__event-list").addClass("active");
+            $(".sgp-calender__event-date").text(eventDate);
+            $(".sgp-calender__event-name").text(eventName);
+        }
+        function onCalenderChange(){
+            if(window.matchMedia("(max-width: 600px)").matches){
+                $(".sgp-calender__event").on('click', function (event) {
+                    onEventClick(event,this);
+                });
+            }
+            else{
+                return;
+            }
+        }
+        $(document).ready(function(){
+            onCalenderChange();
+        });
+    </script>
+</body>
+
+</html>

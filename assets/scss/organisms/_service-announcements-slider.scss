@@ -1,0 +1,9 @@
+.sgp-service-announce {
+    padding: $spacer-6 $spacer-0;
+}
+
+@include mobile {
+    .sgp-service-announce {
+        padding: $spacer-5 $spacer-0;
+    }
+}

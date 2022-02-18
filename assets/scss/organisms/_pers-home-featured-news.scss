@@ -1,20 +1,37 @@
 .sgp-pers-featured{
+    // padding-bottom: $spacer-2;
+    &.sgp-policy-info{
+        .sgp-header-with-cta{
+            margin-bottom: $spacer-0;
+        }
+    }
     .sgp-header-arrow{
         margin-bottom: $spacer-0;
     }
     &__wrapper{
         margin: $spacer-0 (-$spacer-2);
+        display: flex;
+        flex-wrap: wrap;
         &.slick-slider{
             margin-bottom: $spacer-0;
+            display: block;
         }
-        .slick-list{
+        & > .slick-list{
             padding: $spacer-5 $spacer-0;
+            .slick-track{
+                display: flex;
+                margin: $spacer-0;
+            }
         }
-        .slick-track{
-            display: flex;
+        .sgp-tile,
+        .sgp-tile-bg{
+            margin: $spacer-2;
+            height: auto;
+            width: calc(33.33% - 16px);
         }
-        .sgp-tile{
-            margin: $spacer-0 $spacer-2;
+    }
+    &__slider{
+        .sgp-tile:not(.sgp-tile--parcel){
             &:hover{
                 background-color: $color-white;
             }
@@ -22,7 +39,7 @@
     }
     &__social{
         display: flex;
-        margin: $spacer-5 (-$spacer-2) $spacer-0;
+        margin: $spacer-0 (-$spacer-2);
         .sgp-tile-bg{
             .sgp-small-title{
                 font-size: 14px;
@@ -47,12 +64,15 @@
             margin: $spacer-0 $spacer-2;
             min-height: 0px;
         }
+        .sgp-header-arrow{
+            margin-bottom: $spacer-4;
+        }
         .sgp-tile{
             display: flex;
             flex-direction: column;
             background-color: $color-white;
             &__cnt-sec{
-                padding: $spacer-3 $spacer-0 $spacer-0;
+                padding: $spacer-3 $spacer-0 $spacer-1;
             }
             &:hover{
                 box-shadow: none;
@@ -68,29 +88,112 @@
             &__wrapper{
                 margin: $spacer-0;
                 width: calc(60% - 16px);
-                .slick-list{
+                & > .slick-list{
                     padding: $spacer-0;
                 }
             }
         }
     }
-}
+    &--two-slide{
+        .sgp-pers-featured{
+            &__social{
+                margin: $spacer-0;
+            }
+            &__wrapper{
+                margin: $spacer-0;
+                width: 66.66%;
+                & > .slick-list{
+                    padding: $spacer-5 $spacer-0 $spacer-5 $spacer-3;
+                    margin-left: (-$spacer-3);
+                }
+                .sgp-tile{
+                    margin: $spacer-0 $spacer-3 $spacer-0 $spacer-0;
+                }
+            }
+        }
 
+        .sgp-tile-blue{
+            width: 33.33%;
+            margin: $spacer-5 $spacer-0;
+        }
+    }
+}
+@include mobile-tablet{
+    .sgp-pers-featured{
+        // &--two-slide{
+        //     .sgp-pers-featured{
+        //         &__wrapper{
+        //             width: 50%;
+        //         }
+        //     }
+        //     .sgp-tile-blue{
+        //         width: 50%;
+        //     }
+        // }
+        &__wrapper{
+            .sgp-tile-bg{
+                margin: $spacer-0 $spacer-2 $spacer-3;
+            }
+            .sgp-tile-bg,
+            .sgp-tile{
+                width: calc(50% - 16px);
+            }
+            .sgp-tile{
+                margin: $spacer-2;
+            }
+        }
+        &--two-slide{
+            .sgp-pers-featured{
+                &__social{
+                    display: block;
+                }
+                &__wrapper{
+                    width: 100%;
+                    .sgp-tile{
+                        margin-right: $spacer-3;
+                    }
+                    & > .slick-list{
+                        width: calc(100% + 16px);
+                        margin-left: $spacer-0;
+                        padding: $spacer-4 $spacer-0 $spacer-0;
+                    }
+                }
+            }
+            .sgp-tile-blue{
+                width: auto;
+                margin: $spacer-4 (-$spacer-5) $spacer-0;
+            }
+        }
+    }
+}
 @include mobile{
     .sgp-pers-featured{
         &__social{
             display: block;
         }
         &__wrapper{
-            margin: $spacer-0;
+            // margin: $spacer-0;
+            display: block;
             &.slick-slider{
                 margin-bottom: 30px;
             }
             .sgp-tile{
-                margin: $spacer-0;
+                width: auto;
+                &--pdp{
+                    margin: $spacer-0 5px;
+                }
             }
-            .slick-list{
-                padding: $spacer-5 $spacer-0 $spacer-0;
+            .sgp-tile-bg{
+                // margin: $spacer-0;
+                min-height: 260px;
+                width: auto;
+            }
+            & > .slick-list{
+                padding: $spacer-4 $spacer-0 $spacer-0;
+            }
+            .slick-dots{
+                width: calc(100% - 16px);
+                margin: $spacer-0 $spacer-2;
             }
         }
         .slick-dots{
@@ -100,12 +203,14 @@
             .sgp-tile-bg{
                 width: 100%;
                 margin: $spacer-0 $spacer-0 $spacer-3;
+                min-height: 280px;
                 .sgp-btn{
                     display: block;
                 }
             }
             .sgp-pers-featured{
                 &__social{
+                    width: auto;
                     margin: $spacer-4 $spacer-0 $spacer-0;
                 }
                 &__wrapper{
@@ -119,6 +224,21 @@
                         padding: $spacer-3 $spacer-0 $spacer-0;
                     }
                 }
+            }
+        }
+        &--two-slide{
+            .sgp-pers-featured{
+                &__wrapper{
+                    .sgp-tile{
+                        margin-right: $spacer-0;
+                    }
+                    & > .slick-list{
+                        width: 100%;
+                    }
+                }
+            }
+            .sgp-tile-blue{
+                margin: $spacer-6 (-$spacer-3) $spacer-0;
             }
         }
     }

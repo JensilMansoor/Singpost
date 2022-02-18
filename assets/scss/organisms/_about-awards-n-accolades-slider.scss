@@ -1,0 +1,117 @@
+.sgp-awards-slider {
+    // padding: $spacer-6 $spacer-0;
+    overflow-x: hidden;
+    // .sgp-arrow {
+    //     &__prev,
+    //     &__next {
+    //         &.slick-disabled {
+    //             opacity: 1;
+    //         }
+    //     }
+    // }
+    &__nav {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 44px;
+            height: 1px;
+            width: 100%;
+            background-color: $color-blue-med-2;
+        }
+    }
+    &__year {
+        text-align: center;
+        padding: $spacer-0 $spacer-2;
+        &.slick-current {
+            .sgp-awards-slider__arrow {
+                opacity: 1;
+            }
+            .sgp-awards-slider__year-dot {
+                background-color: $color-white;
+            }
+        }
+    }
+    &__year-txt {
+        margin-bottom: $spacer-3;
+        @include font-univers-65;
+        color: $color-blue-2;
+        cursor: pointer;
+    }
+    &__year-dot {
+        width: 16px;
+        height: 16px;
+        background-color: $color-blue-2;
+        border: 3px solid $color-blue-2;
+        border-radius: 50%;
+        margin: $spacer-0 auto $spacer-3;
+        cursor: pointer;
+    }
+    &__arrow {
+        background-color: $color-grey-5;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        margin: $spacer-0 auto;
+        opacity: 0;
+    }
+    &__item {
+        padding: $spacer-5;
+        background-color: $color-grey-5;
+        &.slick-slide {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__for {
+        margin-top: -10px;
+    }
+    &__item-img-outer {
+        width: 35%;
+    }
+    &__item-cnt {
+        width: 75%;
+        padding-left: $spacer-6;
+        .sgp-h3 {
+            color: $color-blue-2;
+            margin-bottom: $spacer-3;
+        }
+        .sgp-list {
+            color: $color-grey-3;
+            li {
+                margin-bottom: $spacer-2;
+                &:last-child {
+                    margin-bottom: $spacer-0;
+                }
+            }
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-awards-slider {
+        &__item {
+            &.slick-slide {
+                display: block;
+            }
+        }
+        &__item-img-outer {
+            width: 100%;
+        }
+        &__item-cnt {
+            width: 100%;
+            padding-left: $spacer-0;
+            padding-top: $spacer-4;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-awards-slider {
+        // padding: $spacer-5 $spacer-0;
+        &__item {
+            padding: $spacer-3;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Singpost</title>
+</head>
+
+<body style="padding: 20px;">
+    <div class="track-trace-sec content-wrapper-small">
+        <div class="track-trace-sec__desk track-trace-sec__desk--postal">
+            <ul class="nav nav-pills" role="tablist" id="pills-tab">
+                <li class="track-trace-sec__tab" role="presentation">
+                    <a href="#pills-track" class="track-trace-sec__btn active" id="pills-track-tab" data-toggle="pill"
+                        role="tab" aria-controls="pills-track" aria-selected="true">STREET</a>
+                </li>
+
+                <li class="track-trace-sec__tab" role="presentation">
+                    <a href="#pills-calculate" class="track-trace-sec__btn" id="pills-calculate-tab" data-toggle="pill"
+                        role="tab" aria-controls="pills-calculate" aria-selected="false">LANDMARK</a>
+                </li>
+
+                <li class="track-trace-sec__tab" role="presentation">
+                    <a href="#pills-find" class="track-trace-sec__btn" id="pills-find-tab" data-toggle="pill" role="tab"
+                        aria-controls="pills-find" aria-selected="false">PO BOX</a>
+                </li>
+            </ul>
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="track-trace-sec--search tab-pane fade show active" id="pills-track" role="tabpanel"
+                    aria-labelledby="pills-track-tab">
+                    <div class="track-trace-sec__tab-cont">
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">Building / Block / House No.<span>*</span></div>
+                            <input type="text" placeholder="Eg: 100" class="sgp-text-box__input">
+                        </div>
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">Street Name <span>*</span></div>
+                            <input type="text" placeholder="Eg: Woodlands Avenue 7" class="sgp-text-box__input">
+                        </div>
+                    </div>
+                    <a href="" title="Search Now" class="sgp-link-btn sgp-link-btn--box">SEARCH NOW<svg
+                            xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7">
+                            <path
+                                d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z"
+                                transform="translate(0 8.75)" />
+                        </svg></a>
+                    <div class="search-result">
+                        <p class="search-result__head">Result:</p>
+                        <div class="search-result__wrap">
+                            <div class="search-result__box active">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                            <div class="search-result__box">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="track-trace-sec--search tab-pane fade" id="pills-calculate" role="tabpanel"
+                    aria-labelledby="pills-calculate-tab">
+                    <div class="track-trace-sec__tab-cont">
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">Major Building / Estate Name<span>*</span></div>
+                            <input type="text" placeholder="Eg: Paya Lebar Square" class="sgp-text-box__input">
+                        </div>
+                    </div>
+                    <a href="" title="Search Now" class="sgp-link-btn sgp-link-btn--box">SEARCH NOW<svg
+                            xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7">
+                            <path
+                                d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z"
+                                transform="translate(0 8.75)" />
+                        </svg></a>
+                    <div class="search-result">
+                        <p class="search-result__head">Result:</p>
+                        <div class="search-result__wrap">
+                            <div class="search-result__box active">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                            <div class="search-result__box">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="track-trace-sec--search tab-pane fade" id="pills-find" role="tabpanel"
+                    aria-labelledby="pills-find-tab">
+                    <div class="track-trace-sec__tab-cont track-trace-sec__tab-cont--width">
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">Select Type<span>*</span></div>
+                            <select id="" class="track-trace-sec__calculate-drop">
+                                <option value="01">PO Box</option>
+                                <option value="02">PO Box 1</option>
+                                <option value="03">PO Box 2</option>
+                            </select>
+                        </div>
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">PO Box / Locked Bag No.<span>*</span></div>
+                            <input type="text" placeholder="Eg: Paya Lebar Square" class="sgp-text-box__input">
+                        </div>
+                        <div class="track-trace-sec__post-text">
+                            <div class="sgp-text-box__text">Post Office Location<span>*</span></div>
+                            <input type="text" placeholder="Eg: Paya Lebar Square" class="sgp-text-box__input">
+                        </div>
+                    </div>
+                    <a href="" title="Search Now" class="sgp-link-btn sgp-link-btn--box">SEARCH NOW<svg
+                            xmlns="http://www.w3.org/2000/svg" width="12.25" height="7" viewBox="0 0 12.25 7">
+                            <path
+                                d="M8.5-8.641a.327.327,0,0,1,.232-.109.327.327,0,0,1,.232.109l3.172,3.172a.26.26,0,0,1,.109.219.26.26,0,0,1-.109.219L8.969-1.859a.327.327,0,0,1-.232.109A.327.327,0,0,1,8.5-1.859l-.191-.191A.26.26,0,0,1,8.2-2.27a.34.34,0,0,1,.109-.246l2.3-2.27H.328a.316.316,0,0,1-.232-.1A.316.316,0,0,1,0-5.113v-.273a.316.316,0,0,1,.1-.232.316.316,0,0,1,.232-.1H10.609l-2.3-2.27A.34.34,0,0,1,8.2-8.23a.26.26,0,0,1,.109-.219Z"
+                                transform="translate(0 8.75)" />
+                        </svg></a>
+                    <div class="search-result">
+                        <p class="search-result__head">Result:</p>
+                        <div class="search-result__wrap">
+                            <div class="search-result__box active">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                            <div class="search-result__box">
+                                <p class="search-result__num">218005</p>
+                                <div class="search-result__text">
+                                    <p class="search-result__val">100 Serangoon Rd, Singapore 218005</p>
+                                    <p class="search-result__val"><em>Building Type A</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

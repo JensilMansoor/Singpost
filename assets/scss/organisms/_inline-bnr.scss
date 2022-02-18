@@ -1,12 +1,58 @@
 .sgp-inline-bnr {
     padding: $spacer-6 $spacer-0;
-    margin-bottom: -130px;
-    z-index: 1;
     position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-white;
+    }
+    &--bg-grey {
+        &::before {
+            background-color: $color-grey-7;
+        }
+    }
+    &--no-shadow {
+        .sgp-inline-bnr__outer {
+            box-shadow: none;
+        }
+    }
+    &--body-grey {
+        padding: $spacer-0;
+        .sgp-inline-bnr__cnt {
+            background-color: $color-grey-7;
+        }
+    }
+    &--with-footer {
+        margin-bottom: -130px;
+    }
+    &--bg-blue {
+        .sgp-inline-bnr {
+            &__outer {
+                @include dark-blue-gradient(99deg);
+            }
+            &__cnt {
+                color: $color-white;
+            }
+        }
+    }
     &__outer {
         display: flex;
         box-shadow: 0px 3px 32px rgba(0, 0, 0, 0.16);
         background-color: $color-white;
+        z-index: 1;
+        position: relative;
+        &--reverse {
+            &.sgp-inline-bnr__outer {
+                flex-direction: row-reverse;
+                p {
+                    color: $color-grey-3;
+                }
+            }
+        }
     }
     &__bg {
         width: 50%;
@@ -22,12 +68,18 @@
         font-size: 20px;
         margin-bottom: $spacer-4;
     }
+    &__value {
+        @include font-univers-55;
+        color: $color-red;
+    }
 }
 
 @include mobile {
     .sgp-inline-bnr {
         padding: $spacer-5 $spacer-0;
-        margin-bottom: $spacer-0;
+        &--with-footer {
+            margin-bottom: $spacer-0;
+        }
         &__outer {
             display: block;
         }

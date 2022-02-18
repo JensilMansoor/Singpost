@@ -7,6 +7,9 @@
     top: 0;
     left: 0;
     width: 100%;
+    &__active {
+        padding-top: 25px;
+    }
     &.hide {
         display: none;
     }
@@ -110,7 +113,7 @@
         &__item {
             white-space: unset;
             text-overflow: unset;
-            // height: 40px !important;
+            padding-bottom: $spacer-2;
         }
         &__close-btn {
             right: 0;
@@ -118,8 +121,8 @@
             transform: none;
             svg {
                 position: absolute;
-                right: 4px;
-                top: 0px;
+                right: 7px;
+                top: 3px;
                 z-index: 1;
                 path {
                     stroke: #C31126;
@@ -128,11 +131,11 @@
             &::after {
                 content: '';
                 background-color: #fff;
-                width: 50px;
-                height: 50px;
+                width: 65px;
+                height: 65px;
                 position: absolute;
-                right: -30px;
-                top: -29px;
+                right: -37px;
+                top: -37px;
                 transform: rotate( 45deg);
             }
         }

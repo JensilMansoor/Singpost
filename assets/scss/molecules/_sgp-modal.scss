@@ -1,0 +1,85 @@
+.modal-backdrop.show{
+    opacity: 0.9;
+}
+.sgp-modal{
+    .modal-dialog{
+        max-width: 970px;
+        margin: 75px auto;
+        min-height: calc(100% - 150px);
+    }
+    .modal-content{
+        border: 0;
+        border-radius: 0;
+        padding: $spacer-6;
+    }
+    .close{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        text-shadow: none;
+        color: $color-white;
+        opacity: 1;
+        svg{
+            width: 25px;
+            height: 25px;
+            fill: $color-white;
+            transition: 0.3s;
+        }
+        &:not(:disabled):not(.disabled):hover{
+            opacity: 1;
+            svg{
+                fill: $color-red;
+            }
+        }
+    }
+}
+
+@include mobile-tablet{
+    .sgp-modal{
+        .modal-dialog{
+            max-width: 100%;
+            margin: 60px $spacer-3;
+            min-height: calc(100% - 120px);
+        }
+        .close{
+            top: 24px;
+            right: 16px;
+        }
+    }
+}
+
+@include mobile{
+    .sgp-modal{
+        .modal-dialog{
+            margin: $spacer-0;
+            min-height: 0;
+        }
+        .close{
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1050;
+            &::before{
+                content: "";
+                width: 120px;
+                height: 120px;
+                background-color: $color-black;
+                transform: rotate(45deg);
+                position: fixed;
+                top: -60px;
+                right: -60px;
+            }
+            svg{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+            }
+        }
+        .modal-content{
+            padding: $spacer-6 $spacer-3;
+            min-height: 100vh;
+        }
+    }
+}

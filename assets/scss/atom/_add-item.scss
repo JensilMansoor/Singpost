@@ -1,0 +1,14 @@
+.sgp-add-item {
+    background-color: $color-blue-6;
+    color: $color-blue-1;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer-2;
+    border: 1px dashed $color-blue-2;
+    img {
+        width: 15px;
+        margin-right: $spacer-2;
+    }
+}

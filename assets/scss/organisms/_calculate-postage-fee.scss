@@ -1,0 +1,401 @@
+.sgp-calc-postage {
+    padding: $spacer-6 $spacer-0;
+    &__sticky {
+        position: fixed;
+        width: 100%;
+        top: 83px;
+        left: 0;
+        z-index: 99;
+        display: none;
+        .content-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &.active {
+            display: block;
+            animation: slide-down 0.3s linear forwards;
+            @keyframes slide-down {
+                0% {
+                    opacity: .5;
+                    transform: translateY(-100%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    &__sticky-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-red;
+        color: $color-white;
+        padding: $spacer-2 $spacer-0 $spacer-2 $spacer-3;
+        min-width: 300px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5000px;
+            height: 100%;
+            background-color: $color-red;
+        }
+    }
+    &__sticky-label,
+    &__sticky-value {
+        position: relative;
+        z-index: 1;
+    }
+    &__sticky-label {
+        padding-right: $spacer-3;
+    }
+    &__wrapp {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__main {
+        max-width: 500px;
+        width: 100%;
+        &>.sgp-link-btn--box {
+            margin-top: $spacer-4;
+        }
+    }
+    &__progress {
+        display: inline-flex;
+        position: relative;
+        margin-bottom: $spacer-5;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 100px);
+            height: 1px;
+            background-color: $color-blue-5;
+        }
+    }
+    &__progress-outer {
+        display: flex;
+        flex-direction: column;
+        &:last-child {
+            text-align: right;
+            margin-left: $spacer-6;
+            align-items: flex-end;
+        }
+        &:first-child {
+            margin-right: $spacer-6;
+        }
+        &.current {
+            .sgp-calc-postage {
+                &__progress-dot {
+                    border: 1px solid $color-blue-2;
+                }
+                &__progress-txt {
+                    color: $color-blue-2;
+                }
+                &__progress-label {
+                    color: $color-blue-2;
+                }
+            }
+        }
+        &.active {
+            .sgp-calc-postage {
+                &__progress-dot {
+                    border: 1px solid $color-blue-2;
+                    background-color: $color-blue-2;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.313' height='11' viewBox='0 0 14.313 11'%3E%3Cpath d='M13.625-11.406a.338.338,0,0,1,.25-.094.457.457,0,0,1,.281.094l.875.906a.3.3,0,0,1,.125.25.389.389,0,0,1-.125.281L5.656-.594a.338.338,0,0,1-.25.094.457.457,0,0,1-.281-.094L.969-4.781a.3.3,0,0,1-.125-.25.389.389,0,0,1,.125-.281l.875-.875a.389.389,0,0,1,.281-.125.3.3,0,0,1,.25.125L5.406-3.156Z' transform='translate(-0.844 11.5)' fill='%23fff'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                &__progress-txt {
+                    display: none;
+                }
+                &__progress-label {
+                    color: $color-blue-2;
+                }
+            }
+        }
+    }
+    &__progress-dot {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid $color-grey-4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__progress-txt {
+        color: $color-grey-4;
+    }
+    &__progress-label {
+        color: $color-grey-4;
+        margin-top: $spacer-2;
+    }
+    &__row {
+        display: flex;
+        margin-bottom: $spacer-4;
+        .sgp-select {
+            flex: 1;
+            border: 1px solid $color-grey-4;
+            padding: 10px $spacer-3;
+            background-position-x: calc(100% - 9px);
+            background-position-y: 50%;
+            @include font-univers-45;
+            &:last-child {
+                flex: 2;
+                margin-left: $spacer-3;
+            }
+            &--single {
+                max-width: 180px;
+                &:last-child {
+                    margin-left: $spacer-0;
+                }
+            }
+        }
+        .sgp-input-text {
+            border: 1px solid $color-grey-4;
+            padding: 10px $spacer-3;
+            flex: 2;
+        }
+    }
+    &__value-btn {
+        flex: 1;
+        padding: 10px $spacer-3;
+        border: 1px solid $color-blue-4;
+        color: $color-blue-4;
+        text-align: center;
+        &:hover {
+            color: $color-blue-4;
+        }
+        &.active {
+            background-color: $color-blue-4;
+            color: $color-white;
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+    .sgp-link {
+        display: block;
+        margin-bottom: $spacer-2;
+    }
+    &__result {
+        max-width: 375px;
+        width: 100%;
+        margin-left: $spacer-3;
+        .sgp-btn {
+            margin-top: $spacer-3;
+        }
+    }
+    &__result-box {
+        border: 1px solid $color-grey-4;
+    }
+    &__result-box-head {
+        padding: 10px $spacer-3;
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 18px;
+        @include font-univers-65;
+    }
+    &__result-box-row {
+        display: flex;
+        padding: 10px $spacer-3;
+        border-top: 1px solid $color-grey-4;
+    }
+    &__result-box-label {
+        flex: 1;
+        padding-right: $spacer-2;
+    }
+    &__result-box-value {
+        flex: 2;
+        &--total {
+            color: $color-red;
+            text-align: right;
+            font-size: 18px;
+            @include font-univers-65;
+        }
+    }
+    &__tiles {
+        margin-top: $spacer-5;
+        .sgp-h3 {
+            margin-bottom: $spacer-3;
+        }
+        &--services {
+            .sgp-pdp {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                margin: $spacer-0 (-$spacer-2) $spacer-0;
+                width: calc(100% + 16px);
+                margin-top: $spacer-3;
+                &__price {
+                    margin: $spacer-2;
+                }
+                .spg-postal-popup {
+                    margin: $spacer-2;
+                }
+            }
+        }
+    }
+    &__tiles-outer {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $spacer-0 (-$spacer-2);
+        .sgp-tile {
+            width: calc(33.33% - 16px);
+            margin: $spacer-2;
+        }
+    }
+    &__tiles-btn {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $spacer-4 (-$spacer-2) $spacer-0;
+        .sgp-link-btn {
+            margin: $spacer-2;
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-calc-postage {
+        position: relative;
+        padding-top: 96px;
+        &__sticky {
+            &.active {
+                display: none;
+            }
+        }
+        &__result {
+            position: absolute;
+            left: 0;
+            top: 16px;
+            max-width: none;
+            margin-left: $spacer-0;
+            background-color: $color-white;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+            z-index: 99;
+            .sgp-btn {
+                margin: $spacer-3;
+                display: none;
+            }
+            &.active {
+                .sgp-calc-postage {
+                    &__result-box-head {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &__result-box-row {
+                        display: flex;
+                    }
+                }
+                .sgp-btn {
+                    display: inline-flex;
+                }
+            }
+            &--sticky {
+                position: fixed;
+                top: 60px;
+                animation: slide-down 0.3s linear forwards;
+                @keyframes slide-down {
+                    0% {
+                        opacity: .5;
+                        transform: translateY(-100%);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+        &__result-box-row {
+            display: none;
+        }
+        &__result-box-head {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 16px;
+                top: 14px;
+                width: 15px;
+                height: 15px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.125' height='7.793' viewBox='0 0 13.125 7.793'%3E%3Cpath id='Path_1019' data-name='Path 1019' d='M6.234-4.1H6.193a.6.6,0,0,0,.369.123A.6.6,0,0,0,6.932-4.1L13-10.131a.571.571,0,0,0,.123-.349A.571.571,0,0,0,13-10.828l-.82-.82a.6.6,0,0,0-.369-.123.443.443,0,0,0-.328.123L6.563-6.768,1.641-11.648a.443.443,0,0,0-.328-.123.6.6,0,0,0-.369.123l-.82.82A.571.571,0,0,0,0-10.479a.49.49,0,0,0,.164.349Z' transform='translate(0 11.771)' fill='%23fff'/%3E%3C/svg%3E%0A");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                transition: all 0.3s;
+            }
+        }
+        &__tiles-outer {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            @include scroll-bar-x;
+            padding-bottom: $spacer-2;
+            .sgp-tile {
+                min-width: 260px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-calc-postage {
+        padding-top: 72px;
+        padding-bottom: $spacer-5;
+        &__main {
+            &>.sgp-link-btn--box {
+                margin-top: $spacer-3;
+            }
+        }
+        &__row {
+            flex-wrap: wrap;
+            margin-bottom: $spacer-3;
+            .sgp-select {
+                flex: none;
+                width: 100%;
+                margin-bottom: $spacer-3;
+                &:last-child {
+                    margin-left: $spacer-0;
+                    margin-bottom: $spacer-0;
+                }
+                &--single {
+                    max-width: 100%;
+                }
+            }
+            .sgp-input-text {
+                flex: none;
+                width: 100%;
+            }
+        }
+        &__value-btn {
+            flex: none;
+            width: 50%;
+        }
+        &__result {
+            top: 0;
+            &--sticky {
+                top: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.sgp-rate-tile {
+    padding: $spacer-6 $spacer-0;
+    background-color: $color-grey-7;
+    &__outer {
+        margin: $spacer-4 (-$spacer-2) $spacer-0;
+    }
+    .sgp-tile-h {
+        margin: $spacer-2;
+        display: flex;
+    }
+    &__notice{
+        font-size: 14px;
+        padding-top: $spacer-3;
+        color: $color-grey-3;
+    }
+    &__note{
+        padding: $spacer-4;
+        background-color: $color-white;
+        color: $color-black;
+        .sgp-list{
+            margin: $spacer-2 $spacer-0;
+        }
+    }
+    &__note-hd{
+        font-size: 16px;
+        @include font-univers-65;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-rate-tile {
+        .sgp-tile-h {
+            display: block;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-rate-tile {
+        padding: $spacer-5 $spacer-0;
+        &__note{
+            padding: $spacer-3;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.sgp-tab-with-table {
+    padding: $spacer-6 $spacer-0;
+    .sgp-info-tab {
+        margin-bottom: $spacer-5;
+        .nav {
+            margin-bottom: $spacer-3;
+        }
+        .nav-item {
+            margin-right: $spacer-2;
+            &:last-child {
+                margin-right: $spacer-0;
+            }
+        }
+        .tab-content {
+            background-color: $color-white;
+            padding: $spacer-0;
+        }
+    }
+    &__size {
+        margin-top: $spacer-4;
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        .sgp-btn {
+            margin-bottom: $spacer-3;
+        }
+    }
+    &__note-txt {
+        color: $color-grey-3;
+        margin-bottom: $spacer-2;
+    }
+    &__note-txt-n-link {
+        color: $color-grey-3;
+        padding-top: $spacer-2;
+        a {
+            color: $color-blue-2;
+            text-decoration: underline;
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .sgp-tab-with-table {
+        padding: $spacer-5 $spacer-0;
+    }
+}

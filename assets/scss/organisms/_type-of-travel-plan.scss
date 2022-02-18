@@ -1,0 +1,56 @@
+.sgp-of-travel-plan {
+    padding: $spacer-6 $spacer-0;
+    background-color: $color-grey-7;
+    .sgp-plan-table {
+        &__table {
+            th,
+            td {
+                width: 50%;
+                border: 0;
+                vertical-align: top;
+                position: relative;
+            }
+            tr {
+                &:last-child {
+                    td {
+                        .sgp-accordion-custom {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .sgp-plan-table__spacer {
+                min-width: 16px;
+                width: 16px;
+            }
+        }
+    }
+    .sgp-accordion-custom {
+        position: static;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 16px;
+            bottom: 0;
+            width: calc(100% - 32px);
+            height: 1px;
+            background-color: $color-blue-med-2;
+        }
+        &__expan {
+            padding-top: $spacer-0;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-of-travel-plan {
+        padding: $spacer-5 $spacer-0;
+        .sgp-plan-table {
+            &__table {
+                width: 550px;
+            }
+        }
+    }
+}

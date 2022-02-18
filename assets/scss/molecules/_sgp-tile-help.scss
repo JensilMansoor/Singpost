@@ -1,0 +1,29 @@
+.sgp-tile-help {
+    border: 1px solid $color-white;
+    padding: $spacer-4;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        @include dark-blue-gradient(136deg);
+        border: 1px solid $color-blue-2;
+        color: $color-white;
+    }
+    .sgp-link-btn{
+        margin-top: auto;
+    }
+    &__desc {
+        // min-height: 88px;
+        font-size: 16px;
+        margin-bottom: $spacer-3;
+    }
+}
+
+@include mobile {
+    .sgp-tile-help {
+        padding: $spacer-3 $spacer-2;
+        &__desc {
+            font-size: 14px;
+        }
+    }
+}

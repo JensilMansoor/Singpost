@@ -1,0 +1,64 @@
+.sgp-awards{
+    overflow: hidden;
+    &__tile{
+        background-color: $color-white;
+        padding: $spacer-6;
+        display: flex;
+        position: relative;
+    }
+    &__tile-img{
+        width: 30%;
+        margin-right: $spacer-6;
+        background-size: cover;
+        background-position: center;
+    }
+    &__tile-cnt{
+        padding: $spacer-6 $spacer-0;
+        width: 70%;
+        max-width: 580px;
+        .sgp-h3{
+            color: $color-blue-2;
+            margin-bottom: $spacer-3;
+        }
+        .sgp-list{
+            color: $color-grey-3
+        }
+    }
+}
+
+@include mobile-tablet{
+    .sgp-awards{
+        &__tile-img{
+            width: 40%;
+            margin-right: $spacer-5;
+        }
+        &__tile-cnt{
+            padding: $spacer-3 $spacer-0;
+            width: 60%;
+            max-width: none;
+        }
+    }
+}
+
+@include mobile{
+    .sgp-awards{
+        &__tile{
+            display: block;
+            padding: $spacer-3;
+        }
+        &__tile-img{
+            width: 100%;
+            min-height: 200px;
+            margin-right: $spacer-0;
+        }
+        &__tile-cnt{
+            padding: $spacer-3 $spacer-0 $spacer-0;
+            width: 100%;
+            max-width: none;
+            .sgp-h3{
+                font-size: 18px;
+                margin-bottom: $spacer-2;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.sgp-tag {
+    color: $color-white;
+    background-color: $color-red;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    padding: $spacer-1 $spacer-3;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    &::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cg id='Group_5256' data-name='Group 5256' transform='translate(-326 -735)'%3E%3Crect id='Rectangle_1194' data-name='Rectangle 1194' width='30' height='30' transform='translate(326 735)' fill='none'/%3E%3Crect id='Rectangle_1193' data-name='Rectangle 1193' width='21.213' height='21.213' transform='translate(341 735) rotate(45)' fill='%23c31126'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-size: 30px 30px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.971' height='16.971' viewBox='0 0 16.971 16.971'%3E%3Cpath id='Polygon_1' data-name='Polygon 1' d='M8,0l8,8H0Z' transform='translate(5.657) rotate(45)' fill='%23610812'/%3E%3C/svg%3E%0A");
+        background-size: 15px 15px;
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+}

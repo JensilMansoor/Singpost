@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52">
+  <g id="Group_5265" data-name="Group 5265" transform="translate(24152 7112)">
+    <g id="key-exclusion" transform="translate(-24318 -9069)">
+      <g id="Rectangle_1195" data-name="Rectangle 1195" transform="translate(169 1959)" fill="none" stroke="#c31126" stroke-width="1" stroke-dasharray="5">
+        <rect width="50" height="50" rx="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_1196" data-name="Rectangle 1196" width="50" height="50" rx="25" transform="translate(166 1957)" fill="#c31126"/>
+      <path id="Path_1018" data-name="Path 1018" d="M9.063-7.5l5.078,5.078a.571.571,0,0,1,.117.352.422.422,0,0,1-.117.313l-.9.9a.422.422,0,0,1-.312.117.571.571,0,0,1-.352-.117L7.5-5.937,2.422-.859a.571.571,0,0,1-.352.117.422.422,0,0,1-.312-.117l-.9-.9A.422.422,0,0,1,.742-2.07a.571.571,0,0,1,.117-.352L5.938-7.5.859-12.578a.571.571,0,0,1-.117-.352.422.422,0,0,1,.117-.312l.9-.9a.422.422,0,0,1,.313-.117.571.571,0,0,1,.352.117L7.5-9.062l5.078-5.078a.571.571,0,0,1,.352-.117.422.422,0,0,1,.313.117l.9.9a.422.422,0,0,1,.117.313.571.571,0,0,1-.117.352Z" transform="translate(183.5 1990)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

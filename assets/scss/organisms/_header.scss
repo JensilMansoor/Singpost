@@ -30,6 +30,9 @@
                     height: 15px;
                     margin-right: $spacer-2;
                 }
+                &.active {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -75,7 +78,6 @@
     }
     &__logo {
         width: 150px;
-        height: 51px;
     }
     &__menu-sec {
         margin-left: auto;
@@ -92,11 +94,18 @@
         &:hover {
             .sgp-header__drop-menu-item {
                 position: relative;
+                color: $color-blue-2;
+                svg {
+                    fill: $color-blue-2;
+                    path {
+                        fill: $color-blue-2;
+                    }
+                }
                 &::after {
                     content: '';
                     position: absolute;
                     left: 50%;
-                    top: 17px;
+                    top: 18px;
                     transform: translateX(-50%);
                     width: 15px;
                     height: 15px;
@@ -124,6 +133,15 @@
     &__drop-menu-item {
         cursor: pointer;
     }
+    &__drop-menu-item.active {
+        color: $color-blue-2;
+        svg {
+            fill: $color-blue-2;
+            path {
+                fill: $color-blue-2;
+            }
+        }
+    }
     &__drop-menu-icon {
         width: 10px;
         height: 6px;
@@ -134,14 +152,16 @@
         top: 51px;
         right: 32px;
         background-color: $color-white;
-        width: 850px;
+        // width: 850px;
         min-height: 350px;
         box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
         display: none;
     }
     &__menu-drop-col {
-        flex: 1;
+        // flex: 1;
         padding: $spacer-4;
+        width: 282px;
+        min-width: 282px;
         &--bg-img {
             background-repeat: no-repeat;
             background-size: cover;
@@ -152,9 +172,16 @@
             &.active {
                 display: block;
             }
+            .sgp-header__menu-drop-link {
+                &:hover {
+                    color: $color-black;
+                }
+            }
         }
         &--two {
-            flex: 2;
+            // flex: 2;
+            width: 564px;
+            min-width: 564px;
         }
     }
     &__menu-drop-btn {
@@ -175,13 +202,15 @@
         display: block;
         margin-bottom: $spacer-4;
         cursor: pointer;
-        &:hover {
+        &:hover,
+        &.active {
             text-decoration: underline;
+            color: $color-blue-2;
+            svg {
+                fill: $color-blue-2;
+            }
         }
         &--tab {
-            &:hover {
-                text-decoration: none;
-            }
             svg {
                 width: 6px;
                 height: 10px;
@@ -326,6 +355,7 @@
         svg {
             width: 8px;
             height: 13px;
+            margin-left: auto;
             path {
                 fill: $color-grey-4;
                 transition: all 0.3s;
@@ -354,9 +384,9 @@
                 width: 50px;
             }
         }
-        &:last-child {
-            margin-bottom: $spacer-0;
-        }
+        // &:last-child {
+        //     margin-bottom: $spacer-0;
+        // }
     }
     &__menu-desk {
         color: $color-grey-4;
@@ -436,6 +466,7 @@
     &__catgry-item {
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         display: block;
         width: 100%;
         height: 33.33%;
@@ -452,12 +483,12 @@
         &:hover {
             .sgp-btn {
                 text-decoration: underline;
-                svg {
-                    circle {
-                        stroke: $color-red;
-                        fill: $color-red;
+                .sgp-btn__icon {
+                    &::before {
+                        box-shadow: inset 0 0 0 35px $color-red;
+                        transform: scale3d(1.1, 1.1, 1);
                     }
-                    path {
+                    svg {
                         fill: $color-white;
                     }
                 }
@@ -465,7 +496,7 @@
         }
         .sgp-btn {
             z-index: 1;
-            position: relative;
+            // position: relative;
             position: absolute;
             bottom: 24px;
             left: 24px;
@@ -473,6 +504,44 @@
     }
     &__footer {
         display: none;
+    }
+    &--about {
+        .sgp-header {
+            &__drop-menu {
+                position: relative;
+            }
+            &__menu-drop {
+                right: -30px;
+                top: 33px;
+                min-height: 0;
+                height: auto;
+            }
+        }
+    }
+    &--business {
+        .sgp-header {
+            &__nav {
+                background-color: $color-black-2;
+            }
+            &__drop-menu-item {
+                color: $color-white;
+            }
+            &__menu-sec {
+                align-items: center;
+            }
+            &__drop-menu {
+                &:hover {
+                    .sgp-header__drop-menu-item {
+                        color: $color-white;
+                        svg {
+                            path {
+                                fill: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -499,7 +568,6 @@
         }
         &__logo {
             width: 130px;
-            height: 44px;
         }
         &__menu-btn-icon {
             order: 1;
@@ -636,6 +704,30 @@
         }
         &__catgry-item {
             min-width: 220px;
+            margin-right: $spacer-2;
+            &:last-child {
+                margin-right: $spacer-0;
+            }
+        }
+    }
+}
+
+@include ie-fix {
+    .sgp-header {
+        &__menu-drop {
+            height: 370px;
+        }
+        &__mega-menu {
+            .content-wrapper {
+                height: 100vh;
+            }
+        }
+        &--about {
+            .sgp-header {
+                &__menu-drop {
+                    height: auto;
+                }
+            }
         }
     }
 }

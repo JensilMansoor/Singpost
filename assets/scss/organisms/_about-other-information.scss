@@ -1,0 +1,51 @@
+.sgp-other-info {
+    padding: $spacer-6 $spacer-0;
+    background-color: $color-grey-7;
+    &__tile-outer {
+        display: flex;
+        margin: $spacer-0 (-$spacer-2);
+    }
+    &__tile {
+        width: calc(33.33% - 16px);
+        margin: $spacer-0 $spacer-2;
+        color: $color-white;
+        padding: $spacer-4;
+        .sgp-h4 {
+            margin-bottom: $spacer-3;
+        }
+    }
+    &__tile-txt {
+        margin-bottom: $spacer-3;
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@include mobile-tablet {
+    .sgp-other-info {
+        &__tile-outer {
+            overflow-x: auto;
+            padding-bottom: $spacer-2;
+            @include scroll-bar-x;
+        }
+        &__tile {
+            width: 100%;
+            min-width: 280px;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-other-info {
+        padding: $spacer-5 $spacer-0;
+        &__tile {
+            padding: $spacer-3;
+        }
+    }
+}

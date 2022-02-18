@@ -1,0 +1,284 @@
+.sgp-cart {
+    padding: $spacer-6 $spacer-0;
+    .sgp-header-arrow__head-sec {
+        flex: 1 100%;
+    }
+    &__box {
+        margin-bottom: $spacer-5;
+    }
+    &__box-row {
+        display: flex;
+        border: 1px solid rgba(187, 187, 187, 0.3);
+        &--head {
+            background-color: $color-blue-1;
+            color: $color-white;
+            @include font-univers-65;
+            font-size: 16px;
+        }
+    }
+    &__item-col,
+    &__qty-col,
+    &__prdct-head,
+    &__prdct-qty,
+    &__prdct-price {
+        padding: $spacer-3;
+    }
+    &__item-col {
+        width: calc(100% - 480px);
+    }
+    &__qty-col {
+        width: 240px;
+        border-left: 1px solid rgba(187, 187, 187, 0.3);
+    }
+    &__prdct-img {
+        width: 132px;
+        padding: $spacer-3;
+    }
+    &__prdct-detail {
+        display: flex;
+        width: calc(100% - 132px);
+    }
+    &__prdct-head {
+        width: calc(100% - 480px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sgp-qty {
+        width: auto;
+        span {
+            padding: $spacer-0 $spacer-3;
+        }
+    }
+    &__prdct-qty,
+    &__prdct-price {
+        width: 240px;
+        border-left: 1px solid rgba(187, 187, 187, 0.3);
+        display: flex;
+        align-items: center;
+    }
+    &__prdct-price {
+        justify-content: space-between;
+    }
+    &__qty-reload {
+        margin-left: $spacer-3;
+        img {
+            width: 15px;
+            height: auto;
+            transition: 0.4s;
+        }
+        &:hover{
+            img{
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &__prdct-title {
+        color: $color-red;
+        margin-bottom: $spacer-2;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    &__prdct-name {
+        font-size: 16px;
+        @include font-univers-65;
+    }
+    &__prdct-price-value {
+        font-size: 16px;
+    }
+    &__delete {
+        img {
+            width: 15px;
+            height: auto;
+        }
+    }
+    &__total-outer {
+        display: flex;
+        align-items: flex-start;
+        .sgp-add-item {
+            width: 60%;
+            margin-right: $spacer-5;
+        }
+    }
+    &__total-box {
+        padding: $spacer-4;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+        width: 40%;
+        background-color: $color-white;
+    }
+    &__rate-box {
+        border-bottom: 1px solid $color-blue-med-2;
+        margin-bottom: $spacer-3;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacer-3;
+    }
+    &__value {
+        font-size: 16px;
+        @include font-univers-65;
+    }
+    &__total-rate-box {
+        .sgp-btn {
+            display: none;
+        }
+        .sgp-cart {
+            &__row {
+                margin-bottom: $spacer-0;
+            }
+            &__value {
+                color: $color-red;
+            }
+        }
+        .sgp-link-btn {
+            display: none;
+        }
+    }
+    &__note {
+        color: $color-grey-3;
+        font-weight: $font-bold;
+    }
+    &__btns {
+        margin-top: $spacer-5;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__total-input {
+        display: none;
+    }
+    &__input-label {
+        display: none;
+    }
+}
+
+@include mobile-tablet {
+    .sgp-cart {
+        background-color: $color-grey-7;
+        &__box {
+            margin-bottom: $spacer-4;
+        }
+        &__box-row {
+            margin-bottom: $spacer-3;
+            background-color: $color-white;
+            &--head {
+                display: none;
+            }
+        }
+        &__prdct-detail {
+            flex-direction: column;
+            width: calc(100% - 130px);
+            padding: $spacer-2;
+            position: relative;
+        }
+        &__prdct-head,
+        &__prdct-qty,
+        &__prdct-price {
+            width: 100%;
+            border-left: 0;
+            padding: $spacer-0 $spacer-0 $spacer-2;
+        }
+        &__prdct-head {
+            order: 1;
+        }
+        &__prdct-qty {
+            order: 3;
+            padding-bottom: $spacer-0;
+        }
+        &__prdct-price {
+            order: 2;
+        }
+        &__prdct-img {
+            width: 130px;
+            padding: $spacer-2;
+        }
+        &__prdct-name {
+            font-size: 14px;
+        }
+        .sgp-qty {
+            &__btn {
+                padding: $spacer-2 10px;
+            }
+        }
+        &__qty-reload {
+            display: none;
+        }
+        &__delete {
+            position: absolute;
+            right: 8px;
+            bottom: 10px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $color-red;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-cart {
+        padding: $spacer-5 $spacer-0 $spacer-0;
+        background-color: $color-grey-7;
+        &__total-outer {
+            display: block;
+            .sgp-add-item {
+                width: 100%;
+                margin-right: $spacer-0;
+                margin-bottom: $spacer-4;
+            }
+        }
+        &__prdct-detail {
+            width: calc(100% - 110px);
+        }
+        &__prdct-img {
+            width: 110px;
+        }
+        &__total-box {
+            width: calc(100% + 32px);
+            margin: $spacer-0 (-$spacer-3);
+            padding: $spacer-6 $spacer-3 $spacer-4;
+            position: relative;
+        }
+        &__btns {
+            display: none;
+        }
+        &__rate-box {
+            display: none;
+        }
+        &__total-rate-box {
+            .sgp-link-btn {
+                display: inline-flex;
+                margin-top: $spacer-3;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        &__input-label {
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            svg {
+                width: 15px;
+                height: auto;
+            }
+        }
+        &__total-input {
+            &:checked {
+                &~.sgp-cart__rate-box {
+                    display: block;
+                }
+                &+.sgp-cart__input-label {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

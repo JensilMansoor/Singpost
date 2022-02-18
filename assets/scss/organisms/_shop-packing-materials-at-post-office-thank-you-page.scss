@@ -1,0 +1,50 @@
+.sgp-thank-u {
+    padding: $spacer-6 $spacer-0;
+    .sgp-header-arrow {
+        text-align: center;
+        max-width: 750px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__cnt {
+        max-width: 750px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $spacer-4;
+    }
+    &__order-label {
+        margin-right: $spacer-3;
+    }
+    &__order-no {
+        color: $color-red;
+        @include font-univers-65;
+        font-size: 18px;
+    }
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        padding-top: $spacer-4;
+        .sgp-btn {
+            margin: $spacer-2;
+        }
+    }
+}
+
+@include mobile {
+    .sgp-thank-u {
+        padding: $spacer-5 $spacer-0;
+        &__btn {
+            flex-wrap: wrap;
+            .sgp-btn {
+                margin: $spacer-2;
+            }
+        }
+    }
+}

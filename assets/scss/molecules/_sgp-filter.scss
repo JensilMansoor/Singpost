@@ -1,0 +1,195 @@
+.sgp-filter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__sec-1{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin: $spacer-0 (-$spacer-2);
+        .sgp-sort{
+            width: 100%;
+            margin: $spacer-4 $spacer-2 $spacer-3;
+        }
+        .sgp-select,
+        .sgp-link-btn,
+        .sgp-sort{
+            margin-right: $spacer-2;
+            margin-left: $spacer-2;
+        }
+    }
+    &__sec-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    &__sidebar,
+    &__btn,
+    &__mob-drop{
+        display: none;
+    }
+    .sgp-toggle{
+        transform: translateY(50%);
+    }
+    .sgp-link-btn{
+        min-width: 60px;
+        &.active{
+            color: $color-white;
+            pointer-events: none;
+            &::after{
+                background-color: $color-blue-2;
+            }
+        }
+    }
+    &__overlay{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@include mobile-tablet{
+    .sgp-filter{
+        flex-direction: column-reverse;
+        .sgp-sort{
+            margin: $spacer-0;
+        }
+        &__sec-1{
+            flex-wrap: nowrap;
+            overflow: auto;
+            .sgp-link-btn{
+                flex: 1 0 auto;
+            }
+        }
+        .sgp-toggle{
+            transform: none;
+        }
+        &__sidebar{
+            background-color: $color-black-2;
+            color: $color-white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            z-index: 9999;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: transform 0.4s;
+            &.active{
+                transform: translateX(0);
+            }
+            .sgp-select,
+            .sgp-input-text{
+                width: 100%;
+                color: $color-white;
+                border: 1px solid $color-white;
+                background-color: transparent;
+            }
+            .sgp-input-text{
+                margin-right: $spacer-0;
+                &::placeholder {
+                    @include font-univers-45;
+                    color: $color-grey-5;
+                }
+            }
+            .sgp-select{
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.125' height='7.793' viewBox='0 0 13.125 7.793'%3E%3Cpath id='Path_1018' data-name='Path 1018' d='M6.234-4.1H6.193a.6.6,0,0,0,.369.123A.6.6,0,0,0,6.932-4.1L13-10.131a.571.571,0,0,0,.123-.349A.571.571,0,0,0,13-10.828l-.82-.82a.6.6,0,0,0-.369-.123.443.443,0,0,0-.328.123L6.563-6.768,1.641-11.648a.443.443,0,0,0-.328-.123.6.6,0,0,0-.369.123l-.82.82A.571.571,0,0,0,0-10.479a.49.49,0,0,0,.164.349Z' transform='translate(0 11.771)' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+                option{
+                    color: $color-grey-2;
+                }
+            }
+            .sgp-link-btn{
+                color: $color-white;
+                min-width: 0;
+                &--border{
+                    border: 1px solid $color-white;
+                    background-color: transparent;
+                    color: $color-white;
+                    width: 100%;
+                    &::before,
+                    &::after{
+                        content: none;
+                    }
+                    &.active{
+                        border: 1px solid $color-blue-2;
+                        background-color: $color-blue-2;
+                    }
+                }
+                margin-right: $spacer-3;
+                &:last-child{
+                    margin-right: $spacer-0;
+                }
+            }
+            
+        }
+        &__btn-sec{
+            display: flex;
+            margin: $spacer-6 $spacer-0 $spacer-3;
+        }
+        &__item,
+        &__sidebar-head{
+            @include font-univers-65;
+            padding: $spacer-4;
+        }
+        &__item{
+            border-bottom: 1px solid rgba(226, 243, 252, 0.4);
+        }
+        &__item-label{
+            margin-bottom: $spacer-2;
+        }
+        &__sidebar-head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sgp-link-btn,
+            .sgp-btn{
+                @include font-univers-55;
+            }
+            &:last-child{
+                margin-top: auto;
+            }
+        }
+        &__sec-2{
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: $spacer-3;
+            .sgp-link-btn{
+                margin-left: $spacer-3;
+            }
+        }
+        &__btn,
+        &__mob-drop{
+            display: block;
+            flex: 1 0 auto;
+            min-width: 0px;
+        }
+        &__only-desk{
+            display: none;
+        }
+        &__overlay{
+            &.active{
+                opacity: 1;
+                visibility: visible;
+                background-color: rgba(0, 0, 0, 0.75);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 999;
+                transition: 0.4s;
+            }
+        }
+        &__close{
+            width: 20px;
+        }
+        .sgp-select{
+            flex: 1 0 auto;
+        }
+    }
+}

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    &.slick-slide{
+    &.slick-slide {
         display: flex;
     }
     &:hover {
@@ -15,14 +15,12 @@
                 }
             }
         }
-        .sgp-btn {
-            text-decoration: underline;
-            svg {
-                circle {
-                    fill: #C31126;
-                    stroke: #C31126;
-                }
-            }
+    }
+    .sgp-btn {
+        margin-bottom: $spacer-3;
+        &:only-child,
+        &:last-child {
+            margin-bottom: $spacer-0;
         }
     }
     &__bg {
@@ -50,7 +48,7 @@
         z-index: 5;
         color: #fff;
         padding: $spacer-4;
-        .sgp-small-title{
+        .sgp-small-title {
             color: $color-white;
         }
     }
@@ -62,9 +60,10 @@
     &__desc {
         margin-bottom: $spacer-3;
     }
-    &--border{
-        .sgp-tile-bg{
-            &__cnt{
+    &--border {
+        min-height: 320px;
+        .sgp-tile-bg {
+            &__cnt {
                 padding: $spacer-5;
             }
         }
@@ -91,7 +90,7 @@
             z-index: 1;
             transition: all 0.3s;
         }
-        &:hover{
+        &:hover {
             &::after {
                 width: calc(80% - 32px);
                 height: calc(50% - 32px);
@@ -102,11 +101,54 @@
             }
         }
     }
+    &--content-hide{
+        overflow: hidden;
+        .sgp-tile-bg {
+            &__bg {
+                &::after {
+                    opacity: 0;
+                }
+            }
+            &__cnt {
+                transform: translateY(110%);
+                transition: 0.3s;
+            }
+        }
+        &:hover{
+            .sgp-tile-bg {
+                &__bg {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                &__cnt {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+a.sgp-tile-bg {
+    &:hover {
+        .sgp-btn {
+            text-decoration: underline;
+            .sgp-btn__icon {
+                &::before {
+                    box-shadow: inset 0 0 0 35px $color-red;
+                    transform: scale3d(1.1, 1.1, 1);
+                }
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
     .sgp-tile-bg {
-        min-height: 140px;
+        min-height: 260px;
         &::before {
             bottom: 8px;
             left: 8px;
@@ -119,28 +161,44 @@
             width: calc(100% - 16px);
             height: calc(100% - 16px);
         }
+        &__bg {
+            &::after {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
         &__cnt {
             padding: $spacer-3;
         }
         &__head {
             font-size: 16px;
             line-height: 22px;
-            margin-bottom: $spacer-0;
         }
         &__desc {
             font-size: 14px;
             line-height: 20px;
-            display: none;
         }
-        .sgp-btn {
-            display: none;
-        }
-        &--border{
-            .sgp-tile-bg{
-                &__cnt{
-                    padding: $spacer-3;
+        &--border {
+            min-height: 155px;
+            .sgp-tile-bg {
+                &__cnt {
+                    padding: 18px;
                 }
+                // &__desc {
+                //     display: none;
+                // }
+                // &__head {
+                //     margin-bottom: $spacer-0;
+                // }
             }
+            // .sgp-btn {
+            //     display: none;
+            // }
         }
+    }
+}
+
+@include ie-fix {
+    .sgp-tile-bg {
+        height: 400px;
     }
 }

@@ -1,0 +1,81 @@
+.sgp-stock-box{
+    &__blue-head{
+        background-color: $color-blue-1;
+        padding: $spacer-3 $spacer-4;
+        p{
+            font-size: 21px;
+            color: $color-white;
+            font-weight: bold;
+        }
+        span{
+            font-size: 14px;
+            font-style: italic;
+            font-weight: normal;
+        }
+    }
+    &__cont-wrap{
+        border: 1px solid $color-blue-med-2;
+        padding: $spacer-4;
+        hr{
+            border-top: 1px solid $color-blue-med-2;
+            margin: $spacer-4 $spacer-0;
+        }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacer-3;
+        &:last-child{
+            margin-bottom: $spacer-0;
+        }
+    }
+    &__row-detail{
+        color: $color-grey-1;
+        min-width: 120px;
+    }
+    &__row-val{
+        color: $color-black;
+        font-weight: bold;
+        min-width: 80px;
+        &--blue{
+            color: $color-blue-4;
+        }
+        &--red{
+            color: $color-red;
+        }
+    }
+    &__btn-sec{
+        background-color: $color-blue-2;
+        display: flex;
+        justify-content: center;
+        padding: $spacer-2 $spacer-3
+    }
+    &--bg{
+        padding: $spacer-5;
+        background-size: cover;
+        background-position: center;
+        .sgp-stock-box{
+            &__cont-wrap{
+                background-color: $color-white;
+                border: 0;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .sgp-stock-box{
+        &__blue-head{
+            padding: $spacer-3;
+        }
+        &__row{
+            margin-bottom: $spacer-2;
+        }
+        &__cont-wrap{
+            padding: $spacer-4 $spacer-3;
+            hr{
+                margin: $spacer-3 $spacer-0;
+            }
+        }
+    }
+}

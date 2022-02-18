@@ -1,27 +1,68 @@
-.sing-reg-service{
-    &__image{
+.sgp-reg-service{
+    &--community{
+        &.sgp-val-added{
+            background-color: $color-white;
+            padding: $spacer-0;
+        }
+        &.sgp-reg-service{
+            .sgp-reg-service__inner{
+                width: 100%;
+            }
+            .sgp-reg-service__bodycopy{
+                padding-left: $spacer-0;
+                list-style: none;
+                text-align: center;
+                &--bold{
+                    font-weight: bold;
+                }
+                &:last-child{
+                    margin-bottom: $spacer-0;
+                }
+                }
+                .slick-arrow.slick-hidden{
+                    display: block;
+                }
+                .slick-dots{
+                    display: block;
+                }
+                .sgp-pers-featured__wrapper{
+                    padding: $spacer-0 $spacer-5;
+                }
+                .sgp-pers-featured__wrapper > .slick-list{
+                    padding: 0px;
+                }
+        }
+    }
+    &__wrapper{
         position: relative;
-        display: flex;
-        align-items: flex-end;
-        min-height: 350px;
+        padding-top: 85px;
+        
+    }
+    &__image{
+        position: absolute;
+        width: 100%;
+        height: 333px;
+        top: 0;
+        bottom: 0;
         background-size: cover;
         background-position: center;
     }
     &__inner{
         position: relative;
-        background-color: #fff;
-        padding: $spacer-6 $spacer-6 $spacer-0 $spacer-6 ;
+        background-color: $color-white;
+        padding: $spacer-6;
         margin: 0 auto;
         width: calc(100% - 140px);
-    }
-    &__image::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: $spacer-0;
-        left: $spacer-0;
+        p{
+            margin-bottom: $spacer-3;
+            color: $color-grey-3;
+        }
+        .sgp-small-title{
+            text-align: center;
+        }
+        &--no-pad{
+            padding-bottom: 0px;
+        }
     }
     &__header{
         font-size: 36px;
@@ -32,11 +73,13 @@
     }
     &__bodycopy{
         color: $color-grey-3;
-        ul{
-            list-style: disc;
-        }
+        list-style: disc;
+        padding-left: $spacer-3;
         li{
             margin-bottom: $spacer-3;
+            &:last-child{
+                margin-bottom: $spacer-0; 
+            }
         }
     }
     &__bodylink{
@@ -45,10 +88,7 @@
     }
 }
 @include tablet {
-    .sing-reg-service{
-        &__image{
-            min-height:300px;
-        }
+    .sgp-reg-service{
         &__header{
             font-size: 30px;
             line-height: 34px;
@@ -59,22 +99,41 @@
     }
 }
 @include mobile {
-    .sing-reg-service{
+    .sgp-reg-service{
+        &--community{
+            &.sgp-reg-service{
+                .sgp-reg-service__inner{
+                    width: 100%;
+                    padding: $spacer-4 $spacer-0;
+                }
+                .sgp-reg-service__bodycopy{
+                    text-align: left;
+                }
+                .slick-dots{
+                    display: flex;
+                    margin: $spacer-0
+                }
+                .sgp-pers-featured__wrapper{
+                    padding: $spacer-0 $spacer-2;
+                }
+            }
+        }
+        &__wrapper{
+            padding-top: 55px;
+                
+        }
         &__header{
             font-size: 24px;
             line-height: 28px;
             margin-bottom: $spacer-3;
         }
         &__inner{
-            padding: $spacer-4 $spacer-4 $spacer-0 $spacer-4;
+            padding: $spacer-4 $spacer-3;
             width: calc(100% - 40px);
-            position: absolute;
-            left: $spacer-0;
-            right: $spacer-0;
-            margin-left: auto;
-            margin-right: auto;
-            bottom: -70px;
         }
+        // &__image{
+        //     height: calc(100% - 70px);
+        // }
     }
     
 }

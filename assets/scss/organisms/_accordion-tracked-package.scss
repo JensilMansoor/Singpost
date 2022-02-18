@@ -1,0 +1,9 @@
+.sgp-accordion-package {
+    padding: $spacer-6 $spacer-0;
+}
+
+@include mobile {
+    .sgp-accordion-package {
+        padding: $spacer-5 $spacer-0;
+    }
+}

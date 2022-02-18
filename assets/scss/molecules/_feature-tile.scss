@@ -1,0 +1,22 @@
+.sgp-feature-tile {
+    padding: $spacer-4;
+    color: $color-white;
+    .sgp-h3 {
+        margin-bottom: $spacer-3;
+    }
+    &__desc {
+        margin-bottom: $spacer-3;
+        &:last-child {
+            margin-bottom: $spacer-0;
+        }
+    }
+    .sgp-list {
+        margin-bottom: $spacer-3;
+    }
+}
+
+@include mobile {
+    .sgp-feature-tile {
+        padding: $spacer-3;
+    }
+}
