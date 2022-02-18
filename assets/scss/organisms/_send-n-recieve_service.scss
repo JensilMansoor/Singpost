@@ -147,7 +147,8 @@
                 width: 100%;
             }
         }
-        &--announcements {
+        &--announcements,
+        &.sgp-add-ons {
             .sgp-tile {
                 margin: $spacer-2;
                 &:last-of-type {
@@ -177,7 +178,8 @@
                 margin: $spacer-0 $spacer-2;
             }
         }
-        &--announcements {
+        &--announcements,
+        &.sgp-add-ons {
             .sgp-tile {
                 width: 100%;
                 margin: $spacer-2 $spacer-0;

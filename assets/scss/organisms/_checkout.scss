@@ -1,50 +1,51 @@
-.sgp-checkout{
+.sgp-checkout {
     padding: $spacer-6 $spacer-0;
-    &__wrapper{
-        img{
+    &__wrapper {
+        img {
             width: 250px;
             height: auto;
         }
     }
-    &__wrapper-inner{
+    &__wrapper-inner {
         display: flex;
         flex-wrap: wrap;
     }
-    &__sec{
+    &__sec {
         padding-right: $spacer-4;
         padding-bottom: $spacer-4;
         flex: 2;
         display: flex;
         flex-direction: column;
-        &:last-child{
-            padding-right: $spacer-0; 
+        &:last-child {
+            padding-right: $spacer-0;
         }
-        &--small{
-            &.sgp-checkout__sec{
+        &--small {
+            &.sgp-checkout__sec {
                 flex: 1;
             }
         }
     }
-    &__label{
+    &__label {
         display: flex;
         align-items: center;
         padding-right: $spacer-5;
-        p{
+        p {
             padding-left: $spacer-2;
         }
-        label{
+        label {
             margin-left: $spacer-2;
         }
     }
-    &__radio{
+    &__radio {
         display: flex;
         height: 40px;
     }
-    &__notes{
+    &__notes {
         margin-bottom: $spacer-4;
-        li{
+        li {
             color: $color-grey-3;
-            &::before{
+            display: flex;
+            &::before {
                 content: "-";
                 margin-right: $spacer-5;
                 left: 0;
@@ -52,47 +53,51 @@
             }
         }
     }
-    &__checkbox{
+    &__checkbox {
         display: flex;
-        align-items: center;
+        // align-items: center;
         margin-bottom: $spacer-4;
+        flex-wrap: wrap;
     }
-    &__check-text{
+    &__check-text {
         margin-left: $spacer-3;
+        margin-top: 2px;
+        width: calc(100% - 40px);
     }
-    &__buttons{
+    &__buttons {
         margin-top: $spacer-4;
         display: flex;
         justify-content: space-between;
     }
 }
+
 @include mobile-tablet {
-    .sgp-checkout{
-        &__sec{
+    .sgp-checkout {
+        &__sec {
             flex: unset;
             width: 50%;
-            &--small{
-                &.sgp-checkout__sec{
+            &--small {
+                &.sgp-checkout__sec {
                     flex: unset;
                 }
             }
-            &:last-child{
-                padding-right: $spacer-0; 
+            &:last-child {
+                padding-right: $spacer-0;
             }
             // &:nth-child(even){
             //     padding-right: $spacer-0; 
             // }
-            &--width{
-                &.sgp-checkout__sec{
+            &--width {
+                &.sgp-checkout__sec {
                     width: 100%;
                 }
             }
         }
-        &__wrapper-inner{
-            &--right{
-                &.sgp-checkout__wrapper-inner{
-                    .sgp-checkout__sec{
-                        &:nth-child(2){
+        &__wrapper-inner {
+            &--right {
+                &.sgp-checkout__wrapper-inner {
+                    .sgp-checkout__sec {
+                        &:nth-child(2) {
                             padding-right: $spacer-0;
                         }
                     }
@@ -101,28 +106,29 @@
         }
     }
 }
+
 @include mobile {
-.sgp-checkout{
-    padding: $spacer-5 $spacer-0;
-    &__sec{
-        padding-right: $spacer-0;
-        width: 100%;
-        &--mob{
-            &.sgp-checkout__sec{
-                width: calc(50% - 8px);
-                margin-right: $spacer-3;
-                &:last-child{
-                    margin-right: $spacer-0; 
+    .sgp-checkout {
+        padding: $spacer-5 $spacer-0;
+        &__sec {
+            padding-right: $spacer-0;
+            width: 100%;
+            &--mob {
+                &.sgp-checkout__sec {
+                    width: calc(50% - 8px);
+                    margin-right: $spacer-3;
+                    &:last-of-type {
+                        margin-right: $spacer-0;
+                    }
+                }
+            }
+        }
+        &__notes {
+            li {
+                &::before {
+                    margin-right: $spacer-3;
                 }
             }
         }
     }
-    &__notes{
-        li{
-            &::before{
-                margin-right: $spacer-3;
-            }
-        }
-    }
-}  
 }

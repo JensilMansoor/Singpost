@@ -290,6 +290,13 @@
         width: 100%;
         margin-top: $spacer-2;
     }
+    // &--pdp{
+    //     .sgp-tile{
+    //         &__btn-sec{
+    //             display: block;
+    //         }
+    //     }
+    // }
 }
 
 @include tablet-pro {
@@ -350,6 +357,18 @@
                     img {
                         min-height: 130px;
                         object-fit: contain;
+                    }
+                }
+            }
+        }
+        &__img-sec{
+            .sgp-tile {
+                &__tag {
+                    &--red {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        max-width: 150px;
                     }
                 }
             }
