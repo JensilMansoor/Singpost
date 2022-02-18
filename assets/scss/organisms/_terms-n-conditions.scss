@@ -103,8 +103,8 @@
     }
 }
 @include mobile-tablet {
-.sgp-terms-n-cond{
     padding: $spacer-5 $spacer-0;
+.sgp-terms-n-cond{
     &__tile{
         width: calc(50% - 16px);
         // &:nth-child(even){

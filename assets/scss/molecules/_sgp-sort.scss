@@ -36,21 +36,9 @@
     .sgp-filter__btn{
         flex: none;
         margin-right: $spacer-3;
-        text-transform: capitalize;
     }
     .sgp-btn{
         margin-left: auto;
-    }
-    .sgp-link-btn--border{
-        margin-left: auto;
-        margin-top: -11px;
-    }
-    &--btn{
-        &.sgp-sort{
-            .sgp-search-input{
-                max-width: 200px;
-            }
-        }
     }
 }
 
@@ -59,9 +47,6 @@
         overflow: auto;
         &__label{
             display: none;
-        }
-        .sgp-link-btn--border{
-            margin-top: $spacer-0;
         }
     }
 }

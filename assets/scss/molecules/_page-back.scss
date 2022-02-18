@@ -6,12 +6,6 @@
             margin-right: $spacer-2;
         }
     }
-    .sgp-link-btn:not(.sgp-link-btn[href]){
-        color: $color-blue-2;
-        &:hover {
-            color: $color-red;
-        }
-    }
 }
 
 @include mobile {
