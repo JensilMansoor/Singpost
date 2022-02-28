@@ -53,13 +53,11 @@
     &__btn-sec {
         display: flex;
         margin-top: $spacer-5;
+        margin: $spacer-5 (-$spacer-2) $spacer-0;
     }
     &__btn {
         display: block;
-        margin-right: $spacer-3;
-        &:last-child {
-            margin-right: $spacer-0;
-        }
+        margin: $spacer-0 $spacer-2;
     }
 }
 
@@ -114,7 +112,7 @@
             padding-bottom: 70px;
         }
         &__btn-sec {
-            width: 100%;
+            width: auto;
             margin-top: $spacer-0;
             position: absolute;
             left: 0;
@@ -122,6 +120,7 @@
             transform: translateY(100%);
         }
         &__inner {
+            background-image: url(../images/mail-bg-image-mob.jpg) !important;
             padding-bottom: $spacer-3;
         }
     }

@@ -1,24 +1,24 @@
 .sgp-val-added {
     background-color: $color-grey-5;
     padding: $spacer-6 $spacer-0;
-    &.sgp-key-deliver{
-        &.sgp-white{
+    &.sgp-key-deliver {
+        &.sgp-white {
             background-color: $color-white;
         }
-        .sgp-h4{
+        .sgp-h4 {
             font-size: 21px;
         }
-        .sgp-val-added__item{
+        .sgp-val-added__item {
             background-color: $color-white;
         }
     }
     .content-wrapper-small {
-        position: relative; 
+        position: relative;
     }
     &__slider {
         padding: $spacer-0 $spacer-5 $spacer-5;
     }
-    &__heading{
+    &__heading {
         color: $color-black;
         margin-bottom: $spacer-0;
         max-width: 100%;
@@ -68,24 +68,24 @@
                 margin-bottom: $spacer-0;
             }
         }
-        &--business{
-            .sgp-h3{
+        &--business {
+            .sgp-h3 {
                 color: $color-black;
                 margin-bottom: $spacer-3;
             }
         }
     }
-    &__inner-desc{
+    &__inner-desc {
         margin-bottom: 12px;
-        .sgp-h6{
+        .sgp-h6 {
             color: $color-black;
             margin-bottom: $spacer-2;
         }
-        &:last-child{
+        &:last-child {
             margin-bottom: $spacer-0;
         }
     }
-    &__desc-txt{
+    &__desc-txt {
         color: $color-grey-3;
     }
     &__content-inner-wrapper {
@@ -95,22 +95,39 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -25px;
-        width: calc(100% + 50px);
+        // left: -25px;
+        // width: calc(100% + 50px);
+        left: -16px;
+        width: calc(100% + 32px);
         display: flex;
         justify-content: space-between;
         &__next {
             margin-left: $spacer-0;
         }
     }
-}
-@media (max-width: 1024px) {
-    .sgp-val-added {
-        .sgp-arrow{
-            display: none;
+    &--business{
+        background-color: $color-grey-7;
+        .slick-list{
+            background-color: $color-white;
+        } 
+        .sgp-val-added{
+            &__item{
+                flex-direction: row-reverse;
+            }
+            &__content-inner-wrapper{
+                padding: $spacer-4 $spacer-5;
+            }
         }
     }
 }
+
+// @media (max-width: 1024px) {
+//     .sgp-val-added {
+//         .sgp-arrow{
+//             display: none;
+//         }
+//     }
+// }
 @include mobile-tablet {
     .sgp-val-added {
         &__item {
@@ -119,9 +136,9 @@
         }
         &__content-wrapper {
             width: 100%;
-            &--business{
-                &.sgp-val-added{
-                    &__content-wrapper{
+            &--business {
+                &.sgp-val-added {
+                    &__content-wrapper {
                         padding-top: $spacer-3;
                     }
                 }
@@ -134,7 +151,16 @@
         // &__slide-control {
         //     display: none;
         // }
-        
+        &--business{
+            .sgp-val-added{
+                &__item{
+                    display: block;
+                }
+                &__content-inner-wrapper{
+                    padding: $spacer-4;
+                }
+            }
+        }
     }
 }
 

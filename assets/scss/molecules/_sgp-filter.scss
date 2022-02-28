@@ -92,7 +92,18 @@
             }
             .sgp-input-text{
                 margin-right: $spacer-0;
-                &::placeholder {
+                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    @include font-univers-45;
+                    color: $color-grey-5;
+                    opacity: 1; /* Firefox */
+                }
+                
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    @include font-univers-45;
+                    color: $color-grey-5;
+                }
+                
+                &::-ms-input-placeholder { /* Microsoft Edge */
                     @include font-univers-45;
                     color: $color-grey-5;
                 }

@@ -1,4 +1,4 @@
-.sgp-tile { 
+.sgp-tile {
     transition: 0.2s;
     background-color: $color-grey-7;
     display: flex;
@@ -11,11 +11,14 @@
         box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
     }
     .sgp-h3,
-    .sgp-h4,
-    .sgp-h5,
-    .sgp-h6 {
+    .sgp-h4{
         margin-bottom: $spacer-3;
     }
+    .sgp-h5,
+    .sgp-h6 {
+        margin-bottom: $spacer-2;
+    }
+
     // .sgp-h5{
     //     min-height: 40px;
     // }
@@ -139,24 +142,24 @@
     &__date {
         margin-left: $spacer-1;
     }
-    &__desc-date{
+    &__desc-date {
         font-size: 12px;
         color: $color-grey-3;
         margin-bottom: $spacer-2;
         text-transform: uppercase;
-        span.italic-txt{
+        span.italic-txt {
             font-style: italic;
             margin-right: $spacer-3;
         }
-        span.date-txt{
+        span.date-txt {
             margin-left: $spacer-2;
         }
     }
-    &__italic{
+    &__italic {
         font-style: italic;
     }
     &__desc,
-    &__desc-grey{
+    &__desc-grey {
         margin-bottom: $spacer-3;
         &:last-child {
             margin-bottom: $spacer-0;
@@ -193,10 +196,16 @@
     }
     &__btn-sec {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         width: 100%;
         .sgp-link-btn {
-            flex: 1;
+            // flex: 1;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
         }
     }
     &__desc-black {
@@ -290,6 +299,19 @@
         width: 100%;
         margin-top: $spacer-2;
     }
+    &--pdp {
+        .sgp-tile__img-sec {
+            padding-bottom: $spacer-5;
+        }
+        .sgp-pdp {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            &__price {
+                margin-top: auto;
+            }
+        }
+    }
 }
 
 @include tablet-pro {
@@ -350,6 +372,18 @@
                     img {
                         min-height: 130px;
                         object-fit: contain;
+                    }
+                }
+            }
+        }
+        &__img-sec {
+            .sgp-tile {
+                &__tag {
+                    &--red {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        max-width: 150px;
                     }
                 }
             }

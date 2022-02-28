@@ -3,6 +3,7 @@
     &__small {
         color: $color-grey-3;
         margin-bottom: $spacer-2;
+        text-transform: uppercase;
     }
     .sgp-h2 {
         margin-bottom: $spacer-3;
@@ -16,5 +17,6 @@
         margin-left: 10px;
         padding-left: $spacer-2;
         border-left: 2px solid $color-grey-3;
+        text-transform: none;
     }
 }

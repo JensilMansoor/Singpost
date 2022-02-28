@@ -1,0 +1,22 @@
+.sgp-pdf-view{
+    padding: $spacer-4 0;
+    &__result{
+        font-size: 21px;
+        @include font-univers-65;
+        color: $color-black;
+        border-bottom: 1px solid $color-blue-med-2;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $spacer-4 0;
+    }
+    .sgp-h4{
+        color: $color-blue-2;
+    }
+    &__frame{
+        width: 100%;
+        min-height: 500px;
+    }
+}

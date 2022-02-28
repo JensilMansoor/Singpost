@@ -68,7 +68,8 @@
             color: $color-white;
         }
     }
-    &--disabled {
+    &--disabled,
+    &.slick-disabled {
         pointer-events: none;
         color: $color-grey-4;
         .sgp-btn {
@@ -85,7 +86,7 @@
 }
 
 // Button inline
-.sgp-link-btn {
+.sgp-link-btn{
     color: $color-blue-2;
     text-transform: uppercase;
     display: inline-block;

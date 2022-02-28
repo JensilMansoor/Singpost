@@ -108,3 +108,11 @@
         }
     }
 }
+
+@include ie-fix{
+    .sgp-solutions{
+        .sgp-tile-bg {
+            height: 320px;
+        }
+    }
+}

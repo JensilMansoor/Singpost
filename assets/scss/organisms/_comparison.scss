@@ -20,7 +20,7 @@
         }
     }
     &__detail-top {
-        min-height: 297px;
+        min-height: 325px;
         &>.sgp-btn {
             margin-bottom: $spacer-4;
         }
@@ -49,7 +49,7 @@
         }
     }
     &__prdct-item-top {
-        min-height: 297px;
+        min-height: 325px;
         .sgp-btn {
             display: none;
         }
@@ -98,9 +98,9 @@
         }
         &--rate {
             color: $color-black;
-            .sgp-accordion-custom__expan {
-                min-height: 52px;
-            }
+            // .sgp-accordion-custom__expan {
+            //     min-height: 52px;
+            // }
         }
     }
     &__detail-wrapp {
@@ -120,9 +120,9 @@
             &--delivery-std {
                 min-height: 106px;
             }
-            &--rate {
-                min-height: 52px;
-            }
+            // &--rate {
+            //     min-height: 52px;
+            // }
         }
     }
     .sgp-accordion-custom {

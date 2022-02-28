@@ -25,6 +25,12 @@
                 min-width: 16px;
                 width: 16px;
             }
+            th {
+                font-size: 22px;
+            }
+        }
+        .sgp-plan-table__recomend-inner {
+            text-transform: uppercase;
         }
     }
     .sgp-accordion-custom {
@@ -40,6 +46,7 @@
         }
         &__expan {
             padding-top: $spacer-0;
+            margin-top: (-$spacer-2);
         }
     }
 }
