@@ -107,6 +107,11 @@
                     width: calc(50% - 16px);
                 }
             }
+            &--col-3 {
+                .sgp-text-box:last-child{
+                    width: 100%;
+                }
+            }
         }
     }
 }

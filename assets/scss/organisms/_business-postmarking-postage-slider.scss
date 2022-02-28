@@ -1,0 +1,75 @@
+.sgp-post-slider{
+    padding: $spacer-6 $spacer-0;
+    .sgp-header-arrow__desc{
+        color: $color-grey-1;
+    }
+    .sgp-tile__desc-black{
+        min-width: 170px;
+    }
+    .sgp-pers-featured__wrapper > .slick-list{
+        padding: $spacer-3 $spacer-0;
+    }
+    .sgp-tile__italic{
+        color: $color-grey-3;
+        @include font-univers-55;
+    }
+    &__border-box{
+        border: 1px solid $color-blue-med-2;
+        padding: $spacer-3;
+    }
+    &__box-head{
+        font-size: 14px;
+        @include font-univers-65;
+        color: $color-black;
+        padding-bottom: $spacer-2;
+    }
+    &__box-address,&__box-hours{
+        position: relative;
+        margin-left: 20px;
+        padding-bottom: $spacer-2;
+        &:before{
+            position: absolute;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.5' height='14.007' viewBox='0 0 10.5 14.007'%3E%3Cpath id='Path_1023' data-name='Path 1023' d='M5.25-12.25a5.067,5.067,0,0,1,2.625.711A5.35,5.35,0,0,1,9.789-9.625,5.067,5.067,0,0,1,10.5-7a4.88,4.88,0,0,1-.191,1.422A8.213,8.213,0,0,1,9.57-3.992q-.383.656-1.586,2.57L6.371,1.121a1.253,1.253,0,0,1-.684.561,1.31,1.31,0,0,1-.875,0,1.253,1.253,0,0,1-.684-.561L2.516-1.422Q1.313-3.336.93-3.965A8.842,8.842,0,0,1,.191-5.578,4.88,4.88,0,0,1,0-7,5.067,5.067,0,0,1,.711-9.625a5.35,5.35,0,0,1,1.914-1.914A5.067,5.067,0,0,1,5.25-12.25ZM5.25.438,6.973-2.3q1.094-1.75,1.449-2.324a7.617,7.617,0,0,0,.615-1.285A3.564,3.564,0,0,0,9.188-7a3.8,3.8,0,0,0-.533-1.969A4.013,4.013,0,0,0,7.219-10.4a3.8,3.8,0,0,0-1.969-.533,3.8,3.8,0,0,0-1.969.533A4.013,4.013,0,0,0,1.846-8.969,3.8,3.8,0,0,0,1.313-7a3.7,3.7,0,0,0,.15,1.107,6.634,6.634,0,0,0,.643,1.3q.328.574,1.422,2.324Q4.566-.656,5.25.438ZM3.063-7a2.106,2.106,0,0,0,.643,1.545,2.106,2.106,0,0,0,1.545.643,2.106,2.106,0,0,0,1.545-.643A2.106,2.106,0,0,0,7.438-7a2.106,2.106,0,0,0-.643-1.545A2.106,2.106,0,0,0,5.25-9.187a2.106,2.106,0,0,0-1.545.643A2.106,2.106,0,0,0,3.063-7Z' transform='translate(0 12.25)' fill='%23c31126'/%3E%3C/svg%3E%0A");
+            background-size: 10px 14px;
+            width: 10px;
+            height: 14px;
+            top: 0;
+            left: -20px;
+        }
+    }
+    &__red-txt{
+        font-size: 14px;
+        @include font-univers-65;
+        color: $color-red;
+    }
+    &__desc-txt,&__footer-note{
+        font-size: 14px;
+        @include font-univers-55;
+        color: $color-grey-3;
+    }
+    &__box-hours{
+        padding-bottom: $spacer-0;
+        &:before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.563' height='13.563' viewBox='0 0 13.563 13.563'%3E%3Cpath id='Path_1024' data-name='Path 1024' d='M7-12.031a6.573,6.573,0,0,1,3.391.916,6.852,6.852,0,0,1,2.475,2.475,6.573,6.573,0,0,1,.916,3.391,6.573,6.573,0,0,1-.916,3.391A6.852,6.852,0,0,1,10.391.615,6.573,6.573,0,0,1,7,1.531,6.573,6.573,0,0,1,3.609.615,6.852,6.852,0,0,1,1.135-1.859,6.573,6.573,0,0,1,.219-5.25a6.573,6.573,0,0,1,.916-3.391,6.852,6.852,0,0,1,2.475-2.475A6.573,6.573,0,0,1,7-12.031ZM12.906-5.25a5.763,5.763,0,0,0-.793-2.967,5.879,5.879,0,0,0-2.16-2.146,5.811,5.811,0,0,0-2.967-.793,5.738,5.738,0,0,0-2.953.793A5.879,5.879,0,0,0,1.887-8.2a5.811,5.811,0,0,0-.793,2.967,5.738,5.738,0,0,0,.793,2.953A5.879,5.879,0,0,0,4.047-.137,5.811,5.811,0,0,0,7.014.656,5.738,5.738,0,0,0,9.967-.137,5.879,5.879,0,0,0,12.113-2.3,5.786,5.786,0,0,0,12.906-5.25ZM8.832-2.844a.34.34,0,0,0,.246.068A.3.3,0,0,0,9.3-2.9l.219-.328a.318.318,0,0,0,.068-.232.29.29,0,0,0-.123-.205L7.52-5.086V-9.078a.316.316,0,0,0-.1-.232.316.316,0,0,0-.232-.1H6.809a.316.316,0,0,0-.232.1.316.316,0,0,0-.1.232V-4.7a.269.269,0,0,0,.137.246Z' transform='translate(-0.219 12.031)' fill='%23c31126'/%3E%3C/svg%3E%0A");background-size: 10px 14px;
+            background-size: 13px 13px;
+            width: 13px;
+            height: 13px;
+        }
+    }
+    &__footer-note{
+        margin-top: 12px;
+    }
+}
+@include mobile{
+    .sgp-post-slider{
+        padding: $spacer-5 $spacer-0;
+        .sgp-tile__desc-black{
+            min-width: 135px;
+            max-width: 135px;
+        }
+        .sgp-pers-featured__wrapper > .slick-list{
+            padding: $spacer-4 $spacer-0 $spacer-0;
+        }
+    }
+}

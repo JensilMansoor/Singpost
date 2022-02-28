@@ -26,7 +26,6 @@
 @import "molecules/sgp-slider-arrows";
 @import "molecules/header-with-arrows";
 @import "molecules/bg-overlay-tile";
-@import "molecules/load-more";
 @import "molecules/sgp-locate";
 @import "molecules/sgp-tile";
 @import "molecules/quick-chat";
@@ -63,10 +62,12 @@
 @import "molecules/gallery-popup";
 @import "molecules/sgp-tile-with-icon";
 @import "molecules/sticky-bar";
+@import "molecules/pdf-view";
+@import "molecules/dropdown-with-search";
 @import "molecules/stock-info-box";
 @import "molecules/calender";
 @import "molecules/sgp-tile-help";
-
+@import "molecules/load-more";
 // organisms
 @import "organisms/header";
 @import "organisms/inline-bnr";
@@ -133,6 +134,7 @@
 @import "organisms/contact-us-tiles";
 @import "organisms/here-with-you-details";
 @import "organisms/item-enquiry";
+@import "organisms/declaration";
 // About us Organism start
 @import "organisms/about-community";
 @import "organisms/about-awards-n-accolades";
@@ -161,3 +163,5 @@
 @import "organisms/business-creative-services-slider";
 @import "organisms/business-our-client";
 @import "organisms/business-webstore-design-slider";
+@import "organisms/business-postmarking-postage-slider";
+@import "organisms/business-across-borders";

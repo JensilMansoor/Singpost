@@ -92,14 +92,6 @@ setInterval(function() {
     });
 }, 1000);
 
-// $(".sgp-header__mega-sub-menu .sgp-header__menu-link").click(function() {
-//     $(".sgp-header__mega-sub-menu .sgp-header__menu-link").removeClass("active");
-//     $(this).addClass("active");
-//     $(this).parent().closest(".sgp-header__mega-sub-menu-outer").find(".sgp-header__mega-sub-menu").removeClass("active");
-//     let id = $(this)[0].getAttribute("data-id");
-//     $(".sgp-header__mega-sub-menu[data-content=" + id + "]").addClass("active");
-// });
-
 $(".sgp-header__mega-sub-menu--one .sgp-header__menu-link").click(function() {
     $(".sgp-header__mega-sub-menu--one .sgp-header__menu-link").removeClass("active");
     $(".sgp-header__mega-sub-menu--three").removeClass("active");
@@ -191,7 +183,7 @@ $(".sgp-quick-tool__popup-close").click(function() {
 
 // Accordion start
 $(".sgp-accordion__btn").click(function() {
-    $(".sgp-accordion .card").removeClass("active");
+    $(".sgp-accordion .card").toggleClass("active");
     $(this).parent().closest(".card").addClass("active");
 });
 // Accordion end
@@ -209,17 +201,7 @@ $(".sgp-compare__detail-wrapp .sgp-compare__prdct-row").click(function() {
     let id = $(this)[0].getAttribute("data-id");
     $(".sgp-compare__prdct-item .sgp-compare__prdct-row[data-id=" + id + "]").toggleClass("active");
 });
-
 // custom accordion start
-// $(".sgp-accordion-custom__label").click(function() {
-//     if ($(this).parent().closest(".sgp-accordion-custom").hasClass("active")) {
-//         $(this).parent().closest(".sgp-accordion-custom").removeClass("active");
-//     } else {
-//         $(".sgp-accordion-custom").removeClass("active");
-//         $(this).parent().closest(".sgp-accordion-custom").addClass("active");
-//     }
-// });
-
 $(".sgp-accordion-custom__label").click(function() {
     let currentId = $(this).parent()[0].getAttribute("data-acc");
     if (($(this).parent().closest(".sgp-accordion-custom").hasClass("active"))) {
@@ -229,7 +211,6 @@ $(".sgp-accordion-custom__label").click(function() {
         $(".sgp-accordion-custom[data-acc=" + currentId + "]").addClass("active");
     }
 });
-
 // custom accordion end
 
 // custom select dropdown start
@@ -246,10 +227,6 @@ $(".sgp-custom-select__value").click(function(e) {
     $(this).parent().toggleClass("active");
     e.stopPropagation();
 });
-// $(".sgp-custom-select__item").click(function() {
-//     $(".sgp-custom-select__value").text($(this).text());
-//     $(".sgp-custom-select").removeClass("active");
-// });
 
 $(".sgp-custom-select__item").click(function() {
     $(this).parent().closest(".sgp-custom-select").find(".sgp-custom-select__value").text($(this).text());
@@ -291,42 +268,42 @@ $(document).ready(function() {
     /****************************** Stickybar(blue strip) Start ******************************/
     // Cache selectors
     var stickyBar = $(".sgp-sticky-bar"),
-    header = $("header"),
-    stickyBarHeight = stickyBar.outerHeight(),
-    // All list items
-    menuItems = stickyBar.find(".sgp-sticky-bar__item"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { 
-            return item;
-        }
-    });
+        header = $("header"),
+        stickyBarHeight = stickyBar.outerHeight(),
+        // All list items
+        menuItems = stickyBar.find(".sgp-sticky-bar__item"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
     // Bind to scroll
-    $(window).scroll(function(){
-        $('.scrolledIntoView').each(function () {
+    $(window).scroll(function() {
+        $('.scrolledIntoView').each(function() {
             if ((isScrolledIntoView(this) === true) || menuItems.hasClass("active")) {
                 stickyBar.addClass('active');
-            }
-            else{
+            } else {
                 stickyBar.removeClass('active');
             }
         });
         // Get container scroll position
         var fromTop = $(this).scrollTop() + stickyBarHeight;
         // Get id of current scroll item
-        var cur = scrollItems.map(function(){
-            if ($(this).offset().top < fromTop){
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop) {
                 return this;
             }
         });
         // Get the id of the current element
-        cur = cur[cur.length-1];
+        cur = cur[cur.length - 1];
         var id = cur && cur.length ? cur[0].id : "";
         // Set/remove active class
         menuItems.removeClass("active");
-        menuItems.filter("[href='#"+id+"']").addClass("active");
+        menuItems.filter("[href='#" + id + "']").addClass("active");
     });
+
     function isScrolledIntoView(elem) {
         var docViewTop = $(window).scrollTop();
         var elemTop = $(elem).offset().top + $(elem).height();
@@ -417,85 +394,96 @@ $(".sgp-life-post__slider").slick({
     infinite: true,
     slide: '.sgp-masthead__wrapper',
     responsive: [
-    //     breakpoint: 1023,
-    //     settings: {
-    //         dots: true
-    //     }
-    // },
+        //     breakpoint: 1023,
+        //     settings: {
+        //         dots: true
+        //     }
+        // },
         {
-        breakpoint: 1023,
-        settings: {
-            dots: true
+            breakpoint: 1023,
+            settings: {
+                dots: true
+            }
         }
-    }]
+    ]
 });
 // SG-locate Slider settings End
 
-
-//Personalised home featured news slider Start
-$(".sgp-pers-featured__slider").slick({
-    arrows: true,
-    dots: true,
-    prevArrow: $('.sgp-pers-featured__prev'),
-    nextArrow: $('.sgp-pers-featured__next'),
-    slidesToScroll: 1,
-    slidesToShow: 3,
-    speed: 300,
-    infinite: true,
-    slide: ".sgp-tile",
-    responsive: [{
-        breakpoint: 600,
-        settings: {
-            dots: true
-        }
-    }, {
-        breakpoint: 767,
-        settings: {
-            slidesToShow: 2
-        }
-    }, {
-        breakpoint: 567,
-        settings: {
-            slidesToShow: 1
-        }
-    }]
+$(function () {
+    $('.sgp-pers-featured__slider').each(function(num, elem) {
+        elem = $(elem);
+        elem.slick({
+            arrows: true,
+            dots: true,
+            prevArrow: $('.sgp-pers-featured__prev'),
+            nextArrow: $('.sgp-pers-featured__next'),
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            speed: 300,
+            infinite: true,
+            slide: ".sgp-tile",
+            responsive: [{
+                breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                breakpoint: 600,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 2
+                    }
+                }, {
+                breakpoint: 567,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
 });
 //Personal home featured news slider ends
 
 //Policy Information and Downloads slider Start
-$(".sgp-policy-info__slider").slick({
-    arrows: true,
-    dots: true,
-    prevArrow: $('.sgp-policy-info__prev'),
-    nextArrow: $('.sgp-policy-info__next'),
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    speed: 300,
-    infinite: true,
-    slide: ".sgp-tile",
-    responsive: [{
-            breakpoint: 600,
-            settings: {
-                dots: true
-            }
-        },
-        {
-            breakpoint: 1023,
-            settings: {
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 567,
-            settings: {
-                slidesToShow: 1
-            }
-        }
-    ]
+$(function () {
+    $('.sgp-policy-info__slider').each(function(num, elem) {
+        elem = $(elem);
+        elem.slick({
+            arrows: true,
+            dots: true,
+            prevArrow: $('.sgp-policy-info__prev'),
+            nextArrow: $('.sgp-policy-info__next'),
+            slidesToScroll: 1,
+            slidesToShow: 4,
+            speed: 300,
+            infinite: true,
+            slide: ".sgp-tile",
+            responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 567,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
 });
 //Policy Information and Downloads slider ends
 
@@ -609,43 +597,72 @@ $(".sgp-snr-reg-serv__slider").slick({
         }
     }]
 });
-//Personal home social feed slider end
 
-function deskThreeSlider(sliderName, sliderItem) {
-    var slider = sliderName + "__slider";
-    var slideItem = sliderItem;
-    var arrowPrev = sliderName + "__prev";
-    var arrowNext = sliderName + "__next";
-    $(slider).slick({
-        arrows: true,
-        prevArrow: $(arrowPrev),
-        nextArrow: $(arrowNext),
-        dots: true,
-        slidesToScroll: 1,
-        slidesToShow: 3,
-        speed: 300,
-        infinite: false,
-        slide: slideItem,
-        responsive: [{
-            breakpoint: 600,
-            settings: {
-                dots: true
-            }
-        }, {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 567,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
+$(function () {
+    $('.sgp-service-announce__slider').each(function(num, elem) {
+        elem = $(elem);
+        elem.slick({
+            arrows: true,
+            prevArrow: $('.sgp-service-announce__prev'),
+            nextArrow: $('.sgp-service-announce__next'),
+            dots: true,
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            speed: 300,
+            infinite: false,
+            slide: ".sgp-tile",
+            responsive: [{
+                breakpoint: 600,
+                settings: {
+                    dots: true
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 567,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
     });
-}
-deskThreeSlider(".sgp-useful-links", ".sgp-tile");
-deskThreeSlider(".sgp-service-announce", ".sgp-tile");
+});
+
+$(function () {
+    $('.sgp-useful-links__slider').each(function(num, elem) {
+        elem = $(elem);
+        elem.slick({
+            arrows: true,
+            prevArrow: $('.sgp-useful-links__prev'),
+            nextArrow: $('.sgp-useful-links__next'),
+            dots: true,
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            speed: 300,
+            infinite: false,
+            slide: ".sgp-tile",
+            responsive: [{
+                breakpoint: 600,
+                settings: {
+                    dots: true
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 567,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    });
+});
 
 //service-announce slider end
 
@@ -763,35 +780,36 @@ $(".sgp-basic-serv__slider").slick({
 $(".sgp-snr-steps__wrapper").slick({
     arrows: false,
     responsive: [{
-        breakpoint: 99999,
-        settings: "unslick"
-    }, {
-        breakpoint: 1023,
-        settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            dots: true,
-            slide: ".sgp-snr-steps__box"
-        }
-    },
-    {
-        breakpoint: 600,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            slide: ".sgp-snr-steps__box"
-        }
-    },
-    {
-        breakpoint: 567,
-        settings: {
-            dots: true,
-            slide: ".sgp-snr-steps__box"
+            breakpoint: 99999,
+            settings: "unslick"
+        }, {
+            breakpoint: 1023,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: true,
+                slide: ".sgp-snr-steps__box"
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                slide: ".sgp-snr-steps__box"
+            }
+        },
+        {
+            breakpoint: 567,
+            settings: {
+                dots: true,
+                slide: ".sgp-snr-steps__box"
             }
         }
     ]
 });
+
 //gallery image slider settings
 $(".sgp-gallery-slider-settings").slick({
     slide: ".sgp-gallery-slider__item",
@@ -832,11 +850,7 @@ $(".sgp-gallery-popup-slider").slick({
         }
     }, ]
 });
-// $('.sgp-modal').on('shown.bs.modal', function(e) {
-//     $('.sgp-gallery-slider-settings').slick('setPosition', 0);
-//     $('.sgp-gallery-slider-settings').resize();
-//     // $('.sgp-gallery-slider-settings').addClass('open');
-// });
+
 $('.modal').on('shown.bs.modal', function(e) {
     $('.sgp-gallery-popup-slider').slick('setPosition');
     $('.sgp-gallery-popup-slider').addClass('open');
@@ -848,7 +862,7 @@ $('a[data-toggle="pill"]').on('shown.bs.tab', function(e) {
     //send and recieve tracked mail slider end
 
 //key featured slider starts
-$(".sgp-snr-steps__wrapper--color-tile").slick({
+$('.sgp-snr-steps__wrapper--color-tile').slick({
     arrows: false,
     responsive: [{
             breakpoint: 99999,
@@ -861,7 +875,7 @@ $(".sgp-snr-steps__wrapper--color-tile").slick({
                 dots: true,
                 slide: ".sgp-snr-steps__box-color"
             }
-        },{
+        }, {
             breakpoint: 600,
             settings: {
                 slidesToShow: 1,
@@ -879,6 +893,12 @@ $(".sgp-snr-steps__wrapper--color-tile").slick({
         }
     ]
 });
+$(window).on('resize', function() {
+    $('.sgp-snr-steps__wrapper--color-tile').slick('resize');
+    $('.sgp-pers-featured__slider').slick('resize');
+    $('.sgp-snr-steps__wrapper').slick('resize');
+    $('.sgp-useful-links__slider').slick('resize');
+});
 //key featured tracked mail slider end
 
 //Value added service slider starts
@@ -893,7 +913,7 @@ $(".sgp-val-added__slider").slick({
     infinite: true,
     slide: '.sgp-val-added__item',
     responsive: [{
-        breakpoint: 1025,
+        breakpoint: 600,
         settings: {
             dots: true,
         }
@@ -946,9 +966,41 @@ $(".sgp-store-recom__slider").slick({
     }, {
         breakpoint: 567,
         settings: {
-            slidesToShow: 2
+            slidesToShow: 1
         }
     }]
+});
+$(function () {
+    $('.sgp-useful-links__slider').each(function(num, elem) {
+        elem = $(elem);
+        elem.slick({
+            arrows: true,
+            prevArrow: $('.sgp-useful-links__prev'),
+            nextArrow: $('.sgp-useful-links__next'),
+            dots: true,
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            speed: 300,
+            infinite: false,
+            slide: ".sgp-tile",
+            responsive: [{
+                breakpoint: 600,
+                settings: {
+                    dots: true
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 567,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    });
 });
 // Store PDP - recommended items slider ends
 
@@ -1021,6 +1073,34 @@ $(window).on('orientationchange', function() {
     $('.sgp-awards-slider-for, .sgp-awards-slider-nav').slick('resize');
 });
 // About awards year slider settings end
+
+//Business help tile slider starts
+$(".sgp-help-tile__slider").slick({
+    dots: false,
+    infinite: false,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+        }
+    }, {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+        }
+    }, ]
+});
+//Business help tile slider ends
 
 // About our milestones slider settings start
 $('.sgp-milestones-slider-for').slick({
@@ -1136,29 +1216,29 @@ $(".sgp-tile-box__about-slider").slick({
     slide: ".sgp-tile-bg",
     prevArrow: ".sgp-tile-box__prev",
     nextArrow: ".sgp-tile-box__next",
-    responsive: [
-    {
-        breakpoint: 99999,
-        settings: "unslick"
-    },{
-        breakpoint: 1023,
-        settings: {
-            slidesToShow: 2
+    responsive: [{
+            breakpoint: 99999,
+            settings: "unslick"
+        }, {
+            breakpoint: 1023,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                dots: true
+            }
+        },
+        {
+            breakpoint: 567,
+            settings: {
+                slidesToShow: 1,
+                dots: true
+            }
         }
-    },
-    {
-        breakpoint: 600,
-        settings: {
-            dots: true
-        }
-    },
-    {
-        breakpoint: 567,
-        settings: {
-            slidesToShow: 1,
-            dots: true
-        }
-    }]
+    ]
 });
 
 $(window).on('orientationchange', function() {
@@ -1186,7 +1266,7 @@ $(".sgp-tile__img-sec").slick(tileImgSliderOptions);
 var miniCart = document.querySelector(".sgp-minicart__cart");
 $(".sgp-minicart__strip").click(function(e) {
     $(".sgp-minicart__cart").toggleClass("active");
-    $("body").addClass("sgp-minicart__disable-scroll");
+    $("body").toggleClass("sgp-minicart__disable-scroll");
     e.stopPropagation();
 });
 document.addEventListener('click', function(event) {
@@ -1263,29 +1343,29 @@ $(".sgp-locate-result__tile").click(function() {
 // Locate us filter end
 
 // Postpal functinalities start
-$(".sgp-postpal-func__btn").click(function(){
+$(".sgp-postpal-func__btn").click(function() {
     let postpalId = $(this)[0].getAttribute("data-postpal-id");
     let postpalTarget = $(".sgp-postpal-func__tooltip[data-postpal-taget=" + postpalId + "]");
     $(".sgp-postpal-func__btn").not(this).removeClass("active");
     $(this).toggleClass("active");
-    if(window.matchMedia('(min-width:600px)').matches){
+    if (window.matchMedia('(min-width:600px)').matches) {
         $(this).append(postpalTarget);
         return;
-    }
-    else{
+    } else {
         $(".sgp-postpal-func__tooltip").not(postpalTarget).removeClass("active");
         postpalTarget.toggleClass("active");
     }
 });
-$(".sgp-postpal-func__tooltip").click(function(e){
+$(".sgp-postpal-func__tooltip").click(function(e) {
     e.stopPropagation();
 });
 // Postpal functinalities end
 
 // Toggle calender event view start
 var eventViewToggler = document.getElementById("calenderEventToggler");
-function setEventView(){
-    if (eventViewToggler.checked == true){
+
+function setEventView() {
+    if (eventViewToggler.checked == true) {
         $(".sgp-events__calender").hide();
         $(".sgp-events__summary").show();
         $("label[for='calenderEventToggler']").text("Event Summary");
@@ -1295,9 +1375,9 @@ function setEventView(){
         $("label[for='calenderEventToggler']").text("Calendar Mode");
     }
 }
-if(window.matchMedia('(max-width:600px)').matches){
+if (window.matchMedia('(max-width:600px)').matches) {
     setEventView();
-    eventViewToggler.addEventListener('change',function(){
+    eventViewToggler.addEventListener('change', function() {
         setEventView();
     });
 }
@@ -1468,3 +1548,24 @@ document.querySelectorAll('.sgp-switch').forEach(function(elem) {
     });
 });
 // Toggle, Checkbox and Radio js End
+
+// Load More start
+loadMoreItemCount = $(".sgp-load-more").parent().find(".sgp-load-more__item").length;
+loadLimit=3;
+$(".sgp-load-more").parent().find('.sgp-load-more__item:lt('+loadLimit+')').addClass("active");
+$(".sgp-load-more__show").addClass("active");
+$('.sgp-load-more__show').click(function () {
+    loadLimit= (loadLimit+3 <= loadMoreItemCount) ? loadLimit+3 : loadMoreItemCount;
+    $(this).parent().parent().find('.sgp-load-more__item:lt('+loadLimit+')').addClass("active");
+    if(loadLimit == loadMoreItemCount){
+        $(this).removeClass("active");
+        $(this).siblings(".sgp-load-more__hide").addClass("active");
+    }
+});
+$('.sgp-load-more__hide').click(function () {
+    loadLimit=3;
+    $(this).parent().parent().find('.sgp-load-more__item').not(':lt('+loadLimit+')').removeClass("active");
+    $(this).siblings(".sgp-load-more__show").addClass("active");
+    $(this).removeClass("active");
+});
+// Load more end

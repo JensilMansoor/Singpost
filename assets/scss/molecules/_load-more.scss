@@ -1,38 +1,19 @@
-.sgp-load-more {
-    display: none;
-    &__label {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        margin-top: $spacer-3;
-        cursor: pointer;
-        // svg {
-        //     width: 20px;
-        //     height: 20px;
-        // }
-    }
-    &~.sgp-load-more__item,
-    &~.sgp-load-more__label,
-    &~.sgp-tile,
-    &~.sgp-tile-bg {
+.sgp-load-more{
+    width: 100%;
+    text-align: center;
+    margin-top: $spacer-4;
+    &__item{
         display: none;
-    }
-    &+.sgp-load-more__label {
-        display: flex;
-    }
-    &:checked {
-        &~.sgp-load-more__item {
-            display: block;
-        }
-        &~.sgp-tile,
-        &~.sgp-tile-bg {
+        &.active{
             display: flex;
         }
-        &~.sgp-load-more__label {
-            display: flex;
-        }
-        &+.sgp-load-more__label {
-            display: none;
+    }
+    &__show,
+    &__hide{
+        display: none;
+        cursor: pointer;
+        &.active{
+            display: inline-flex;
         }
     }
 }

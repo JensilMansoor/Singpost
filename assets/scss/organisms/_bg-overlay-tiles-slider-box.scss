@@ -64,6 +64,31 @@
         &.sgp-tile-box__slider{
             display: block;
         }
+        &--business{
+            .sgp-tile-bg {
+                &__cnt{
+                    min-height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    .sgp-btn {
+                        margin-top: auto;
+                    }
+                    .sgp-h5{
+                        @include font-univers-55;
+                        text-transform: uppercase;
+                        margin-bottom: $spacer-2;
+                        color: $color-white;
+                    }
+                    .sgp-h1{
+                        @include font-univers-65;
+                    }
+                    .sgp-h6{
+                        @include font-univers-55;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
     }
     &__wave {
         position: absolute;
@@ -144,6 +169,13 @@
             }
             .sgp-tile-bg {
                 width: calc(100% - 16px);
+            }
+            &--business{
+                .sgp-tile-bg {
+                    &__cnt{
+                        min-height: 170px;
+                    }
+                }
             }
         }
     }

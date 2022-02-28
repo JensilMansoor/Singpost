@@ -117,6 +117,15 @@
             margin: $spacer-5 $spacer-0;
         }
     }
+    &--one-slide{
+        .sgp-tile{
+            width: calc(100% - 16px);
+        }
+        .sgp-pers-featured__wrapper{
+            width: 33.33%;
+            margin:  $spacer-5 $spacer-0;
+        }
+    }
 }
 @include mobile-tablet{
     .sgp-pers-featured{
@@ -162,6 +171,46 @@
             .sgp-tile-blue{
                 width: auto;
                 margin: $spacer-4 (-$spacer-5) $spacer-0;
+            }
+        }
+        &--one-slide{
+            .sgp-pers-featured__social{
+                display: flex;
+            }
+            .sgp-pers-featured__wrapper{
+                width: 50%;
+            }
+            .sgp-tile-blue{
+                width: 50%;
+                margin: $spacer-5 $spacer-0;
+            }
+            .sgp-tile{
+                width: calc(100% - 16px);
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .sgp-pers-featured{
+        &--one-slide{
+            &.sgp-pers-featured--two-slide{
+                .sgp-pers-featured__social{
+                    display: block;
+                }
+                .sgp-pers-featured__wrapper{
+                    width: 100%;
+                    .sgp-tile{
+                        margin: $spacer-0;
+                        width: 100%;
+                     }
+                }
+                .sgp-tile-blue{
+                    margin: 0 -32px;
+                    width: calc(100% + 64px);
+                }
+            }
+            .sgp-disclaim-text{
+                margin-top: $spacer-3;
             }
         }
     }
@@ -240,6 +289,17 @@
             .sgp-tile-blue{
                 margin: $spacer-6 (-$spacer-3) $spacer-0;
             }
+        }
+        &--one-slide{
+            &.sgp-pers-featured--two-slide{
+                .sgp-tile-blue{
+                    margin: 0 -16px;
+                    width: calc(100% + 32px);
+                }
+            }
+        }
+        .sgp-disclaim-text{
+            margin-top: $spacer-3;
         }
     }
 }

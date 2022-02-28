@@ -69,7 +69,19 @@
         display: block;
         width: 100%;
         margin-bottom: $spacer-4;
-        &::placeholder {
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            @include font-univers-45;
+            color: $color-grey-8;
+            opacity: 1; /* Firefox */
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            @include font-univers-45;
+            color: $color-grey-8;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            @include font-univers-45;
             color: $color-grey-8;
         }
     }

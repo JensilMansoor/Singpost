@@ -91,7 +91,19 @@
         flex: 1;
         border: 1px solid $color-grey-4;
         border-right: 0px;
-        &::placeholder {
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            @include font-univers-45;
+            color: $color-grey-4;
+            opacity: 1; /* Firefox */
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            @include font-univers-45;
+            color: $color-grey-4;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            @include font-univers-45;
             color: $color-grey-4;
         }
     }
@@ -237,6 +249,7 @@
             display: flex;
             padding: $spacer-3 $spacer-0;
             flex-wrap: wrap;
+            color: $color-blue-2;
         }
         &__mob-tile-sec {
             background-color: $color-white;

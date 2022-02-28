@@ -27,29 +27,29 @@
     .sgp-filter {
         margin-bottom: $spacer-4;
     }
-    .sgp-load-more {
-        &__label {
-            justify-content: center;
-        }
-        &~.sgp-tile,
-        &~.sgp-load-more__label {
-            display: none;
-        }
-        &+.sgp-load-more__label {
-            display: flex;
-        }
-        &:checked {
-            &~.sgp-tile {
-                display: flex;
-            }
-            &~.sgp-load-more__label {
-                display: flex;
-            }
-            &+.sgp-load-more__label {
-                display: none;
-            }
-        }
-    }
+    // .sgp-load-more {
+    //     &__label {
+    //         justify-content: center;
+    //     }
+    //     &~.sgp-tile,
+    //     &~.sgp-load-more__label {
+    //         display: none;
+    //     }
+    //     &+.sgp-load-more__label {
+    //         display: flex;
+    //     }
+    //     &:checked {
+    //         &~.sgp-tile {
+    //             display: flex;
+    //         }
+    //         &~.sgp-load-more__label {
+    //             display: flex;
+    //         }
+    //         &+.sgp-load-more__label {
+    //             display: none;
+    //         }
+    //     }
+    // }
     &__top-row {
         display: flex;
         margin: $spacer-0 (-$spacer-2) $spacer-5;
@@ -116,9 +116,9 @@
         }
         .sgp-tile,
         .sgp-tile-bg,
-        .sgp-load-more__label {
+        .sgp-load-more{
             width: calc(50% - 16px);
-            min-width: 290px;
+            min-width: 305px;
         }
         &__slider {
             margin: $spacer-0 (-$spacer-2);
@@ -128,16 +128,20 @@
             }
         }
         .sgp-load-more {
-            &__label {
+            display: flex;
+            margin-top: $spacer-0;
+            &__show,
+            &__hide {
+                display: none;
+                width: 100%;
                 background-color: $color-blue-5;
                 border: 1px dashed $color-blue-2;
-                display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-top: $spacer-0;
-            }
-            &:checked~.sgp-load-more__label {
-                display: none;
+                &.active{
+                    display: flex;
+                }
             }
         }
         &__top-row {
@@ -147,7 +151,8 @@
                 width: 100%;
             }
         }
-        &--announcements {
+        &--announcements,
+        &.sgp-add-ons {
             .sgp-tile {
                 margin: $spacer-2;
                 &:last-of-type {
@@ -177,7 +182,8 @@
                 margin: $spacer-0 $spacer-2;
             }
         }
-        &--announcements {
+        &--announcements,
+        &.sgp-add-ons {
             .sgp-tile {
                 width: 100%;
                 margin: $spacer-2 $spacer-0;

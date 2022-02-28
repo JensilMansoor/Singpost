@@ -8,7 +8,7 @@
         transform: translateY(-50%);
     }
     &__slider{
-        padding: $spacer-0 35px;
+        padding: $spacer-0 45px;
         .sgp-tile{
             .sgp-h4{
                 margin-bottom: $spacer-2;
@@ -24,7 +24,7 @@
 @include mobile-tablet{
     .sgp-arrow-center{
         &__slider{
-            padding: $spacer-0 30px;
+            padding: $spacer-0 40px;
         }
     }
 }

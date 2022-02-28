@@ -102,6 +102,14 @@
                     top: 0;
                     right: 0;
                 }
+                &--blue{
+                    &::after{
+                        @include dark-blue-gradient(99deg);
+                    }
+                    .sgp-locate__sec-2{
+                        background-color: transparent;
+                    }
+                }
             }
             &__sec-1,
             &__sec-2{
@@ -157,6 +165,11 @@
                     &::after{
                         content: none;
                     }
+                    &--blue{
+                        .sgp-locate__sec-2{
+                            @include dark-blue-gradient(99deg);
+                        }
+                    }
                 }
                 &__sec-1{
                     &::before{
@@ -179,12 +192,13 @@
 @include mobile {
     .sgp-locate {
         .slick-dots {
-            display: flex;
-            margin: $spacer-0 $spacer-3 $spacer-0;
-            width: auto;
-            position: static;
-            z-index: 1;
-            transform: translateY(-24px);
+            // display: flex;
+            margin: $spacer-0 $spacer-3;
+            width: calc(100% - 32px);
+            bottom: 16px;
+            // position: static;
+            // z-index: 1;
+            // transform: translateY(-24px);
         }
         &__item {
             padding: $spacer-0;
@@ -218,6 +232,12 @@
             .sgp-locate {
                 &__item{
                     padding: $spacer-0;
+                }
+            }
+            .content-wrapper-small,
+            .content-wrapper{
+                .slick-dots{
+                    width: calc(100% - 64px);
                 }
             }
         }

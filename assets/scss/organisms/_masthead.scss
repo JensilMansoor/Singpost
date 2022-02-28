@@ -1,60 +1,60 @@
 .sgp-masthead {
     padding: $spacer-6 $spacer-0;
-    .sgp-link-btn{
+    .sgp-link-btn {
         margin-bottom: $spacer-3;
     }
     .sgp-price,
-    .sgp-qty{
+    .sgp-qty {
         margin-top: $spacer-3;
     }
-    &.sgp-community-block{
-        .sgp-community-block__desc{
+    &.sgp-community-block {
+        .sgp-community-block__desc {
             margin-bottom: $spacer-4;
             color: $color-grey-1;
         }
-        .sgp-masthead{
-        &__wrapper{
-            background-color: $color-grey-5;
-            margin: $spacer-0 $spacer-0 $spacer-4 $spacer-0;
-            margin-bottom: $spacer-4;
-            &:last-child{
-                margin-bottom: $spacer-0; 
+        .sgp-masthead {
+            &__wrapper {
+                background-color: $color-grey-5;
+                margin: $spacer-0 $spacer-0 $spacer-4 $spacer-0;
+                margin-bottom: $spacer-4;
+                &:last-child {
+                    margin-bottom: $spacer-0;
+                }
+                &--rev {
+                    flex-direction: row-reverse;
+                }
             }
-            &--rev{
-                flex-direction: row-reverse;
+            &__img-outer {
+                width: 50%;
+                margin: 0;
             }
-        }
-        &__img-outer {
-            width: 50%;
-            margin: 0;
-        }
-        &__cnt-outer{
-            width: 50%;
-            margin: $spacer-0;
-            padding: $spacer-3 $spacer-5;
-        }
-        &__desc{
-            &:last-child{
-                margin-bottom: $spacer-0;
+            &__cnt-outer {
+                width: 50%;
+                margin: $spacer-0;
+                padding: $spacer-3 $spacer-5;
+            }
+            &__desc {
+                &:last-child {
+                    margin-bottom: $spacer-0;
+                }
             }
         }
     }
-    }
-    &--slider{
-        &.sgp-masthead{
-            .sgp-masthead{
-                &__wrapper{
+    &--slider {
+        &.sgp-masthead {
+            .sgp-masthead {
+                &__wrapper {
                     flex-direction: row-reverse;
                     align-items: flex-start;
-                    &.slick-slide{
+                    &.slick-slide {
                         display: flex;
                     }
-                    &--row{
+                    &--row {
                         flex-direction: row;
                         align-items: center;
                     }
                 }
-                &__img{
+                &__img {
                     min-height: 450px;
                 }
             }
@@ -69,7 +69,7 @@
         width: calc(50% - 32px);
         margin: $spacer-0 $spacer-3;
         position: relative;
-        .sgp-tile__tag{
+        .sgp-tile__tag {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -80,8 +80,8 @@
         background-size: cover;
         background-position: center;
         min-height: 400px;
-        &--top-text{
-            &.sgp-masthead__img{
+        &--top-text {
+            &.sgp-masthead__img {
                 position: relative;
             }
         }
@@ -96,7 +96,7 @@
     }
     &__sub-sec {
         margin-top: $spacer-3;
-        .sgp-h3{
+        .sgp-h3 {
             margin-bottom: $spacer-3;
         }
     }
@@ -112,10 +112,10 @@
             margin-bottom: $spacer-0;
         }
     }
-    &__dim-col{
+    &__dim-col {
         display: flex;
         flex-wrap: wrap;
-        .sgp-masthead__sub-sec-row{
+        .sgp-masthead__sub-sec-row {
             flex: 1;
         }
     }
@@ -149,10 +149,10 @@
     .sgp-info-tab {
         margin-top: $spacer-4;
     }
-    &__btn-sec{
+    &__btn-sec {
         display: flex;
         margin: $spacer-0 (-$spacer-1);
-        .sgp-link-btn{
+        .sgp-link-btn {
             margin: $spacer-0 $spacer-1 $spacer-2;
             text-align: left;
             display: flex;
@@ -160,40 +160,40 @@
             text-transform: capitalize;
             width: 100%;
             max-width: 180px;
-            &:hover{
-                svg{
+            &:hover {
+                svg {
                     transform: rotate(-45deg);
                 }
             }
         }
     }
-    &__img-cnt{
+    &__img-cnt {
         color: $color-white;
         position: relative;
         z-index: 1;
         max-width: 500px;
-        .sgp-h3{
+        .sgp-h3 {
             margin-bottom: $spacer-2;
         }
-        .sgp-masthead__desc{
+        .sgp-masthead__desc {
             color: $color-white;
         }
     }
-    &--extended{
+    &--extended {
         position: relative;
         padding: $spacer-0;
         overflow: hidden;
         margin-bottom: $spacer-6;
-        .sgp-masthead{
+        .sgp-masthead {
             &__wrapper,
-            &__img{
+            &__img {
                 min-height: 600px;
             }
-            &__cnt-outer{
+            &__cnt-outer {
                 max-width: 500px;
                 margin: $spacer-3;
             }
-            &__extended-sec{
+            &__extended-sec {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -201,21 +201,21 @@
                 max-width: calc(100% - 564px);
                 padding-left: calc((100% - 1300px) / 2);
             }
-            &__img-outer{
+            &__img-outer {
                 width: 100%;
                 margin: $spacer-0;
             }
-            &__img-slider{
-                .sgp-masthead__img-cnt{
+            &__img-slider {
+                .sgp-masthead__img-cnt {
                     margin-bottom: $spacer-4;
                 }
             }
-            &__img{
+            &__img {
                 display: flex;
                 align-items: flex-end;
                 padding: $spacer-6;
                 position: relative;
-                &::before{
+                &::before {
                     content: "";
                     width: 100%;
                     height: 100%;
@@ -226,21 +226,21 @@
                 }
             }
         }
-        .slick-dots{
+        .slick-dots {
             bottom: 40px;
             left: 40px;
         }
     }
 }
 
-@include tablet-pro{
+@include tablet-pro {
     .sgp-masthead {
-        &--extended{
-            .sgp-masthead{
-                &__extended-sec{
+        &--extended {
+            .sgp-masthead {
+                &__extended-sec {
                     max-width: calc(55% - 32px);
                 }
-                &__cnt-outer{
+                &__cnt-outer {
                     width: calc(45% - 32px);
                 }
             }
@@ -248,56 +248,56 @@
     }
 }
 
-@include mobile-tablet{
+@include mobile-tablet {
     .sgp-masthead {
-        &__btn-sec{
+        &__btn-sec {
             overflow: auto;
-            .sgp-link-btn{
+            .sgp-link-btn {
                 min-width: 180px;
             }
         }
-        &--extended{
-            .sgp-masthead{
-                &__extended-sec{
+        &--extended {
+            .sgp-masthead {
+                &__extended-sec {
                     max-width: 50%;
                     padding-left: $spacer-0;
                 }
-                &__img{
+                &__img {
                     padding: $spacer-4;
                 }
             }
-            .slick-dots{
+            .slick-dots {
                 bottom: 24px;
                 left: 24px;
             }
         }
-        &.sgp-community-block{
-            .sgp-masthead{
-            &__wrapper{
-                .sgp-h2{
-                    font-size: 28px;
+        &.sgp-community-block {
+            .sgp-masthead {
+                &__wrapper {
+                    .sgp-h2 {
+                        font-size: 28px;
+                    }
                 }
             }
         }
-        }
-        &--slider{
-            &.sgp-masthead{
-                .sgp-masthead{
-                    &__wrapper{
+        &--slider {
+            &.sgp-masthead {
+                .sgp-masthead {
+                    &__wrapper {
                         flex-direction: column;
                         margin: $spacer-0 $spacer-2;
-                        &.slick-slide{
+                        &.slick-slide {
                             display: flex;
                         }
                     }
-                    &__img{
+                    &__img {
                         min-height: 450px;
                     }
-                    &__img-outer{
+                    &__img-outer {
                         width: 100%;
                         margin: $spacer-0;
                     }
-                    &__cnt-outer{
+                    &__cnt-outer {
                         width: 100%;
                         margin: $spacer-0;
                         padding: $spacer-4;
@@ -305,22 +305,23 @@
                 }
             }
         }
-        &__dim-col{
-            .sgp-masthead__sub-sec-row{
+        &__dim-col {
+            .sgp-masthead__sub-sec-row {
                 flex: auto;
                 width: 100%;
             }
         }
     }
 }
+
 @include mobile {
     .sgp-masthead {
         padding: $spacer-0 $spacer-0 $spacer-5;
-        .sgp-link-btn{
+        .sgp-link-btn {
             margin-top: $spacer-3;
         }
-        &__btn-sec{
-            .sgp-link-btn{
+        &__btn-sec {
+            .sgp-link-btn {
                 margin-top: $spacer-0;
             }
         }
@@ -348,6 +349,9 @@
         &__cnt-outer {
             width: 100%;
             margin: $spacer-4 $spacer-0 $spacer-0;
+            .sgp-qty {
+                width: 100%;
+            }
         }
         &__sub-sec-row {
             display: block;
@@ -357,51 +361,51 @@
                 margin-bottom: $spacer-1;
             }
         }
-        &--extended{
+        &--extended {
             padding: $spacer-5 $spacer-0 $spacer-0;
             margin-bottom: $spacer-5;
             .sgp-masthead {
-                &__extended-sec{
+                &__extended-sec {
                     position: static;
                     max-width: 100%;
                     margin-top: $spacer-3;
                 }
-                &__cnt-outer{
+                &__cnt-outer {
                     margin: $spacer-0;
                 }
-                &__wrapper{
+                &__wrapper {
                     min-height: 0;
                 }
-                &__img{
+                &__img {
                     padding: $spacer-3;
                     min-height: 280px;
                 }
             }
-            .slick-dots{
+            .slick-dots {
                 left: 0;
             }
         }
-        &.sgp-community-block{
+        &.sgp-community-block {
             padding: $spacer-5 $spacer-0;
-            .sgp-masthead{
-            &__wrapper{
-                margin-bottom: $spacer-3;
-            }
-            &__img-outer {
-                width: 100%;
-            }
-            &__cnt-outer {
-                margin: $spacer-0;
-                padding: $spacer-4 $spacer-3;
-                width: 100%;
+            .sgp-masthead {
+                &__wrapper {
+                    margin-bottom: $spacer-3;
+                }
+                &__img-outer {
+                    width: 100%;
+                }
+                &__cnt-outer {
+                    margin: $spacer-0;
+                    padding: $spacer-4 $spacer-3;
+                    width: 100%;
+                }
             }
         }
-        }
-        &--slider{
-            &.sgp-masthead{
+        &--slider {
+            &.sgp-masthead {
                 padding: $spacer-5 $spacer-0;
-                .sgp-masthead{
-                    &__cnt-outer{
+                .sgp-masthead {
+                    &__cnt-outer {
                         padding: $spacer-3 $spacer-0;
                     }
                 }
@@ -410,12 +414,12 @@
     }
 }
 
-@include ie-fix{
+@include ie-fix {
     .sgp-masthead {
-        &--extended{
+        &--extended {
             .sgp-masthead {
                 &__wrapper,
-                &__img{
+                &__img {
                     height: 600px;
                 }
             }

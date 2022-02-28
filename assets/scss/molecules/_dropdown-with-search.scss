@@ -1,0 +1,13 @@
+.sgp-custom-select {
+    flex: 1;
+    &__value {
+        padding: 11px 32px 11px 16px;
+        border: 1px solid $color-blue-med-2;
+        &::after {
+            top: 18px;
+        }
+    }
+    &.active{
+        z-index: 20;
+    }
+}

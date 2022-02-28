@@ -14,6 +14,9 @@
     position: relative;
     input {
         appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         outline: none;
         border: none;
         background: var(--input-background, none);

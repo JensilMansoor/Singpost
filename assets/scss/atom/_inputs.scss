@@ -39,7 +39,6 @@
     background-position-x: calc(100% - 4px);
     background-position-y: calc(50% - 4px);
     cursor: pointer;
-    appearance: none;
     min-width: 150px;
     &::-ms-expand {
         display: none;
@@ -53,6 +52,7 @@
         width: 100%;
         padding: 10px $spacer-3;
         border: 1px solid $color-grey-4;
+        border-radius: 0;
         background-position-x: calc(100% - 8px);
         background-position-y: 50%;
     }
@@ -67,6 +67,7 @@
     }
     .sgp-select{
         border: 1px solid $color-blue-2;
+        border-radius: 0;
         padding: 11px $spacer-6 11px $spacer-3;
         background-position-x: calc(100% - 16px);
         background-position-y: 50%;

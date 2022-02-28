@@ -3,6 +3,9 @@
         display: flex;
         align-items: flex-end;
         margin-bottom: $spacer-4;
+        &--block{
+            display: block;
+        }
         .sgp-sort{
             margin-bottom: $spacer-0;
             .sgp-search-input{
@@ -11,6 +14,12 @@
         }
         & > .sgp-link-btn{
             margin-left: auto;
+        }
+        .mobile-none{
+            display: block;
+        }
+        .mobile-show{
+            display: none;
         }
     }
     .sgp-service{
@@ -56,6 +65,13 @@
             .sgp-sort{
                 margin-bottom: $spacer-3;
             }
+            .mobile-none{
+                display: none;
+            }
+            .mobile-show{
+                display: inline-block;
+                margin-bottom: $spacer-3;
+            }
         }
         .sgp-tile{
             width: calc(50% - 10px);
@@ -80,5 +96,8 @@
                 width: calc(100% + 42px);
             }
         }
+    }
+    .sgp-tile__img-sec .sgp-tile__tag--red{
+        max-width: none;
     }
 }

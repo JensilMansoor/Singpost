@@ -46,11 +46,6 @@
         &:hover{
             box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
         }
-        li{
-            color: $color-grey-3;
-            list-style: disc;
-            margin-left: $spacer-3;
-        }
         p{
             color: $color-grey-3;
             font-size: 14px;
@@ -90,11 +85,25 @@
             width: 100%;
             // margin: $spacer-3 $spacer-0;
         }
+        .sgp-list{
+            color: $color-grey-3;
+            padding-bottom: $spacer-2;
+        }
+        .sgp-list--dash{
+            padding-left: 20px;
+            padding-bottom: $spacer-0;
+        }
     }
     &__head{
         color: $color-black;
         font-size: 16px;
         padding-bottom: $spacer-2;
+        @include font-univers-65;
+    }
+    &__sub-head{
+        color: $color-black;
+        font-size: 14px;
+        padding-bottom: $spacer-1;
         @include font-univers-65;
     }
     &__desc{
@@ -103,8 +112,8 @@
     }
 }
 @include mobile-tablet {
-    padding: $spacer-5 $spacer-0;
 .sgp-terms-n-cond{
+    padding: $spacer-5 $spacer-0;
     &__tile{
         width: calc(50% - 16px);
         // &:nth-child(even){
